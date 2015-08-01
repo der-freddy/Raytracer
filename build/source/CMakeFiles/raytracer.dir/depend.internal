@@ -88,4 +88,4 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o
  ../framework/ppmwriter.hpp
  ../framework/renderer.hpp
  ../framework/window.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/source/raytracer.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/source/raytracer.cpp

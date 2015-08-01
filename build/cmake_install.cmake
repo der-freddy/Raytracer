@@ -1,4 +1,4 @@
-# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer
+# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Raytracer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/external/glfw-3.0.3/cmake_install.cmake")
-  include("/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/cmake_install.cmake")
-  include("/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/source/cmake_install.cmake")
-  include("/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/tests/cmake_install.cmake")
+  include("/home/freddy/Dokumente/Studium/Prog/Raytracer/build/external/glfw-3.0.3/cmake_install.cmake")
+  include("/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/cmake_install.cmake")
+  include("/home/freddy/Dokumente/Studium/Prog/Raytracer/build/source/cmake_install.cmake")
+  include("/home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests/cmake_install.cmake")
 
 endif()
 
@@ -47,7 +47,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()

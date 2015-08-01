@@ -1,4 +1,4 @@
-# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/external/glfw-3.0.3/src
+# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/external/glfw-3.0.3/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

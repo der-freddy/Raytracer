@@ -39,21 +39,34 @@ void Sdfloader::readSdf(std::string path)
       {
         create_material(iss);
       }
-      // else if(sub == "shape")
-      // {
-      //   create_shape(iss);
-      // }
-      // else if(sub == "Sphere")
-      // {
-      //   create_sphere(iss);
-      // }
-      // else if(sub == "Box")
-      // {
-      //   create_box(iss);
-      // }
+      else if(sub == "shape")
+      {
+        iss >> sub
+        if(sub == "Sphere")
+        {
+          create_sphere(iss);
+        }
+        else if(sub == "Box")
+        {
+          create_box(iss);
+        }
+      }
+      else if(sub == "light")
+      {
+        create_light(iss);
+      }
+      else if(sub == "camera")
+      {
+        create_camera(iss);
+      }
 
 
     }
+    else if(sub == "transform")
+    {
+      create_transform(iss);
+    }
+
   }
   
 
@@ -78,4 +91,3 @@ void Sdfloader::create_material(std::istringstream& iss)
 
   return ;
 }
-

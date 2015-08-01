@@ -5,7 +5,7 @@ framework/CMakeFiles/framework.dir/glew.c.o
  ../external/GL/glew.h
  ../external/GL/glxew.h
  ../external/GL/wglew.h
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/glew.c
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/glew.c
 framework/CMakeFiles/framework.dir/box.cpp.o
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
@@ -84,24 +84,24 @@ framework/CMakeFiles/framework.dir/box.cpp.o
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
  ../framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/box.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/box.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ray.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 framework/CMakeFiles/framework.dir/material.cpp.o
  ../framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
 framework/CMakeFiles/framework.dir/pixel.cpp.o
  ../framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
  ../framework/color.hpp
  ../framework/pixel.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
@@ -179,22 +179,22 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  ../external/glm-0.9.5.3/glm/vec3.hpp
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/renderer.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/renderer.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o
  ../framework/color.hpp
  ../framework/material.hpp
  ../framework/scene.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/scene.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.cpp
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o
  ../framework/color.hpp
  ../framework/material.hpp
  ../framework/scene.hpp
  ../framework/sdfloader.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sdfloader.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sdfloader.cpp
 framework/CMakeFiles/framework.dir/shape.cpp.o
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
@@ -273,10 +273,10 @@ framework/CMakeFiles/framework.dir/shape.cpp.o
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
  ../framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ray.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 framework/CMakeFiles/framework.dir/sphere.cpp.o
  ../external/glm-0.9.5.3/glm/./common.hpp
  ../external/glm-0.9.5.3/glm/./detail/_noise.hpp
@@ -519,11 +519,11 @@ framework/CMakeFiles/framework.dir/sphere.cpp.o
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
  ../framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ray.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sphere.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sphere.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.hpp
 framework/CMakeFiles/framework.dir/window.cpp.o
  ../external/GL/glew.h
  ../external/glfw-3.0.3/include/GLFW/glfw3.h
@@ -605,6 +605,6 @@ framework/CMakeFiles/framework.dir/window.cpp.o
  ../external/glm-0.9.5.3/glm/vec3.hpp
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/color.hpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/window.cpp
- /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/window.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/window.cpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/window.hpp

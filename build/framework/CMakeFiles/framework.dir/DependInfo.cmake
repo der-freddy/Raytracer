@@ -5,27 +5,27 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/glew.c" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/glew.c.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/glew.c" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/glew.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/box.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/material.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/renderer.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/renderer.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/scene.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/scene.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sdfloader.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/sdfloader.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/shape.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sphere.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/sphere.cpp.o"
-  "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/window.cpp" "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/framework/CMakeFiles/framework.dir/window.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/material.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/renderer.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/scene.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sdfloader.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/sdfloader.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/shape.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/sphere.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/window.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/window.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS
-  "FENSTERCHEN_BINARY_DIR=\"/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build\""
-  "FENSTERCHEN_SOURCE_DIR=\"/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer\""
+  "FENSTERCHEN_BINARY_DIR=\"/home/freddy/Dokumente/Studium/Prog/Raytracer/build\""
+  "FENSTERCHEN_SOURCE_DIR=\"/home/freddy/Dokumente/Studium/Prog/Raytracer\""
   "GLEW_STATIC"
   )
 

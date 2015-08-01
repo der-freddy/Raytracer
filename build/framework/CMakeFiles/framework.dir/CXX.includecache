@@ -2000,11 +2000,11 @@ material.hpp
 scene.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/box.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.cpp
 box.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/box.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/box.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.hpp
 glm/vec3.hpp
 -
 stdlib.h
@@ -2014,19 +2014,19 @@ string
 algorithm
 -
 shape.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 ray.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/color.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
 iostream
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.cpp
 material.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
 string
 -
 iostream
@@ -2034,21 +2034,21 @@ iostream
 color.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.cpp
 pixel.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
 ostream
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
 iosfwd
 -
 color.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.cpp
 ppmwriter.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
 iostream
 -
 fstream
@@ -2058,7 +2058,7 @@ cmath
 algorithm
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
 string
 -
 vector
@@ -2066,31 +2066,31 @@ vector
 pixel.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
 glm/glm.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/renderer.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp
 renderer.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/renderer.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/renderer.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
 color.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/color.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
 pixel.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/pixel.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
 ppmwriter.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ppmwriter.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
 string
 -
 glm/glm.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/scene.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.cpp
 scene.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sdfloader.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sdfloader.cpp
 sdfloader.hpp
 -
 fstream
@@ -2106,33 +2106,33 @@ iterator
 string
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.cpp
 shape.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 string
 -
 iostream
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 material.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/material.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
 string
 -
 ray.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sphere.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.cpp
 shape.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 sphere.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sphere.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.hpp
 cmath
 -
 glm/ext.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/glm/ext.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/glm/ext.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/sphere.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.hpp
 string
 -
 stdlib.h
@@ -2140,19 +2140,19 @@ stdlib.h
 glm/vec3.hpp
 -
 shape.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/shape.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/window.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/window.cpp
 window.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/window.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/window.hpp
 cstring
 -
 iostream
 -
 
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/window.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/window.hpp
 color.hpp
-/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/framework/color.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
 GL/glew.h
 -
 GLFW/glfw3.h
