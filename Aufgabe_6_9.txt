@@ -1,0 +1,21 @@
+Aufgabe 6.9
+
+Klassenhierarchiv (Vererbung):
+Es wird von einer bestehende Klasse bestimmte Attribute und Methoden abgeleitet für eine neue Klasse. Erstpart Programmieraufwand und zusetzlichen Code. 
+
+Objekthierarchie:
+
+
+Klassendiagramm:
+Grafische Darstellung von Klassen, Schnittstellen und deren Beziehungen. In dieser Modellierung werden Methoden, und deren Rückgabewert, und Attribute der jeweiligen Klasse aufgeliste und beschrieben. Desweiteren werden in dieser Darstellung Verebungsbeziehung zwischen Klassen aufgezeigt.
+
+Objektdiagramm:
+Ein Objektdiagramm zeigt den aktuellen Zustand eines Objektes einer Klasse. D.h. die derzeitige Belegung von Attributen und die Bezeihnung des Objektes. Der Aufbau ähnelt dem des Klassendiagrammes
+
+Statischer Typ von Variablen
+Hier wird Sphere durch Sphere erzeugt und kann damit nur für Sphere verwendet werden. Es ist nicht möglich andere Formen (z.B. Box usw.) zu erzeugen, da dies statisch ist.
+
+
+
+Dynamaischer Typ von Variablen
+Die Erzeugung von Sphere durch den Objektpoint Shape ist eine dynamische Zuweisung, da Shape die Basis-Klasse von Sphere ist. Es ist möglich auch andere Shapes damit zu erzeugen wie zB. Box.

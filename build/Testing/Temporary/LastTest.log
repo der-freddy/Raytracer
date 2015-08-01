@@ -1,0 +1,33 @@
+Start testing: Aug 01 14:46 CEST
+----------------------------------------------------------
+1/1 Testing: tests
+1/1 Test: tests
+Command: "/home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build/build/Release/tests"
+Directory: /home/freddy/Dokumente/Studium/Prog/Aufgabenblatt7/programmiersprachen-raytracer/build
+"tests" start time: Aug 01 14:46 CEST
+Output:
+----------------------------------------------------------
+===========================
+======= Aufgabe 6.8 =======
+===========================
+[Sphere: sphere0]
+[Material: [m4(0,0,255),(0,0,255),(0,0,255),0]]
+[Point: fvec3(0.000000, 0.000000, 0.000000)]
+[radius: 1.2]
+[Sphere: sphere1]
+[Material: [m4(0,0,255),(0,0,255),(0,0,255),0]]
+[Point: fvec3(0.000000, 0.000000, 0.000000)]
+[radius: 1.2]
+[red(1,0,0),(1,0,0),(1,0,0),1]
+===============================================================================
+All tests passed (4 assertions in 5 test cases)
+
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"tests" end time: Aug 01 14:46 CEST
+"tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 01 14:46 CEST
