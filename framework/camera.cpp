@@ -10,7 +10,7 @@ up_(up)
 
 std::string Camera::getName()
 {
-	return name_
+	return name_;
 }
 
 double Camera::getFov_x()
