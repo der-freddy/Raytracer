@@ -1,6 +1,7 @@
 #ifndef BUW_SCENE_HPP
 #define BUW_SCENE_HPP
 #include <map>
+#include <shape.hpp>
 #include <material.hpp>
 #include <memory>
 
