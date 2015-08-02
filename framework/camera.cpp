@@ -28,7 +28,7 @@ glm::vec3 Camera::getDir()
 	return dir_;
 }
 
-glm::vec3 Camera::getUp()
+glm::vec3 Camera::getUp()//everybody
 {
 	return up_;
 }

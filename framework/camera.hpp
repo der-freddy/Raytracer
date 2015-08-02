@@ -15,7 +15,7 @@ public:
 	double getFov_x();
 	glm::vec3 getEye();
 	glm::vec3 getDir();
-	glm::vec3 getUp();
+	glm::vec3 getUp();//everybody
 
 private:
 
