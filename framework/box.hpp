@@ -14,8 +14,8 @@ class Box : public Shape
 	public:
 	//Constructor
 	Box();
-	Box(glm::vec3 const& max, glm::vec3 const& min);
-	Box(glm::vec3 const& max, glm::vec3 const& min, std::string name, Material material);
+	Box(glm::vec3 const& min, glm::vec3 const& max);
+	Box(glm::vec3 const& min, glm::vec3 const& max, std::string name, Material material);
 	~Box();
 	glm::vec3 max() const;
 

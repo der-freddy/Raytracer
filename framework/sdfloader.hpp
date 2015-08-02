@@ -6,6 +6,8 @@
 #include <iostream>
 #include <material.hpp>
 #include <scene.hpp>
+#include <box.hpp>
+#include <sphere.hpp>
 
 class Sdfloader
 {
@@ -20,6 +22,12 @@ public:
 	void readSdf(std::string path);
 
 	void create_material(std::istringstream&);
+
+	void create_box(std::istringstream&);
+
+	void create_sphere(std::istringstream&);
+
+	void create_cam(std::istringstream&);
 
 private:
 		Scene scene_;

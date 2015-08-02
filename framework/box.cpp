@@ -7,23 +7,23 @@
 Box::Box(): Shape{}, _max{1.0f}, _min{0.0f}
 {}
 
-Box::Box(glm::vec3 const& max, glm::vec3 const& min):Shape{}, _max{max}, _min{min}
+Box::Box(glm::vec3 const& min, glm::vec3 const& max):Shape{}, _max{max}, _min{min}
 {}
 
-Box::Box(glm::vec3 const& max, glm::vec3 const& min, std::string name, Material material):Shape(name, material),  _max{max}, _min{min}
+Box::Box(std::string name , Material material, glm::vec3 const& min, glm::vec3 const& max):Shape(name, material),  _min{max}, _max{min}
 {}
 
 Box::~Box()
 {}
 
-glm::vec3 Box::max() const
-{
-	return _max;
-}
-
 glm::vec3 Box::min() const
 {
 	return _min;
+}
+
+glm::vec3 Box::max() const
+{
+	return _max;
 }
 
 double Box::volume() const
