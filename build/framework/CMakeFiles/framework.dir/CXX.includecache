@@ -600,6 +600,12 @@ shape.hpp
 ray.hpp
 ../framework/ray.hpp
 
+../framework/camera.hpp
+string
+-
+glm/glm.hpp
+-
+
 ../framework/color.hpp
 iostream
 -
@@ -619,9 +625,17 @@ glm/glm.hpp
 ../framework/scene.hpp
 map
 -
+shape.hpp
+-
+sphere.hpp
+-
+box.hpp
+-
 material.hpp
 -
-memory
+camera.hpp
+-
+string
 -
 
 ../framework/sdfloader.hpp

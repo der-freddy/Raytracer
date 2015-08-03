@@ -844,6 +844,12 @@ shape.hpp
 ray.hpp
 ../framework/ray.hpp
 
+../framework/camera.hpp
+string
+-
+glm/glm.hpp
+-
+
 ../framework/color.hpp
 iostream
 -
@@ -863,9 +869,13 @@ glm/glm.hpp
 ../framework/scene.hpp
 map
 -
+shape.hpp
+-
 material.hpp
 -
-memory
+camera.hpp
+-
+string
 -
 
 ../framework/sdfloader.hpp
@@ -880,6 +890,10 @@ iostream
 material.hpp
 -
 scene.hpp
+-
+box.hpp
+-
+sphere.hpp
 -
 
 ../framework/shape.hpp
