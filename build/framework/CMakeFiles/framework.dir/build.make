@@ -141,9 +141,32 @@ framework/CMakeFiles/framework.dir/shape.cpp.o.provides: framework/CMakeFiles/fr
 
 framework/CMakeFiles/framework.dir/shape.cpp.o.provides.build: framework/CMakeFiles/framework.dir/shape.cpp.o
 
+framework/CMakeFiles/framework.dir/camera.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/camera.cpp.o: ../framework/camera.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/camera.cpp.o"
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/camera.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/camera.cpp
+
+framework/CMakeFiles/framework.dir/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/camera.cpp.i"
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/camera.cpp > CMakeFiles/framework.dir/camera.cpp.i
+
+framework/CMakeFiles/framework.dir/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/camera.cpp.s"
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/camera.cpp -o CMakeFiles/framework.dir/camera.cpp.s
+
+framework/CMakeFiles/framework.dir/camera.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/camera.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/camera.cpp.o.provides: framework/CMakeFiles/framework.dir/camera.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/camera.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/camera.cpp.o.provides.build: framework/CMakeFiles/framework.dir/camera.cpp.o
+
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/ppmwriter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ppmwriter.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.cpp
 
@@ -166,7 +189,7 @@ framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/scene.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/scene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.cpp
 
@@ -189,7 +212,7 @@ framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build: framework/CMakeFi
 
 framework/CMakeFiles/framework.dir/box.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/box.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.cpp
 
@@ -212,7 +235,7 @@ framework/CMakeFiles/framework.dir/box.cpp.o.provides.build: framework/CMakeFile
 
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/sdfloader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/sdfloader.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sdfloader.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sdfloader.cpp
 
@@ -235,7 +258,7 @@ framework/CMakeFiles/framework.dir/sdfloader.cpp.o.provides.build: framework/CMa
 
 framework/CMakeFiles/framework.dir/material.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/material.cpp.o: ../framework/material.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/material.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/material.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.cpp
 
@@ -258,7 +281,7 @@ framework/CMakeFiles/framework.dir/material.cpp.o.provides.build: framework/CMak
 
 framework/CMakeFiles/framework.dir/sphere.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sphere.cpp.o: ../framework/sphere.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/sphere.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sphere.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sphere.cpp
 
@@ -281,7 +304,7 @@ framework/CMakeFiles/framework.dir/sphere.cpp.o.provides.build: framework/CMakeF
 
 framework/CMakeFiles/framework.dir/renderer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/renderer.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp
 
@@ -308,6 +331,7 @@ framework_OBJECTS = \
 "CMakeFiles/framework.dir/pixel.cpp.o" \
 "CMakeFiles/framework.dir/window.cpp.o" \
 "CMakeFiles/framework.dir/shape.cpp.o" \
+"CMakeFiles/framework.dir/camera.cpp.o" \
 "CMakeFiles/framework.dir/ppmwriter.cpp.o" \
 "CMakeFiles/framework.dir/scene.cpp.o" \
 "CMakeFiles/framework.dir/box.cpp.o" \
@@ -323,6 +347,7 @@ framework/libframework.a: framework/CMakeFiles/framework.dir/glew.c.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/pixel.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/window.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/shape.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/camera.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/scene.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/box.cpp.o
@@ -344,6 +369,7 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/window.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/camera.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/box.cpp.o.requires

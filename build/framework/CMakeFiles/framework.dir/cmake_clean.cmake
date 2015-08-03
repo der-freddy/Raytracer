@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/framework.dir/pixel.cpp.o"
   "CMakeFiles/framework.dir/window.cpp.o"
   "CMakeFiles/framework.dir/shape.cpp.o"
+  "CMakeFiles/framework.dir/camera.cpp.o"
   "CMakeFiles/framework.dir/ppmwriter.cpp.o"
   "CMakeFiles/framework.dir/scene.cpp.o"
   "CMakeFiles/framework.dir/box.cpp.o"

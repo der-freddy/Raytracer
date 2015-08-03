@@ -3,9 +3,6 @@
 Scene::Scene():materials()
 {}
 
-Scene::~Scene()
-{}
-
 std::ostream& operator<<(std::ostream& output, Scene const& scene)
 {
     for(auto i : scene.materials)

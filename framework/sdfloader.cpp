@@ -41,7 +41,8 @@ void Sdfloader::readSdf(std::string path)
       }
       else if(sub == "shape")
       {
-        iss >> sub
+        iss >> sub;
+        
         if(sub == "Sphere")
         {
           create_sphere(iss);

@@ -191,6 +191,30 @@ box.cpp.s:
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.s
 .PHONY : box.cpp.s
 
+camera.o: camera.cpp.o
+.PHONY : camera.o
+
+# target to build an object file
+camera.cpp.o:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.o
+.PHONY : camera.cpp.o
+
+camera.i: camera.cpp.i
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
 glew.o: glew.c.o
 .PHONY : glew.o
 
@@ -448,6 +472,9 @@ help:
 	@echo "... box.o"
 	@echo "... box.i"
 	@echo "... box.s"
+	@echo "... camera.o"
+	@echo "... camera.i"
+	@echo "... camera.s"
 	@echo "... glew.o"
 	@echo "... glew.i"
 	@echo "... glew.s"
