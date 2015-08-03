@@ -5,9 +5,16 @@
 #include <material.hpp>
 #include <memory>
 
-struct Scene {
+class Scene 
+{
+public:
+
   Scene();
   ~Scene();
+  
+
+
+private:
 
   std::map<std::string, Material> materials;
 };
