@@ -1,11 +1,17 @@
 #include "camera.hpp"
 
+Camera::Camera()
+{}
+
 Camera::Camera(std::string name, double fov_x, glm::vec3 eye, glm::vec3 dir, glm::vec3 up) :
 name_(name),
 fov_x_(fov_x),
 eye_(eye),
 dir_(dir),
 up_(up)
+{}
+
+Camera::~Camera()
 {}
 
 std::string Camera::getName()

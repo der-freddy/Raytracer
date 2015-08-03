@@ -118,53 +118,53 @@
 // }
 
 
-TEST_CASE("Aufgabe6_8", "[Aufgabe6_8]")
-{	
-	std::cout << "===========================\n";
-	std::cout << "======= Aufgabe 6.8 =======\n";
-	std::cout << "===========================\n";
-	Color blue(0 , 0 , 255);
-	Material m4("m4", blue, blue, blue, 0);
-	glm::vec3 position (0);
+// TEST_CASE("Aufgabe6_8", "[Aufgabe6_8]")
+// {	
+// 	std::cout << "===========================\n";
+// 	std::cout << "======= Aufgabe 6.8 =======\n";
+// 	std::cout << "===========================\n";
+// 	Color blue(0 , 0 , 255);
+// 	Material m4("m4", blue, blue, blue, 0);
+// 	glm::vec3 position (0);
 
-	Sphere* s1 = new Sphere(position,1.2,"sphere0",m4);
-	Shape* s2 = new Sphere(position,1.2,"sphere1",m4);
-	s1 -> print(std::cout);
-	s2 -> print(std::cout);
-	delete s1;
-	delete s2;
-}
+// 	Sphere* s1 = new Sphere(position,1.2,"sphere0",m4);
+// 	Shape* s2 = new Sphere(position,1.2,"sphere1",m4);
+// 	s1 -> print(std::cout);
+// 	s2 -> print(std::cout);
+// 	delete s1;
+// 	delete s2;
+// }
 
-TEST_CASE("intesect_box1", "[shouldntPass]")
-{
-	Color blue(0 , 0 , 255);
-	Material m4("m4", blue, blue, blue, 0);
-	Box box = Box{{3.0,3.0,3.0}, {-1.0,2.0,1.0}, "Box" , m4};
-	Ray ray = Ray{{0.0,4.0,2.0}, {0.218, -0.436, 0.873}};
+// TEST_CASE("intesect_box1", "[shouldntPass]")
+// {
+// 	Color blue(0 , 0 , 255);
+// 	Material m4("m4", blue, blue, blue, 0);
+// 	Box box = Box{{3.0,3.0,3.0}, {-1.0,2.0,1.0}, "Box" , m4};
+// 	Ray ray = Ray{{0.0,4.0,2.0}, {0.218, -0.436, 0.873}};
 
-	REQUIRE(!box.intersectBox(ray));
+// 	REQUIRE(!box.intersectBox(ray));
 
-}
+// }
 
-TEST_CASE("intesect_box2", "[shouldPass]")
-{
-	Color blue(0 , 0 , 255);
-	Material m4("m4", blue, blue, blue, 0);
-	Box box = Box{{3.0,3.0,3.0}, {0.0,0.0,0.0}, "untitled box", m4};
-	Ray ray = Ray{{0.0,0.0,0.0}, {1.0, 1.0, 1.0}};
+// TEST_CASE("intesect_box2", "[shouldPass]")
+// {
+// 	Color blue(0 , 0 , 255);
+// 	Material m4("m4", blue, blue, blue, 0);
+// 	Box box = Box{{3.0,3.0,3.0}, {0.0,0.0,0.0}, "untitled box", m4};
+// 	Ray ray = Ray{{0.0,0.0,0.0}, {1.0, 1.0, 1.0}};
 
- REQUIRE(box.intersectBox(ray));
-}
+//  REQUIRE(box.intersectBox(ray));
+// }
 
-TEST_CASE("intesect_box3", "[shouldPass]")
-{
-	Color blue(0 , 0 , 255);
-	Material m4("m4", blue, blue, blue, 0);	
- 	Box box = Box{{9.0,9.0,9.0}, {5.0,5.0,5.0}, "untitled box", m4};
- 	Ray ray = Ray{{0.0,0.0,0.0}, {7.0, 7.0, 7.0}};
+// TEST_CASE("intesect_box3", "[shouldPass]")
+// {
+// 	Color blue(0 , 0 , 255);
+// 	Material m4("m4", blue, blue, blue, 0);	
+//  	Box box = Box{{9.0,9.0,9.0}, {5.0,5.0,5.0}, "untitled box", m4};
+//  	Ray ray = Ray{{0.0,0.0,0.0}, {7.0, 7.0, 7.0}};
 
- REQUIRE(box.intersectBox(ray));
-}
+//  REQUIRE(box.intersectBox(ray));
+// }
 
 TEST_CASE("sdfloader", "[checkload]")
 {

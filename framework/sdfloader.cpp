@@ -101,7 +101,8 @@ void Sdfloader::create_material(std::istringstream& iss)
 void Sdfloader::create_box(std::istringstream& iss)
 {
   //box gets name, min-vector, max-vector and name of material
-  std::string name, ma;
+  Material ma{};
+  std::string name;
   float x,y,z;
 
   iss >> name >> x >> y >> z;
@@ -110,15 +111,16 @@ void Sdfloader::create_box(std::istringstream& iss)
   iss >> x >> y >> z;
   glm::vec3 max(x,y,z);
 
-  iss >> ma;
+  
 
-  scene_.box[name] = Box(name, ma, min, max);
+  scene_.boxes[name] = Box(name, ma, min, max);
 }
 
 void Sdfloader::create_sphere(std::istringstream& iss)
 {
   //sphere gets name, middle point vector and name of material
-  std::string name, ma;
+  Material ma{};
+  std::string name;
   float x,y,z,r;
 
   iss >> name >> x >> y >> z;
@@ -126,9 +128,11 @@ void Sdfloader::create_sphere(std::istringstream& iss)
 
   iss >> r;
 
-  iss >> ma;
+  
 
-  scene_.sphere[name] = Sphere(name, ma, mp, r);
+  scene_.spheres[name] = Sphere(name, ma, mp, r);
+
+  return ;
 }
 
 void Sdfloader::create_cam(std::istringstream& iss)
@@ -149,5 +153,7 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   glm::vec3 up(x,y,z);
 
-  scene_.camera[name] = Camera(name, fov_x, eye, dir,up);
+  scene_.cam = Camera(name, fov_x, eye, dir,up);
+
+  return ;
 }

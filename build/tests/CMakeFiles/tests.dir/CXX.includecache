@@ -871,6 +871,10 @@ map
 -
 shape.hpp
 -
+sphere.hpp
+-
+box.hpp
+-
 material.hpp
 -
 camera.hpp
@@ -894,6 +898,8 @@ scene.hpp
 box.hpp
 -
 sphere.hpp
+-
+camera.hpp
 -
 
 ../framework/shape.hpp

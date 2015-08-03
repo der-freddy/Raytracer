@@ -1,6 +1,13 @@
 #include <scene.hpp>
 
-Scene::Scene():materials()
+Scene::Scene():
+spheres(),
+boxes(),
+cam(),
+materials()
+{}
+
+Scene::~Scene()
 {}
 
 std::ostream& operator<<(std::ostream& output, Scene const& scene)

@@ -8,6 +8,7 @@
 #include <scene.hpp>
 #include <box.hpp>
 #include <sphere.hpp>
+#include <camera.hpp>
 
 class Sdfloader
 {
