@@ -8,18 +8,25 @@
 #include <camera.hpp>
 #include <string>
 
-struct Scene 
+class Scene
 {
-  Scene();
-  ~Scene();
+public:
+	//Constructor
+	Scene();
+ 	~Scene();
 
+
+ 	void addShape(std::string, std::shared_ptr<Shape>);
+
+ 	void addMaterial(srd::string, std::shared_ptr<Material>);
+
+ 	void addCam(std::string, std::shared_ptr<Camera>);
+
+private:
   std::map<std::string, Material> materials;
-  std::map<std::string, Box> boxes;
-  std::map<std::string, Sphere> spheres;
-  Camera cam{};
-
+  std::map<std::string, Shapes> spheres;
+  std::shared_ptr<Camera> cam{};
 
 };
-
 
 #endif

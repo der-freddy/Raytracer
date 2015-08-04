@@ -24,9 +24,7 @@ public:
 
 	void create_material(std::istringstream&);
 
-	void create_box(std::istringstream&);
-
-	void create_sphere(std::istringstream&);
+	void create_shape(std::istringstream&);
 
 	void create_cam(std::istringstream&);
 
