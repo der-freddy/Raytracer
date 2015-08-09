@@ -7,6 +7,7 @@
 #include <material.hpp>
 #include <camera.hpp>
 #include <string>
+#include <tr1/memory>
 
 class Scene
 {
@@ -18,14 +19,16 @@ public:
 
  	void addShape(std::string, std::shared_ptr<Shape>);
 
- 	void addMaterial(srd::string, std::shared_ptr<Material>);
+ 	void addMaterial(std::string, Material*);
 
- 	void addCam(std::string, std::shared_ptr<Camera>);
+ 	void addCam(std::shared_ptr<Camera>);
+
+ 	Material* getMaterial(std::string);
 
 private:
-  std::map<std::string, Material> materials;
-  std::map<std::string, Shapes> spheres;
-  std::shared_ptr<Camera> cam{};
+  std::map<std::string, Material*> materials_;
+  std::map<std::string, std::shared_ptr<Shape>> shapes_;
+  std::shared_ptr<Camera> cam_;
 
 };
 

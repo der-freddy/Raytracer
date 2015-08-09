@@ -93,7 +93,7 @@ void Sdfloader::create_material(std::istringstream& iss)
 
   iss >> m;
   
-  auto material = make_shared<Material>(name, ka, kd, ks, m);
+  auto material = std::make_shared<Material>(name, ka, kd, ks, m);
 
   return ;
 }
@@ -101,8 +101,7 @@ void Sdfloader::create_material(std::istringstream& iss)
 void Sdfloader::create_box(std::istringstream& iss)
 {
   //box gets name, min-vector, max-vector and name of material
-  Material ma{};
-  std::string name;
+  std::string name, materialName;
   float x,y,z;
 
   iss >> name >> x >> y >> z;
@@ -111,15 +110,19 @@ void Sdfloader::create_box(std::istringstream& iss)
   iss >> x >> y >> z;
   glm::vec3 max(x,y,z);
 
-  auto box = make_shared<Shape>(name, ma, min, max);
+  iss >> materialName;
 
-  scene.addBox(name, box);
+  Material* ma = scene.getMaterial(materialName); //get the material and create object
+
+  auto box = std::make_shared<Shape>(name, ma, min, max);
+
+  scene.addShape(name, box);
 }
 
 void Sdfloader::create_sphere(std::istringstream& iss)
 {
   //sphere gets name, middle point vector and name of material
-  std::string name;
+  std::string name, materialName;
   float x,y,z,r;
 
   iss >> name >> x >> y >> z;
@@ -127,7 +130,11 @@ void Sdfloader::create_sphere(std::istringstream& iss)
 
   iss >> r;
 
-  auto sphere = make_shared<Shape>(name, ma, mp, r);
+  iss >> materialName;
+
+  Material* ma = scene.getMaterial(materialName); //get the material and create object
+
+  auto sphere = std::make_shared<Shape>(name, ma, mp, r);
 
   scene.addShape(name, sphere);
 
@@ -152,7 +159,7 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   glm::vec3 up(x,y,z);
 
-  auto camera = make_shared<Camera>(name, fov_x, eye, dir, up);
+  auto camera = std::make_shared<Camera>(name, fov_x, eye, dir, up);
 
   scene.addCam(camera);
 

@@ -165,19 +165,19 @@
 
 //  REQUIRE(box.intersectBox(ray));
 // }
-
-TEST_CASE("sdfloader", "[checkload]")
-{
-	Sdfloader s{};
-
-	std::string p = "../input/input_file.txt";
-	s.readSdf(p);
-
-	REQUIRE(s.scene().materials.size() == 2);
-
-	std::cout << s.scene().materials.find("red")-> second << "\n";
-}
-
+// 
+// TEST_CASE("sdfloader", "[checkload]")
+// {
+	// Sdfloader s{};
+// 
+	// std::string p = "../input/input_file.txt";
+	// s.readSdf(p);
+// 
+	// REQUIRE(s.scene().materials.size() == 2);
+// 
+	// std::cout << s.scene().materials.find("red")-> second << "\n";
+// }
+// 
 
 int main(int argc, char *argv[])
 {

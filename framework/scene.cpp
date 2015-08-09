@@ -1,27 +1,36 @@
 #include <scene.hpp>
 
 Scene::Scene():
-shapes(),
-cam(),
-materials()
+shapes_(),
+cam_(),
+materials_()
 {}
 
 Scene::~Scene()
 {}
 
-Scene::addShape(std::string name, shared_ptr<Shape> shape)
+void Scene::addShape(std::string name, std::shared_ptr<Shape> shape)
 {
-	shapes[name] = shape;
+	shapes_[name] = shape;
 }
 
-addMaterial(str::string name, shared_ptr<material> ma)
+void Scene::addMaterial(std::string name, Material* ma)
 {
-	materials[name] = ma;
+	materials_[name] = ma;
 }
 
-Scene::addCam(std::shared_ptr<material> camera)
+void Scene::addCam(std::shared_ptr<Camera> camera)
 {
-	Cam = camera;
+	cam_ = camera;
+}
+
+Material* Scene::getMaterial(std::string name)
+{
+	auto i = materials_.find(name);
+	if (i != materials_.end()) {
+		return i -> second;
+	}
+	else return new Material();
 }
 // std::ostream& operator<<(std::ostream& output, Scene const& scene)
 // {
