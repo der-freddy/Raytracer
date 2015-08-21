@@ -1,11 +1,10 @@
 #include "shape.hpp"
-#include <string>
-#include <iostream>
+
 
 Shape::Shape():_name{"untitled"} ,_material{}
 {}
 
-Shape::Shape(std::string name, Material const& material): _name{name}, _material{material}
+Shape::Shape(std::string name, Material* material): _name{name}, _material{material}
 {
 	//std::cout << _name << "(Shape) created\n";
 }

@@ -3,6 +3,7 @@
 #include "material.hpp"
 #include <string>
 #include "ray.hpp"
+#include <iostream>
 
 class Shape
 {
@@ -10,7 +11,7 @@ public:
 
 	//Constructor
 	Shape();
-	Shape(std::string name, Material const& material);
+	Shape(std::string name, Material* material);
 	//Destructor
 	virtual ~Shape();
 	
