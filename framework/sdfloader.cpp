@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <iterator>
 #include <string>
+
 Sdfloader::Sdfloader(): scene_{}
 {}
 
@@ -112,11 +113,11 @@ void Sdfloader::create_box(std::istringstream& iss)
 
   iss >> materialName;
 
-  Material* ma = scene.getMaterial(materialName); //get the material and create object
+  Material const& ma = scene_.getMaterial(materialName); //get the material and create object
 
-  std::shared_ptr<Box> box = std::make_shared<Shape>(Box(name, ma, min, max));
+  std::shared_ptr<Shape> box = std::make_shared<Box>(Box(name, ma, min, max));
 
-  scene.addShape(name, box);
+  scene_.addShape(name, box);
 }
 
 void Sdfloader::create_sphere(std::istringstream& iss)
@@ -132,11 +133,11 @@ void Sdfloader::create_sphere(std::istringstream& iss)
 
   iss >> materialName;
 
-  Material* ma = scene.getMaterial(materialName); //get the material and create object
+  Material const& ma = scene_.getMaterial(materialName); //get the material and create object
 
-  std::shared<Sphere> sphere = std::make_shared<Shape>(Sphere(name, ma, mp, r));
+  std::shared_ptr<Shape> sphere = std::make_shared<Sphere>(Sphere(name, ma, mp, r));
 
-  scene.addShape(name, sphere);
+  scene_.addShape(name, sphere);
 
   return ;
 }
@@ -161,7 +162,7 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   auto camera = std::make_shared<Camera>(name, fov_x, eye, dir, up);
 
-  scene.addCam(camera);
+  scene_.addCam(camera);
 
   return ;
 }

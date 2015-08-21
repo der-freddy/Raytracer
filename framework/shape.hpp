@@ -11,7 +11,7 @@ public:
 
 	//Constructor
 	Shape();
-	Shape(std::string name, Material* material);
+	Shape(std::string name, Material const& material);
 	//Destructor
 	virtual ~Shape();
 	

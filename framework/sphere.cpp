@@ -10,7 +10,7 @@ Sphere::Sphere(): Shape{}, _mp{0.0f}, _r{0.0f}
 Sphere::Sphere(glm::vec3 const& mp, double r): Shape{}, _mp{mp}, _r{r}
 {}
 
-Sphere::Sphere(std::string name, Material* material, glm::vec3 const& mp, double r): Shape(name, material), _mp{mp}, _r{r} 
+Sphere::Sphere(std::string name, Material const& material, glm::vec3 const& mp, double r): Shape(name, material), _mp{mp}, _r{r} 
 {
 	//std::cout << _name << "(Sphere) created\n";
 }

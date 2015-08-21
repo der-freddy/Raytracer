@@ -19,14 +19,14 @@ public:
 
  	void addShape(std::string, std::shared_ptr<Shape>);
 
- 	void addMaterial(std::string, Material*);
+ 	void addMaterial(std::string, Material);
 
  	void addCam(std::shared_ptr<Camera>);
 
- 	Material* getMaterial(std::string);
+ 	Material getMaterial(std::string);
 
 private:
-  std::map<std::string, Material*> materials_;
+  std::map<std::string, Material> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;
   std::shared_ptr<Camera> cam_;
 
