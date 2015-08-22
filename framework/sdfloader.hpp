@@ -26,6 +26,7 @@ public:
 	void create_sphere(std::istringstream&);
 	void create_box(std::istringstream&);
 	void create_cam(std::istringstream&);
+	void create_light(std::istringstream&);
 
 private:
 		Scene scene_;

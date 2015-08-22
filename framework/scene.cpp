@@ -3,7 +3,8 @@
 Scene::Scene():
 shapes_(),
 cam_(),
-materials_()
+materials_(),
+lights_()
 {}
 
 Scene::~Scene()
@@ -24,13 +25,18 @@ void Scene::addCam(std::shared_ptr<Camera> camera)
 	cam_ = camera;
 }
 
-Material Scene::getMaterial(std::string name)
+Material Scene::getMaterial(std::string name) const
 {
 	auto i = materials_.find(name);
 	if (i != materials_.end()) {
 		return i -> second;
 	}
 	else return Material{};
+}
+
+void Scene::addLight(std::string name, std::shared_ptr<Light> light)
+{
+	lights_[name] = light;
 }
 // std::ostream& operator<<(std::ostream& output, Scene const& scene)
 // {

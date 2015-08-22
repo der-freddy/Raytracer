@@ -54,13 +54,18 @@ void Sdfloader::readSdf(std::string path)
         }
         else if(sub == "composite")
         {
-          iss >> sub;
           create_composite(iss);
         }
       }
       else if(sub == "light")
       {
-        //create_light(iss);
+        iss >> sub;
+        if(sub == "diffuse")
+        {
+          create_light(iss);
+        }
+        else if(sub == "ambient")
+        {}
       }
       else if(sub == "camera")
       {
@@ -81,7 +86,11 @@ void Sdfloader::readSdf(std::string path)
 
 void::Sdfloader::create_composite(std::istringstream& iss)
 {
-  
+  while(!iss.eof())
+    {
+      iss >> shape;
+
+    }
 }
 
 void Sdfloader::create_material(std::istringstream& iss)
@@ -168,9 +177,26 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   glm::vec3 up(x,y,z);
 
-  std::shared:ptr<Camera> camera = std::make_shared<Camera>(name, fov_x, eye, dir, up);
+  std::shared_ptr<Camera> camera = std::make_shared<Camera>(name, fov_x, eye, dir, up);
 
   scene_.addCam(camera);
 
   return ;
+}
+
+void Sdfloader::create_light(std::istringstream& iss)
+{
+  std::string name;
+  float x,y,z;
+  
+  iss >> name >> x >> y >> z;
+
+  glm::vec3 location{x,y,z};
+
+  iss >> x >> y >> z;
+
+  Color color{x,y,z};
+
+  std::shared_ptr<Light> light = std::make_shared<Light>(name, location, color);
+
 }
