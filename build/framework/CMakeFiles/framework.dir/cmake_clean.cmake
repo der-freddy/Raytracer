@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/framework.dir/glew.c.o"
   "CMakeFiles/framework.dir/pixel.cpp.o"
   "CMakeFiles/framework.dir/window.cpp.o"
+  "CMakeFiles/framework.dir/cylinder.cpp.o"
   "CMakeFiles/framework.dir/light.cpp.o"
   "CMakeFiles/framework.dir/shape.cpp.o"
   "CMakeFiles/framework.dir/camera.cpp.o"

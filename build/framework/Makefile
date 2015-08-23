@@ -239,6 +239,30 @@ cone.cpp.s:
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.s
 .PHONY : cone.cpp.s
 
+cylinder.o: cylinder.cpp.o
+.PHONY : cylinder.o
+
+# target to build an object file
+cylinder.cpp.o:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.o
+.PHONY : cylinder.cpp.o
+
+cylinder.i: cylinder.cpp.i
+.PHONY : cylinder.i
+
+# target to preprocess a source file
+cylinder.cpp.i:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.i
+.PHONY : cylinder.cpp.i
+
+cylinder.s: cylinder.cpp.s
+.PHONY : cylinder.s
+
+# target to generate assembly for a file
+cylinder.cpp.s:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.s
+.PHONY : cylinder.cpp.s
+
 glew.o: glew.c.o
 .PHONY : glew.o
 
@@ -526,6 +550,9 @@ help:
 	@echo "... cone.o"
 	@echo "... cone.i"
 	@echo "... cone.s"
+	@echo "... cylinder.o"
+	@echo "... cylinder.i"
+	@echo "... cylinder.s"
 	@echo "... glew.o"
 	@echo "... glew.i"
 	@echo "... glew.s"
