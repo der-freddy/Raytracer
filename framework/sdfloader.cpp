@@ -54,7 +54,7 @@ void Sdfloader::readSdf(std::string path)
         }
         else if(sub == "composite")
         {
-          create_composite(iss);
+          //create_composite(iss);
         }
       }
       else if(sub == "light")
@@ -65,7 +65,9 @@ void Sdfloader::readSdf(std::string path)
           create_light(iss);
         }
         else if(sub == "ambient")
-        {}
+        {
+
+        }
       }
       else if(sub == "camera")
       {
@@ -84,14 +86,14 @@ void Sdfloader::readSdf(std::string path)
 
 }
 
-void::Sdfloader::create_composite(std::istringstream& iss)
-{
-  while(!iss.eof())
-    {
-      iss >> shape;
+// void::Sdfloader::create_composite(std::istringstream& iss)
+// {
+//   while(!iss.eof())
+//     {
+//       iss >> shape;
 
-    }
-}
+//     }
+// }
 
 void Sdfloader::create_material(std::istringstream& iss)
 {
@@ -113,8 +115,6 @@ void Sdfloader::create_material(std::istringstream& iss)
 
   return ;
 }
-
-
 
 void Sdfloader::create_box(std::istringstream& iss)
 {
@@ -186,6 +186,7 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
 void Sdfloader::create_light(std::istringstream& iss)
 {
+  //creation of 
   std::string name;
   float x,y,z;
   
