@@ -8,6 +8,7 @@
 #include <camera.hpp>
 #include <string>
 #include <tr1/memory>
+#include <light.hpp>
 
 class Scene
 {

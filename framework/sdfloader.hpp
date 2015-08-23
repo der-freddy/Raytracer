@@ -9,6 +9,7 @@
 #include <box.hpp>
 #include <sphere.hpp>
 #include <camera.hpp>
+#include <light.hpp>
 
 class Sdfloader
 {
@@ -21,7 +22,7 @@ public:
 	Scene const& scene() const;
 
 	void readSdf(std::string path);
-	void create_composite(std::istringstream&);
+	//void create_composite(std::istringstream&);
 	void create_material(std::istringstream&);
 	void create_sphere(std::istringstream&);
 	void create_box(std::istringstream&);

@@ -263,6 +263,30 @@ glew.c.s:
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.s
 .PHONY : glew.c.s
 
+light.o: light.cpp.o
+.PHONY : light.o
+
+# target to build an object file
+light.cpp.o:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.o
+.PHONY : light.cpp.o
+
+light.i: light.cpp.i
+.PHONY : light.i
+
+# target to preprocess a source file
+light.cpp.i:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.i
+.PHONY : light.cpp.i
+
+light.s: light.cpp.s
+.PHONY : light.s
+
+# target to generate assembly for a file
+light.cpp.s:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.s
+.PHONY : light.cpp.s
+
 material.o: material.cpp.o
 .PHONY : material.o
 
@@ -505,6 +529,9 @@ help:
 	@echo "... glew.o"
 	@echo "... glew.i"
 	@echo "... glew.s"
+	@echo "... light.o"
+	@echo "... light.i"
+	@echo "... light.s"
 	@echo "... material.o"
 	@echo "... material.i"
 	@echo "... material.s"

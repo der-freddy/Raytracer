@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/camera.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/camera.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cone.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/cone.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/light.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/light.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/material.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
