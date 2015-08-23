@@ -9,14 +9,15 @@
 
 
 
-class Box : public Shape
+class Cone : public Shape
 {	
 	public:
 	//Constructor
 	Cone();
-	Cone(glm::vec3 const&, float, float);
-	Cone(std::string name, Material* material, glm::vec3 const&, float, float);
+	Cone(glm::vec3 const& mp, float const& r, float const& height);
+	Cone(std::string name, Material const& material, glm::vec3 const& mp, float const& r, float const& height);
 	~Cone();
+	
 	glm::vec3 mp() const;
 
 	glm::vec3 radius() const;
