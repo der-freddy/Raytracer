@@ -1,25 +1,23 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec2660378116/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2660378116.dir/build.make CMakeFiles/cmTryCompileExec2660378116.dir/build
-make[1]: Entering directory '/home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2660378116.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2660378116.dir/CheckSymbolExists.c.o   -c /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec2660378116
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2660378116.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec2660378116.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2660378116 -rdynamic 
-CMakeFiles/cmTryCompileExec2660378116.dir/CheckSymbolExists.c.o: In Funktion `main':
-CheckSymbolExists.c:(.text+0x16): Nicht definierter Verweis auf `pthread_create'
+Run Build Command:/usr/bin/make "cmTryCompileExec1222606350/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1222606350.dir/build.make CMakeFiles/cmTryCompileExec1222606350.dir/build
+make[1]: Entering directory `/home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1222606350.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1222606350.dir/CheckSymbolExists.c.o   -c /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1222606350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1222606350.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1222606350.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1222606350 -rdynamic 
+CMakeFiles/cmTryCompileExec1222606350.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTryCompileExec2660378116.dir/build.make:88: recipe for target 'cmTryCompileExec2660378116' failed
-make[1]: *** [cmTryCompileExec2660378116] Error 1
-make[1]: Leaving directory '/home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp'
-Makefile:118: recipe for target 'cmTryCompileExec2660378116/fast' failed
-make: *** [cmTryCompileExec2660378116/fast] Error 2
+make[1]: Leaving directory `/home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1222606350] Error 1
+make: *** [cmTryCompileExec1222606350/fast] Error 2
 
-File /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -35,45 +33,41 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1624876012/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1624876012.dir/build.make CMakeFiles/cmTryCompileExec1624876012.dir/build
-make[1]: Entering directory '/home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1624876012.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1624876012.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1624876012
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1624876012.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1624876012.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1624876012 -rdynamic -lpthreads 
+Run Build Command:/usr/bin/make "cmTryCompileExec3579076651/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3579076651.dir/build.make CMakeFiles/cmTryCompileExec3579076651.dir/build
+make[1]: Entering directory `/home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3579076651.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3579076651.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3579076651
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3579076651.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3579076651.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3579076651 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTryCompileExec1624876012.dir/build.make:88: recipe for target 'cmTryCompileExec1624876012' failed
-make[1]: Leaving directory '/home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec1624876012] Error 1
-Makefile:118: recipe for target 'cmTryCompileExec1624876012/fast' failed
-make: *** [cmTryCompileExec1624876012/fast] Error 2
+make[1]: Leaving directory `/home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3579076651] Error 1
+make: *** [cmTryCompileExec3579076651/fast] Error 2
 
 
 Determining if the function glXGetProcAddressEXT exists failed with the following output:
-Change Dir: /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1688498813/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1688498813.dir/build.make CMakeFiles/cmTryCompileExec1688498813.dir/build
-make[1]: Entering directory '/home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1688498813.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTryCompileExec1688498813.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1688498813
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1688498813.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTryCompileExec1688498813.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1688498813 -rdynamic -lGL 
-CMakeFiles/cmTryCompileExec1688498813.dir/CheckFunctionExists.c.o: In Funktion `main':
-CheckFunctionExists.c:(.text+0x15): Nicht definierter Verweis auf `glXGetProcAddressEXT'
+Run Build Command:/usr/bin/make "cmTryCompileExec3781388963/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3781388963.dir/build.make CMakeFiles/cmTryCompileExec3781388963.dir/build
+make[1]: Entering directory `/home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3781388963.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTryCompileExec3781388963.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3781388963
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3781388963.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTryCompileExec3781388963.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3781388963 -rdynamic -lGL 
+CMakeFiles/cmTryCompileExec3781388963.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `glXGetProcAddressEXT'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTryCompileExec1688498813.dir/build.make:89: recipe for target 'cmTryCompileExec1688498813' failed
-make[1]: Leaving directory '/home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec1688498813] Error 1
-Makefile:118: recipe for target 'cmTryCompileExec1688498813/fast' failed
-make: *** [cmTryCompileExec1688498813/fast] Error 2
+make[1]: Leaving directory `/home/hans/Desktop/Raytracer/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3781388963] Error 1
+make: *** [cmTryCompileExec3781388963/fast] Error 2
 
 

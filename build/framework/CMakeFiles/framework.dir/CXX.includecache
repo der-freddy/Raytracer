@@ -586,56 +586,15 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
-<<<<<<< HEAD
-/home/hans/Desktop/Raytracer/framework/color.hpp
-iostream
--
-
-/home/hans/Desktop/Raytracer/framework/pixel.hpp
-iosfwd
--
-color.hpp
--
-
-/home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
-string
--
-vector
--
-pixel.hpp
--
-
-/home/hans/Desktop/Raytracer/framework/ray.hpp
-glm/glm.hpp
--
-
-/home/hans/Desktop/Raytracer/framework/renderer.cpp
-renderer.hpp
-/home/hans/Desktop/Raytracer/framework/renderer.hpp
-
-/home/hans/Desktop/Raytracer/framework/renderer.hpp
-color.hpp
-/home/hans/Desktop/Raytracer/framework/color.hpp
-pixel.hpp
-/home/hans/Desktop/Raytracer/framework/pixel.hpp
-ppmwriter.hpp
-/home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
-string
--
-glm/glm.hpp
--
-ray.hpp
-/home/hans/Desktop/Raytracer/framework/ray.hpp
-=======
 ../framework/color.hpp
 iostream
 -
 
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cone.cpp
+/home/hans/Desktop/Raytracer/framework/cone.cpp
 cone.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cone.hpp
+/home/hans/Desktop/Raytracer/framework/cone.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cone.hpp
+/home/hans/Desktop/Raytracer/framework/cone.hpp
 glm/vec3.hpp
 -
 stdlib.h
@@ -645,11 +604,11 @@ string
 algorithm
 -
 shape.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
+/home/hans/Desktop/Raytracer/framework/shape.hpp
 ray.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+/home/hans/Desktop/Raytracer/framework/ray.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
+/home/hans/Desktop/Raytracer/framework/material.hpp
 string
 -
 iostream
@@ -657,18 +616,17 @@ iostream
 color.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+/home/hans/Desktop/Raytracer/framework/ray.hpp
 glm/glm.hpp
 -
 
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/shape.hpp
+/home/hans/Desktop/Raytracer/framework/shape.hpp
 material.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/material.hpp
+/home/hans/Desktop/Raytracer/framework/material.hpp
 string
 -
 ray.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+/home/hans/Desktop/Raytracer/framework/ray.hpp
 iostream
 -
->>>>>>> dev_composite
 
