@@ -1,10 +1,10 @@
-Start testing: Aug 24 13:52 CEST
+Start testing: Aug 24 14:05 CEST
 ----------------------------------------------------------
 1/1 Testing: tests
 1/1 Test: tests
 Command: "/home/hans/Desktop/Raytracer/build/build/Release/tests"
 Directory: /home/hans/Desktop/Raytracer/build
-"tests" start time: Aug 24 13:52 CEST
+"tests" start time: Aug 24 14:05 CEST
 Output:
 ----------------------------------------------------------
 ===============================================================================
@@ -14,8 +14,8 @@ No tests ran
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"tests" end time: Aug 24 13:52 CEST
+"tests" end time: Aug 24 14:05 CEST
 "tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 24 13:52 CEST
+End testing: Aug 24 14:05 CEST
