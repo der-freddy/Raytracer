@@ -111,9 +111,9 @@ void Sdfloader::create_material(std::istringstream& iss)
 
   iss >> m;
   
-  std::shared_ptr<Material> material = std::make_shared<Material>(Material(name, ka, kd, ks, m));
+  Material material = Material(name, ka, kd, ks, m);
 
-  return ;
+  scene_.addMaterial(name, material);
 }
 
 void Sdfloader::create_box(std::istringstream& iss)
@@ -130,7 +130,7 @@ void Sdfloader::create_box(std::istringstream& iss)
 
   iss >> materialName;
 
-  Material const& ma = scene_.getMaterial(materialName); //get the material and create object
+  std::shared_ptr<Material> ma = scene_.getMaterial(materialName); //get the material and create object
 
   std::shared_ptr<Shape> box = std::make_shared<Box>(Box(name, ma, min, max));
 
@@ -150,7 +150,7 @@ void Sdfloader::create_sphere(std::istringstream& iss)
 
   iss >> materialName;
 
-  Material const& ma = scene_.getMaterial(materialName); //get the material and create object
+  std::shared_ptr<Material> ma = scene_.getMaterial(materialName); //get the material and create object
 
   std::shared_ptr<Shape> sphere = std::make_shared<Sphere>(Sphere(name, ma, mp, r));
 

@@ -25,13 +25,13 @@ void Scene::addCam(std::shared_ptr<Camera> camera)
 	cam_ = camera;
 }
 
-Material Scene::getMaterial(std::string name) const
+std::shared_ptr<Material> Scene::getMaterial(std::string name) const
 {
 	auto i = materials_.find(name);
 	if (i != materials_.end()) {
-		return i -> second;
+		return std::make_shared<Material> i -> second;
 	}
-	else return Material{};
+	//else return Material{};
 }
 
 std::map<std::string, Material> Scene::material() const

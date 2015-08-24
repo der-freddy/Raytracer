@@ -4,7 +4,7 @@
 Shape::Shape():_name{"untitled"} ,_material{}
 {}
 
-Shape::Shape(std::string name, Material const& material): _name{name}, _material{material}
+Shape::Shape(std::string name, std::shared_ptr<Material> material): _name{name}, _material{material}
 {
 	//std::cout << _name << "(Shape) created\n";
 }
@@ -14,7 +14,7 @@ Shape::~Shape()
 	//std::cout << _name <<"(Shape) destroyed\n";
 }
 
-Material Shape::material() const
+std::shared_ptr<Material> Shape::material() const
 {
 	return _material;
 }

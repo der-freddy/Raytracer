@@ -4,6 +4,7 @@
 #include <string>
 #include "ray.hpp"
 #include <iostream>
+#include <memory>
 
 class Shape
 {
@@ -11,7 +12,7 @@ public:
 
 	//Constructor
 	Shape();
-	Shape(std::string name, Material const& material);
+	Shape(std::string name, std::shared_ptr<Material> material);
 	//Destructor
 	virtual ~Shape();
 	
@@ -19,7 +20,7 @@ public:
 
 	virtual double volume() const = 0;
 
-	Material material() const;
+	std::shared_ptr<Material> material() const;
 
 	std::string name() const;
 
@@ -29,7 +30,7 @@ private:
 
 protected:
 	std::string _name;
-	Material _material;
+	std::shared_ptr<Material> _material;
 
 };
 

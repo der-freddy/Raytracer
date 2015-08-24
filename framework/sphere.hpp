@@ -6,7 +6,6 @@
 #include "shape.hpp"
 
 
-
 class Sphere : public Shape
 {	
 	public:
@@ -14,7 +13,7 @@ class Sphere : public Shape
 		Sphere();
 		~Sphere();
 		Sphere(glm::vec3 const& mp, double r);
-		Sphere(std::string name, Material const& material, glm::vec3 const& mp, double r);
+		Sphere(std::string name, std::shared_ptr<Material> material, glm::vec3 const& mp, double r);
 
 		glm::vec3 mp() const;
 

@@ -24,11 +24,9 @@ public:
 
  	void addCam(std::shared_ptr<Camera>);
 
- 	Material getMaterial(std::string) const;
+ 	std::shared_ptr<Material> getMaterial(std::string) const;
 
  	void addLight(std::string, std::shared_ptr<Light>);
-
- 	std::map<std::string, Material> material() const;
 
 private:
   std::map<std::string, Material> materials_;

@@ -18,7 +18,7 @@ r_{r},
 height_{height}
 {}
 
-Cylinder::Cylinder(std::string name , Material const& material, glm::vec3 const& mp, float const& r, float const& height):
+Cylinder::Cylinder(std::string name , std::shared_ptr<Material> material, glm::vec3 const& mp, float const& r, float const& height):
 Shape{name, material},
 mp_{mp},
 r_{r},
