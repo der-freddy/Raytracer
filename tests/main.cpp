@@ -178,6 +178,10 @@ TEST_CASE("sdfloader", "[checkload]")
 	REQUIRE(s.scene().shapes_.size() == 1);
 
 	REQUIRE(s.scene().lights_.size() == 1);
+
+	REQUIRE(s.scene().cam_.getName() == "eye");
+
+
 }
 
 

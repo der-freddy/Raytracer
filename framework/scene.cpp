@@ -20,7 +20,7 @@ void Scene::addMaterial(std::string name, Material ma)
 	materials_[name] = std::make_shared<Material>(ma);
 }
 
-void Scene::addCam(std::shared_ptr<Camera> camera)
+void Scene::addCam(Camera camera)
 {
 	cam_ = camera;
 }

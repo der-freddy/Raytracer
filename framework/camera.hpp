@@ -12,7 +12,7 @@ public:
 	Camera();
 	Camera(std::string name, double fov_x, glm::vec3 eye, glm::vec3 dir, glm::vec3 up);
 	~Camera();
-	std::string getName();
+	std::string getName() const ;
 	double getFov_x();
 	glm::vec3 getEye();
 	glm::vec3 getDir();

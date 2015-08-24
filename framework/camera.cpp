@@ -19,7 +19,7 @@ up_(up)
 Camera::~Camera()
 {}
 
-std::string Camera::getName()
+std::string Camera::getName() const
 {
 	return name_;
 }

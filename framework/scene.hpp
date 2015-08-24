@@ -22,7 +22,7 @@ public:
 
  	void addMaterial(std::string, Material);
 
- 	void addCam(std::shared_ptr<Camera>);
+ 	void addCam(Camera);
 
  	std::shared_ptr<Material> getMaterial(std::string) const;
 
@@ -33,7 +33,7 @@ public:
 // private:
   std::map<std::string, std::shared_ptr<Material>> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;
-  std::shared_ptr<Camera> cam_;
+  Camera cam_;
   std::map<std::string, std::shared_ptr<Light>> lights_;
 };
 

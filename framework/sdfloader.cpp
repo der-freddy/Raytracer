@@ -71,7 +71,7 @@ void Sdfloader::readSdf(std::string path)
       }
       else if(sub == "camera")
       {
-        //create_cam(iss);
+        create_cam(iss);
       }
 
 
@@ -181,7 +181,9 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   glm::vec3 up(x,y,z);
 
-  std::shared_ptr<Camera> camera = std::make_shared<Camera>(name, fov_x, eye, dir, up);
+  //std::shared_ptr<Camera> camera = std::make_shared<Camera>(name, fov_x, eye, dir, up);
+
+  Camera camera = Camera(name, fov_x, eye, dir, up);
 
   scene_.addCam(camera);
 
