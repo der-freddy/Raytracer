@@ -28,8 +28,10 @@ public:
 
  	void addLight(std::string, std::shared_ptr<Light>);
 
+ 	std::map<std::string, std::shared_ptr<Material>> material() const;
+
 private:
-  std::map<std::string, Material> materials_;
+  std::map<std::string, std::shared_ptr<Material>> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;
   std::shared_ptr<Camera> cam_;
   std::map<std::string, std::shared_ptr<Light>> lights_;

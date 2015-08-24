@@ -214,30 +214,6 @@ camera.cpp.s:
 	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
-cone.o: cone.cpp.o
-.PHONY : cone.o
-
-# target to build an object file
-cone.cpp.o:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.o
-.PHONY : cone.cpp.o
-
-cone.i: cone.cpp.i
-.PHONY : cone.i
-
-# target to preprocess a source file
-cone.cpp.i:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.i
-.PHONY : cone.cpp.i
-
-cone.s: cone.cpp.s
-.PHONY : cone.s
-
-# target to generate assembly for a file
-cone.cpp.s:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.s
-.PHONY : cone.cpp.s
-
 cylinder.o: cylinder.cpp.o
 .PHONY : cylinder.o
 
@@ -570,9 +546,6 @@ help:
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
-	@echo "... cone.o"
-	@echo "... cone.i"
-	@echo "... cone.s"
 	@echo "... cylinder.o"
 	@echo "... cylinder.i"
 	@echo "... cylinder.s"

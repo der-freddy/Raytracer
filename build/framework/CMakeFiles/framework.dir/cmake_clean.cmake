@@ -12,7 +12,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/framework.dir/cylinder.cpp.o"
   "CMakeFiles/framework.dir/light.cpp.o"
   "CMakeFiles/framework.dir/scene.cpp.o"
-  "CMakeFiles/framework.dir/cone.cpp.o"
   "CMakeFiles/framework.dir/camera.cpp.o"
   "CMakeFiles/framework.dir/ppmwriter.cpp.o"
   "libframework.pdb"

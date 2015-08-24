@@ -17,7 +17,7 @@ void Scene::addShape(std::string name, std::shared_ptr<Shape> shape)
 
 void Scene::addMaterial(std::string name, Material ma)
 {
-	materials_[name] = ma;
+	materials_[name] = std::make_shared<Material>(ma);
 }
 
 void Scene::addCam(std::shared_ptr<Camera> camera)
@@ -29,12 +29,12 @@ std::shared_ptr<Material> Scene::getMaterial(std::string name) const
 {
 	auto i = materials_.find(name);
 	if (i != materials_.end()) {
-		return std::make_shared<Material> i -> second;
+		return i -> second;
 	}
 	//else return Material{};
 }
 
-std::map<std::string, Material> Scene::material() const
+std::map<std::string, std::shared_ptr<Material>> Scene::material() const
 {
 	return materials_;
 }
