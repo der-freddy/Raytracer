@@ -426,6 +426,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/v
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/color.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/pixel.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ppmwriter.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ray.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.hpp
 

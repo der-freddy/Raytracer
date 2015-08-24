@@ -85,6 +85,7 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/color.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/fensterchen.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/pixel.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/ppmwriter.hpp
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/ray.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/renderer.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../framework/window.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../source/raytracer.cpp

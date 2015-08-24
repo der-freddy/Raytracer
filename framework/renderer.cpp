@@ -50,4 +50,15 @@ void Renderer::write(Pixel const& p)
   }
 
   ppm_.write(p);
+
+// Color Renderer::raytrace(Ray const& ray, Color color, int depth)
+// {
+//   Hit closestIntersec{scene->allObjects->closestIntersec(ray)}
+//     if(closestIntersec.hit_== true)
+//     {
+//       color = closestIntersec.shape_.material.irgendwas;
+//     }
+//     return color;
+// }
+
 }

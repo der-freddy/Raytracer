@@ -427,6 +427,7 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  /home/hans/Desktop/Raytracer/framework/color.hpp
  /home/hans/Desktop/Raytracer/framework/pixel.hpp
  /home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
+ /home/hans/Desktop/Raytracer/framework/ray.hpp
  /home/hans/Desktop/Raytracer/framework/renderer.cpp
  /home/hans/Desktop/Raytracer/framework/renderer.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o

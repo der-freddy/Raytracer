@@ -15,6 +15,7 @@
 #include "ppmwriter.hpp"
 #include <string>
 #include <glm/glm.hpp>
+#include "ray.hpp"
 
 class Renderer
 {
@@ -28,6 +29,8 @@ public:
   {
     return colorbuffer_;
   }
+
+  Color raytrace(Ray const& ray, Color color, int depth);
 
 private:
   unsigned width_;

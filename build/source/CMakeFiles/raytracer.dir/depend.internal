@@ -86,6 +86,7 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o
  ../framework/fensterchen.hpp
  ../framework/pixel.hpp
  ../framework/ppmwriter.hpp
+ ../framework/ray.hpp
  ../framework/renderer.hpp
  ../framework/window.hpp
  /home/hans/Desktop/Raytracer/source/raytracer.cpp

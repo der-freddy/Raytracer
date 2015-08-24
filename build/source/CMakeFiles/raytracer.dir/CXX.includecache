@@ -654,6 +654,10 @@ vector
 pixel.hpp
 -
 
+../framework/ray.hpp
+glm/glm.hpp
+-
+
 ../framework/renderer.hpp
 color.hpp
 ../framework/color.hpp
@@ -665,6 +669,8 @@ string
 -
 glm/glm.hpp
 -
+ray.hpp
+../framework/ray.hpp
 
 ../framework/window.hpp
 color.hpp
