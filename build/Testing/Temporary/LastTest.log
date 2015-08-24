@@ -1,23 +1,25 @@
-Start testing: Aug 24 15:44 CEST
+Start testing: Aug 24 16:29 CEST
 ----------------------------------------------------------
 1/1 Testing: tests
 1/1 Test: tests
-Command: "/home/hans/Desktop/Raytracer/build/build/Release/tests"
-Directory: /home/hans/Desktop/Raytracer/build
-"tests" start time: Aug 24 15:44 CEST
+Command: "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/build/Release/tests"
+Directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/build
+"tests" start time: Aug 24 16:29 CEST
 Output:
 ----------------------------------------------------------
-hi1
-true0xf66878
+Material added
+Box added
+Light added
+1
 ===============================================================================
-All tests passed (1 assertion in 1 test case)
+All tests passed (3 assertions in 1 test case)
 
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"tests" end time: Aug 24 15:44 CEST
+"tests" end time: Aug 24 16:29 CEST
 "tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 24 15:44 CEST
+End testing: Aug 24 16:29 CEST

@@ -14,7 +14,7 @@ class Cone : public Shape
 	public:
 	//Constructor
 	Cone();
-	Cone(std::string name, Material const& material, glm::vec3 const& mp, float const& r, float const& height);
+	Cone(std::string name, std::shared_ptr<Material> material, glm::vec3 const& mp, float const& r, float const& height);
 	~Cone();
 	
 	glm::vec3 mp() const;

@@ -44,11 +44,11 @@ void Sdfloader::readSdf(std::string path)
       {
         iss >> sub;
         
-        if(sub == "Sphere")
+        if(sub == "sphere")
         {
           create_sphere(iss);
         }
-        else if(sub == "Box")
+        else if(sub == "box")
         {
           create_box(iss);
         }
@@ -114,6 +114,8 @@ void Sdfloader::create_material(std::istringstream& iss)
   Material material = Material(name, ka, kd, ks, m);
 
   scene_.addMaterial(name, material);
+
+    std::cout << "Material added" << std::endl;
 }
 
 void Sdfloader::create_box(std::istringstream& iss)
@@ -135,6 +137,8 @@ void Sdfloader::create_box(std::istringstream& iss)
   std::shared_ptr<Shape> box = std::make_shared<Box>(Box(name, ma, min, max));
 
   scene_.addShape(name, box);
+
+  std::cout << "Box added" << std::endl;
 }
 
 void Sdfloader::create_sphere(std::istringstream& iss)
@@ -156,7 +160,7 @@ void Sdfloader::create_sphere(std::istringstream& iss)
 
   scene_.addShape(name, sphere);
 
-  return ;
+  std::cout << "Sphere added" << std::endl;
 }
 
 void Sdfloader::create_cam(std::istringstream& iss)
@@ -181,7 +185,7 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   scene_.addCam(camera);
 
-  return ;
+  std::cout << "Cam added" << std::endl;
 }
 
 void Sdfloader::create_light(std::istringstream& iss)
@@ -199,5 +203,9 @@ void Sdfloader::create_light(std::istringstream& iss)
   Color color{x,y,z};
 
   std::shared_ptr<Light> light = std::make_shared<Light>(name, location, color);
+
+  scene_.addLight(name, light);
+
+  std::cout << "Light added" << std::endl;
 
 }

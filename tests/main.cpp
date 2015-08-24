@@ -168,23 +168,16 @@
 // 
 TEST_CASE("sdfloader", "[checkload]")
 {
-	std::cout << "hi";
-
 	Sdfloader s{};
 
 	std::string p = "../framework/input/sdf_test.txt";
 	s.readSdf(p);
 
-	std::cout << s.scene().material().size() << std::endl;
-
 	REQUIRE(s.scene().material().size() == 1);
 
-	if(s.scene().material().size() == 1)
-	{
-		std::cout << "true";
-	}
+	REQUIRE(s.scene().shapes_.size() == 1);
 
-	std::cout << s.scene().material().find("red")-> second << "\n";
+	REQUIRE(s.scene().lights_.size() == 1);
 }
 
 

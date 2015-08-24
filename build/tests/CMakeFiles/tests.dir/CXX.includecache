@@ -936,7 +936,7 @@ glm/vec3.hpp
 shape.hpp
 ../framework/shape.hpp
 
-/home/hans/Desktop/Raytracer/tests/main.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp
 catch.hpp
 -
 glm/vec3.hpp
@@ -946,11 +946,11 @@ glm/glm.hpp
 glm/gtx/intersect.hpp
 -
 sphere.hpp
-/home/hans/Desktop/Raytracer/tests/sphere.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/sphere.hpp
 box.hpp
-/home/hans/Desktop/Raytracer/tests/box.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/box.hpp
 iostream
 -
 sdfloader.hpp
-/home/hans/Desktop/Raytracer/tests/sdfloader.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/sdfloader.hpp
 
