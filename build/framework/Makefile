@@ -214,6 +214,30 @@ camera.cpp.s:
 	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
+cone.o: cone.cpp.o
+.PHONY : cone.o
+
+# target to build an object file
+cone.cpp.o:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.o
+.PHONY : cone.cpp.o
+
+cone.i: cone.cpp.i
+.PHONY : cone.i
+
+# target to preprocess a source file
+cone.cpp.i:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.i
+.PHONY : cone.cpp.i
+
+cone.s: cone.cpp.s
+.PHONY : cone.s
+
+# target to generate assembly for a file
+cone.cpp.s:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.s
+.PHONY : cone.cpp.s
+
 glew.o: glew.c.o
 .PHONY : glew.o
 
@@ -237,6 +261,30 @@ glew.s: glew.c.s
 glew.c.s:
 	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.s
 .PHONY : glew.c.s
+
+hit.o: hit.cpp.o
+.PHONY : hit.o
+
+# target to build an object file
+hit.cpp.o:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.o
+.PHONY : hit.cpp.o
+
+hit.i: hit.cpp.i
+.PHONY : hit.i
+
+# target to preprocess a source file
+hit.cpp.i:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.i
+.PHONY : hit.cpp.i
+
+hit.s: hit.cpp.s
+.PHONY : hit.s
+
+# target to generate assembly for a file
+hit.cpp.s:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.s
+.PHONY : hit.cpp.s
 
 material.o: material.cpp.o
 .PHONY : material.o
@@ -474,9 +522,15 @@ help:
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
+	@echo "... cone.o"
+	@echo "... cone.i"
+	@echo "... cone.s"
 	@echo "... glew.o"
 	@echo "... glew.i"
 	@echo "... glew.s"
+	@echo "... hit.o"
+	@echo "... hit.i"
+	@echo "... hit.s"
 	@echo "... material.o"
 	@echo "... material.i"
 	@echo "... material.s"

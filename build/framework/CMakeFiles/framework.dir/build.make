@@ -75,55 +75,9 @@ framework/CMakeFiles/framework.dir/glew.c.o.provides: framework/CMakeFiles/frame
 
 framework/CMakeFiles/framework.dir/glew.c.o.provides.build: framework/CMakeFiles/framework.dir/glew.c.o
 
-framework/CMakeFiles/framework.dir/material.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/material.cpp.o: ../framework/material.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/material.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/material.cpp.o -c /home/hans/Desktop/Raytracer/framework/material.cpp
-
-framework/CMakeFiles/framework.dir/material.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/material.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/material.cpp > CMakeFiles/framework.dir/material.cpp.i
-
-framework/CMakeFiles/framework.dir/material.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/material.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/material.cpp -o CMakeFiles/framework.dir/material.cpp.s
-
-framework/CMakeFiles/framework.dir/material.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/material.cpp.o.requires
-
-framework/CMakeFiles/framework.dir/material.cpp.o.provides: framework/CMakeFiles/framework.dir/material.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/material.cpp.o.provides
-
-framework/CMakeFiles/framework.dir/material.cpp.o.provides.build: framework/CMakeFiles/framework.dir/material.cpp.o
-
-framework/CMakeFiles/framework.dir/pixel.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/pixel.cpp.o: ../framework/pixel.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/pixel.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/pixel.cpp.o -c /home/hans/Desktop/Raytracer/framework/pixel.cpp
-
-framework/CMakeFiles/framework.dir/pixel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/pixel.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/pixel.cpp > CMakeFiles/framework.dir/pixel.cpp.i
-
-framework/CMakeFiles/framework.dir/pixel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/pixel.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/pixel.cpp -o CMakeFiles/framework.dir/pixel.cpp.s
-
-framework/CMakeFiles/framework.dir/pixel.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
-
-framework/CMakeFiles/framework.dir/pixel.cpp.o.provides: framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/pixel.cpp.o.provides
-
-framework/CMakeFiles/framework.dir/pixel.cpp.o.provides.build: framework/CMakeFiles/framework.dir/pixel.cpp.o
-
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/sdfloader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/sdfloader.cpp.o"
 	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/sdfloader.cpp.o -c /home/hans/Desktop/Raytracer/framework/sdfloader.cpp
 
@@ -144,78 +98,9 @@ framework/CMakeFiles/framework.dir/sdfloader.cpp.o.provides: framework/CMakeFile
 
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o.provides.build: framework/CMakeFiles/framework.dir/sdfloader.cpp.o
 
-framework/CMakeFiles/framework.dir/box.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/box.cpp.o -c /home/hans/Desktop/Raytracer/framework/box.cpp
-
-framework/CMakeFiles/framework.dir/box.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/box.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/box.cpp > CMakeFiles/framework.dir/box.cpp.i
-
-framework/CMakeFiles/framework.dir/box.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/box.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/box.cpp -o CMakeFiles/framework.dir/box.cpp.s
-
-framework/CMakeFiles/framework.dir/box.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/box.cpp.o.requires
-
-framework/CMakeFiles/framework.dir/box.cpp.o.provides: framework/CMakeFiles/framework.dir/box.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/box.cpp.o.provides
-
-framework/CMakeFiles/framework.dir/box.cpp.o.provides.build: framework/CMakeFiles/framework.dir/box.cpp.o
-
-framework/CMakeFiles/framework.dir/renderer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/renderer.cpp.o -c /home/hans/Desktop/Raytracer/framework/renderer.cpp
-
-framework/CMakeFiles/framework.dir/renderer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/renderer.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/renderer.cpp > CMakeFiles/framework.dir/renderer.cpp.i
-
-framework/CMakeFiles/framework.dir/renderer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/renderer.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/renderer.cpp -o CMakeFiles/framework.dir/renderer.cpp.s
-
-framework/CMakeFiles/framework.dir/renderer.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
-
-framework/CMakeFiles/framework.dir/renderer.cpp.o.provides: framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/renderer.cpp.o.provides
-
-framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build: framework/CMakeFiles/framework.dir/renderer.cpp.o
-
-framework/CMakeFiles/framework.dir/shape.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/shape.cpp.o: ../framework/shape.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/shape.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/shape.cpp.o -c /home/hans/Desktop/Raytracer/framework/shape.cpp
-
-framework/CMakeFiles/framework.dir/shape.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/shape.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/shape.cpp > CMakeFiles/framework.dir/shape.cpp.i
-
-framework/CMakeFiles/framework.dir/shape.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/shape.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/shape.cpp -o CMakeFiles/framework.dir/shape.cpp.s
-
-framework/CMakeFiles/framework.dir/shape.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/shape.cpp.o.requires
-
-framework/CMakeFiles/framework.dir/shape.cpp.o.provides: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/shape.cpp.o.provides
-
-framework/CMakeFiles/framework.dir/shape.cpp.o.provides.build: framework/CMakeFiles/framework.dir/shape.cpp.o
-
 framework/CMakeFiles/framework.dir/window.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/window.cpp.o: ../framework/window.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o"
 	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/window.cpp.o -c /home/hans/Desktop/Raytracer/framework/window.cpp
 
@@ -235,6 +120,121 @@ framework/CMakeFiles/framework.dir/window.cpp.o.provides: framework/CMakeFiles/f
 .PHONY : framework/CMakeFiles/framework.dir/window.cpp.o.provides
 
 framework/CMakeFiles/framework.dir/window.cpp.o.provides.build: framework/CMakeFiles/framework.dir/window.cpp.o
+
+framework/CMakeFiles/framework.dir/pixel.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/pixel.cpp.o: ../framework/pixel.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/pixel.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/pixel.cpp.o -c /home/hans/Desktop/Raytracer/framework/pixel.cpp
+
+framework/CMakeFiles/framework.dir/pixel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/pixel.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/pixel.cpp > CMakeFiles/framework.dir/pixel.cpp.i
+
+framework/CMakeFiles/framework.dir/pixel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/pixel.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/pixel.cpp -o CMakeFiles/framework.dir/pixel.cpp.s
+
+framework/CMakeFiles/framework.dir/pixel.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/pixel.cpp.o.provides: framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/pixel.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/pixel.cpp.o.provides.build: framework/CMakeFiles/framework.dir/pixel.cpp.o
+
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/ppmwriter.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ppmwriter.cpp.o -c /home/hans/Desktop/Raytracer/framework/ppmwriter.cpp
+
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ppmwriter.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/ppmwriter.cpp > CMakeFiles/framework.dir/ppmwriter.cpp.i
+
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ppmwriter.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/ppmwriter.cpp -o CMakeFiles/framework.dir/ppmwriter.cpp.s
+
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides.build: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
+
+framework/CMakeFiles/framework.dir/hit.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/hit.cpp.o: ../framework/hit.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/hit.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/hit.cpp.o -c /home/hans/Desktop/Raytracer/framework/hit.cpp
+
+framework/CMakeFiles/framework.dir/hit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/hit.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/hit.cpp > CMakeFiles/framework.dir/hit.cpp.i
+
+framework/CMakeFiles/framework.dir/hit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/hit.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/hit.cpp -o CMakeFiles/framework.dir/hit.cpp.s
+
+framework/CMakeFiles/framework.dir/hit.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/hit.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/hit.cpp.o.provides: framework/CMakeFiles/framework.dir/hit.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/hit.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/hit.cpp.o.provides.build: framework/CMakeFiles/framework.dir/hit.cpp.o
+
+framework/CMakeFiles/framework.dir/cone.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/cone.cpp.o: ../framework/cone.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/cone.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/cone.cpp.o -c /home/hans/Desktop/Raytracer/framework/cone.cpp
+
+framework/CMakeFiles/framework.dir/cone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/cone.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/cone.cpp > CMakeFiles/framework.dir/cone.cpp.i
+
+framework/CMakeFiles/framework.dir/cone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/cone.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/cone.cpp -o CMakeFiles/framework.dir/cone.cpp.s
+
+framework/CMakeFiles/framework.dir/cone.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/cone.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/cone.cpp.o.provides: framework/CMakeFiles/framework.dir/cone.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/cone.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/cone.cpp.o.provides.build: framework/CMakeFiles/framework.dir/cone.cpp.o
+
+framework/CMakeFiles/framework.dir/scene.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/scene.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/hans/Desktop/Raytracer/framework/scene.cpp
+
+framework/CMakeFiles/framework.dir/scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/scene.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/scene.cpp > CMakeFiles/framework.dir/scene.cpp.i
+
+framework/CMakeFiles/framework.dir/scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/scene.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/scene.cpp -o CMakeFiles/framework.dir/scene.cpp.s
+
+framework/CMakeFiles/framework.dir/scene.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/scene.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/scene.cpp.o.provides: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/scene.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build: framework/CMakeFiles/framework.dir/scene.cpp.o
 
 framework/CMakeFiles/framework.dir/sphere.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/sphere.cpp.o: ../framework/sphere.cpp
@@ -259,32 +259,9 @@ framework/CMakeFiles/framework.dir/sphere.cpp.o.provides: framework/CMakeFiles/f
 
 framework/CMakeFiles/framework.dir/sphere.cpp.o.provides.build: framework/CMakeFiles/framework.dir/sphere.cpp.o
 
-framework/CMakeFiles/framework.dir/scene.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/scene.cpp.o: ../framework/scene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/scene.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/scene.cpp.o -c /home/hans/Desktop/Raytracer/framework/scene.cpp
-
-framework/CMakeFiles/framework.dir/scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/scene.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/scene.cpp > CMakeFiles/framework.dir/scene.cpp.i
-
-framework/CMakeFiles/framework.dir/scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/scene.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/scene.cpp -o CMakeFiles/framework.dir/scene.cpp.s
-
-framework/CMakeFiles/framework.dir/scene.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/scene.cpp.o.requires
-
-framework/CMakeFiles/framework.dir/scene.cpp.o.provides: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/scene.cpp.o.provides
-
-framework/CMakeFiles/framework.dir/scene.cpp.o.provides.build: framework/CMakeFiles/framework.dir/scene.cpp.o
-
 framework/CMakeFiles/framework.dir/camera.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/camera.cpp.o: ../framework/camera.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/camera.cpp.o"
 	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/camera.cpp.o -c /home/hans/Desktop/Raytracer/framework/camera.cpp
 
@@ -305,59 +282,132 @@ framework/CMakeFiles/framework.dir/camera.cpp.o.provides: framework/CMakeFiles/f
 
 framework/CMakeFiles/framework.dir/camera.cpp.o.provides.build: framework/CMakeFiles/framework.dir/camera.cpp.o
 
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: framework/CMakeFiles/framework.dir/flags.make
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.o: ../framework/ppmwriter.cpp
+framework/CMakeFiles/framework.dir/material.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/material.cpp.o: ../framework/material.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/material.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/material.cpp.o -c /home/hans/Desktop/Raytracer/framework/material.cpp
+
+framework/CMakeFiles/framework.dir/material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/material.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/material.cpp > CMakeFiles/framework.dir/material.cpp.i
+
+framework/CMakeFiles/framework.dir/material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/material.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/material.cpp -o CMakeFiles/framework.dir/material.cpp.s
+
+framework/CMakeFiles/framework.dir/material.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/material.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/material.cpp.o.provides: framework/CMakeFiles/framework.dir/material.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/material.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/material.cpp.o.provides.build: framework/CMakeFiles/framework.dir/material.cpp.o
+
+framework/CMakeFiles/framework.dir/shape.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/shape.cpp.o: ../framework/shape.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/ppmwriter.cpp.o -c /home/hans/Desktop/Raytracer/framework/ppmwriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/shape.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/shape.cpp.o -c /home/hans/Desktop/Raytracer/framework/shape.cpp
 
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/ppmwriter.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/ppmwriter.cpp > CMakeFiles/framework.dir/ppmwriter.cpp.i
+framework/CMakeFiles/framework.dir/shape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/shape.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/shape.cpp > CMakeFiles/framework.dir/shape.cpp.i
 
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/ppmwriter.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/ppmwriter.cpp -o CMakeFiles/framework.dir/ppmwriter.cpp.s
+framework/CMakeFiles/framework.dir/shape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/shape.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/shape.cpp -o CMakeFiles/framework.dir/shape.cpp.s
 
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires:
-.PHONY : framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
+framework/CMakeFiles/framework.dir/shape.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/shape.cpp.o.requires
 
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
-	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides.build
-.PHONY : framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides
+framework/CMakeFiles/framework.dir/shape.cpp.o.provides: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/shape.cpp.o.provides
 
-framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.provides.build: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
+framework/CMakeFiles/framework.dir/shape.cpp.o.provides.build: framework/CMakeFiles/framework.dir/shape.cpp.o
+
+framework/CMakeFiles/framework.dir/box.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/box.cpp.o: ../framework/box.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/box.cpp.o -c /home/hans/Desktop/Raytracer/framework/box.cpp
+
+framework/CMakeFiles/framework.dir/box.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/box.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/box.cpp > CMakeFiles/framework.dir/box.cpp.i
+
+framework/CMakeFiles/framework.dir/box.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/box.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/box.cpp -o CMakeFiles/framework.dir/box.cpp.s
+
+framework/CMakeFiles/framework.dir/box.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/box.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/box.cpp.o.provides: framework/CMakeFiles/framework.dir/box.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/box.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/box.cpp.o.provides.build: framework/CMakeFiles/framework.dir/box.cpp.o
+
+framework/CMakeFiles/framework.dir/renderer.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/renderer.cpp.o -c /home/hans/Desktop/Raytracer/framework/renderer.cpp
+
+framework/CMakeFiles/framework.dir/renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/renderer.cpp.i"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/framework/renderer.cpp > CMakeFiles/framework.dir/renderer.cpp.i
+
+framework/CMakeFiles/framework.dir/renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/renderer.cpp.s"
+	cd /home/hans/Desktop/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/framework/renderer.cpp -o CMakeFiles/framework.dir/renderer.cpp.s
+
+framework/CMakeFiles/framework.dir/renderer.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/renderer.cpp.o.provides: framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/renderer.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build: framework/CMakeFiles/framework.dir/renderer.cpp.o
 
 # Object files for target framework
 framework_OBJECTS = \
 "CMakeFiles/framework.dir/glew.c.o" \
-"CMakeFiles/framework.dir/material.cpp.o" \
-"CMakeFiles/framework.dir/pixel.cpp.o" \
 "CMakeFiles/framework.dir/sdfloader.cpp.o" \
-"CMakeFiles/framework.dir/box.cpp.o" \
-"CMakeFiles/framework.dir/renderer.cpp.o" \
-"CMakeFiles/framework.dir/shape.cpp.o" \
 "CMakeFiles/framework.dir/window.cpp.o" \
-"CMakeFiles/framework.dir/sphere.cpp.o" \
+"CMakeFiles/framework.dir/pixel.cpp.o" \
+"CMakeFiles/framework.dir/ppmwriter.cpp.o" \
+"CMakeFiles/framework.dir/hit.cpp.o" \
+"CMakeFiles/framework.dir/cone.cpp.o" \
 "CMakeFiles/framework.dir/scene.cpp.o" \
+"CMakeFiles/framework.dir/sphere.cpp.o" \
 "CMakeFiles/framework.dir/camera.cpp.o" \
-"CMakeFiles/framework.dir/ppmwriter.cpp.o"
+"CMakeFiles/framework.dir/material.cpp.o" \
+"CMakeFiles/framework.dir/shape.cpp.o" \
+"CMakeFiles/framework.dir/box.cpp.o" \
+"CMakeFiles/framework.dir/renderer.cpp.o"
 
 # External object files for target framework
 framework_EXTERNAL_OBJECTS =
 
 framework/libframework.a: framework/CMakeFiles/framework.dir/glew.c.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/material.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/pixel.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/sdfloader.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/window.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/pixel.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/hit.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/cone.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/scene.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/sphere.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/camera.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/material.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/shape.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/box.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/renderer.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/shape.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/window.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/sphere.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/scene.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/camera.cpp.o
-framework/libframework.a: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/build.make
 framework/libframework.a: framework/CMakeFiles/framework.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libframework.a"
@@ -369,17 +419,19 @@ framework/CMakeFiles/framework.dir/build: framework/libframework.a
 .PHONY : framework/CMakeFiles/framework.dir/build
 
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/glew.c.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/material.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sdfloader.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/window.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/pixel.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/hit.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/cone.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sphere.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/camera.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/material.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/box.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/shape.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/window.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sphere.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/scene.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/camera.cpp.o.requires
-framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/ppmwriter.cpp.o.requires
 .PHONY : framework/CMakeFiles/framework.dir/requires
 
 framework/CMakeFiles/framework.dir/clean:

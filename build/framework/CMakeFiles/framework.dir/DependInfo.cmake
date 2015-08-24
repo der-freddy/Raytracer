@@ -11,6 +11,8 @@ SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/hans/Desktop/Raytracer/framework/box.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/camera.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/camera.cpp.o"
+  "/home/hans/Desktop/Raytracer/framework/cone.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/cone.cpp.o"
+  "/home/hans/Desktop/Raytracer/framework/hit.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/hit.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/material.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/material.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/pixel.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/pixel.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/ppmwriter.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/ppmwriter.cpp.o"
