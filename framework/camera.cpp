@@ -1,6 +1,11 @@
 #include "camera.hpp"
 
-Camera::Camera()
+Camera::Camera() :
+name_{"cam"},
+fov_x_{45},
+eye_{0.0, 0.0, 0.0},
+dir_{0.0, 0.0, -1.0},
+up_{0.0, 1.0, 0.0}
 {}
 
 Camera::Camera(std::string name, double fov_x, glm::vec3 eye, glm::vec3 dir, glm::vec3 up) :

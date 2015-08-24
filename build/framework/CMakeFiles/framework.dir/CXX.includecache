@@ -586,6 +586,7 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
+<<<<<<< HEAD
 ../framework/box.hpp
 glm/vec3.hpp
 -
@@ -706,3 +707,15 @@ iterator
 string
 -
 
+=======
+/home/hans/Desktop/Raytracer/framework/camera.cpp
+camera.hpp
+/home/hans/Desktop/Raytracer/framework/camera.hpp
+
+/home/hans/Desktop/Raytracer/framework/camera.hpp
+string
+-
+glm/glm.hpp
+-
+
+>>>>>>> ff6b6055e9ba3e6a2bcdf8e297d779ab6ddf9a93
