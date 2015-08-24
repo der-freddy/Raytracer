@@ -586,6 +586,10 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0d5a6e179113860e41cba2a16fc8f16ad8b65cb2
 ../framework/box.hpp
 glm/vec3.hpp
 -
@@ -615,6 +619,8 @@ glm/glm.hpp
 -
 color.hpp
 ../framework/color.hpp
+<<<<<<< HEAD
+=======
 
 ../framework/material.hpp
 string
@@ -628,6 +634,103 @@ color.hpp
 glm/glm.hpp
 -
 
+../framework/scene.hpp
+map
+-
+shape.hpp
+-
+sphere.hpp
+-
+box.hpp
+-
+material.hpp
+-
+camera.hpp
+-
+string
+-
+tr1/memory
+-
+light.hpp
+-
+
+../framework/sdfloader.hpp
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+material.hpp
+-
+scene.hpp
+-
+box.hpp
+-
+sphere.hpp
+-
+camera.hpp
+-
+light.hpp
+-
+
+../framework/shape.hpp
+material.hpp
+../framework/material.hpp
+string
+-
+ray.hpp
+../framework/ray.hpp
+iostream
+-
+
+../framework/sphere.hpp
+string
+-
+stdlib.h
+-
+glm/vec3.hpp
+-
+shape.hpp
+../framework/shape.hpp
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/sdfloader.cpp
+sdfloader.hpp
+-
+fstream
+-
+sstream
+-
+iostream
+-
+algorithm
+-
+iterator
+-
+string
+-
+
+=======
+/home/hans/Desktop/Raytracer/framework/camera.cpp
+camera.hpp
+/home/hans/Desktop/Raytracer/framework/camera.hpp
+>>>>>>> 0d5a6e179113860e41cba2a16fc8f16ad8b65cb2
+
+../framework/material.hpp
+string
+-
+iostream
+-
+color.hpp
+-
+
+../framework/ray.hpp
+glm/glm.hpp
+-
+
+<<<<<<< HEAD
 ../framework/scene.hpp
 map
 -
@@ -710,3 +813,6 @@ iterator
 string
 -
 
+=======
+>>>>>>> ff6b6055e9ba3e6a2bcdf8e297d779ab6ddf9a93
+>>>>>>> 0d5a6e179113860e41cba2a16fc8f16ad8b65cb2
