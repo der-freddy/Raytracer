@@ -851,6 +851,7 @@ framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../external/glm-0.9.5.3/glm/
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/box.hpp
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/camera.hpp
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/color.hpp
+framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/composite.hpp
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/light.hpp
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/material.hpp
 framework/CMakeFiles/framework.dir/sdfloader.cpp.o: ../framework/ray.hpp

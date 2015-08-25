@@ -852,6 +852,7 @@ framework/CMakeFiles/framework.dir/sdfloader.cpp.o
  ../framework/box.hpp
  ../framework/camera.hpp
  ../framework/color.hpp
+ ../framework/composite.hpp
  ../framework/light.hpp
  ../framework/material.hpp
  ../framework/ray.hpp

@@ -43,6 +43,11 @@ void Scene::addLight(std::string name, std::shared_ptr<Light> light)
 {
 	lights_[name] = light;
 }
+
+std::shared_ptr<Composite> Scene::getComposites() const
+{
+	return composites_;
+}
 // std::ostream& operator<<(std::ostream& output, Scene const& scene)
 // {
     // for(auto i : scene.materials)
