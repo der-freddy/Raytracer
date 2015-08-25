@@ -7,6 +7,7 @@
 #include "box.hpp"
 #include <iostream>
 #include "sdfloader.hpp"
+#include "renderer.hpp"
 
 // TEST_CASE("Sphere","[Sphere]")
 // {
@@ -181,7 +182,10 @@ TEST_CASE("sdfloader", "[checkload]")
 
 	REQUIRE(s.scene().cam_.getName() == "eye");
 
+	std::shared_ptr<Scene> scene = std::make_shared<Scene>(s.scene());
 
+	Renderer renderer = Renderer{800, 600, "test.ppm", scene};
+	renderer.render();
 }
 
 

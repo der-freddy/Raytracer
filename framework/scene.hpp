@@ -18,6 +18,7 @@ public:
 	Scene();
  	~Scene();
 
+void printScene();
 
  	void addShape(std::string, std::shared_ptr<Shape>);
 

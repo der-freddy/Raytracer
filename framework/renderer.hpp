@@ -21,7 +21,7 @@
 class Renderer
 {
 public:
-  Renderer(unsigned w, unsigned h, std::string const& file);
+  Renderer(unsigned w, unsigned h, std::string const& file, std::shared_ptr<Scene> scene);
 
   void render();
   void write(Pixel const& p);
@@ -30,6 +30,7 @@ public:
   {
     return colorbuffer_;
   }
+
 
   Color raytrace(Ray const& ray, Color color, int depth);
 

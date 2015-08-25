@@ -1,9 +1,5 @@
 define material red 1 0 0 1 0 0 1 0 0 0 10
-<<<<<<< HEAD
-define shape box box1 -100 -80 -200 100 80 -100 red
-define camera eye 60.0
-=======
-define	shape box box1 -100 -80 -200 100 80 -100 red
+define shape sphere sphere1 0 0 -20 100 red
 define camera eye 60.0 0 0 0
 define light diffuse spot1 -500 800 0 0.8 0.8 0.8
->>>>>>> 2c7f317fcd359bfdf821324648d0cfcff3f3c259
+

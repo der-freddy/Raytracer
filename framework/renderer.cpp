@@ -9,12 +9,13 @@
 
 #include "renderer.hpp"
 
-Renderer::Renderer(unsigned w, unsigned h, std::string const& file)
+Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_ptr<Scene> scene)
   : width_(w)
   , height_(h)
   , colorbuffer_(w*h, Color(0.0, 0.0, 0.0))
   , filename_(file)
   , ppm_(width_, height_)
+  , scene_(scene)
 {}
 
 void Renderer::render()
@@ -25,8 +26,7 @@ void Renderer::render()
       int x_pos = x - (width_/2);
       int y_pos = y - (height_/2);
 
-      Ray ray{{scene_->cam_.eye_,}, {x_pos, y_pos, -1.0}};
-
+      Ray ray{{0.0, 0.0, 0.0}, {x_pos, y_pos, -1.0}};
       Pixel p(x,y);
         p.color = raytrace(ray, Color{0.0,0.0,0.0}, 1);
       write(p);
@@ -53,14 +53,19 @@ void Renderer::write(Pixel const& p)
 
 Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 {
-  float d = 0.0f;
-
-  for (std::map<std::string, std::shared_ptr<Shape>>::iterator i = scene_->shapes_.begin();
-    i != scene_->shapes_.end(); ++i)
+  float d = 1.0f;
+  Color ambient(0.0, 0.0, 0.0);
+  typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
+  
+  for (it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
   {
     if(i->second->intersect(ray, d))
     {
       color = i->second->material()->kd();
+    }
+    else
+    {
+      color = ambient;
     }
   }
   return color;
