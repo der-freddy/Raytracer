@@ -11,6 +11,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/box.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/camera.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/camera.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/composite.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/composite.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cone.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/cone.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cylinder.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/cylinder.cpp.o"
   "/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/hit.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/hit.cpp.o"

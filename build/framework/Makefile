@@ -215,6 +215,30 @@ camera.cpp.s:
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
+composite.o: composite.cpp.o
+.PHONY : composite.o
+
+# target to build an object file
+composite.cpp.o:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.o
+.PHONY : composite.cpp.o
+
+composite.i: composite.cpp.i
+.PHONY : composite.i
+
+# target to preprocess a source file
+composite.cpp.i:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.i
+.PHONY : composite.cpp.i
+
+composite.s: composite.cpp.s
+.PHONY : composite.s
+
+# target to generate assembly for a file
+composite.cpp.s:
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.s
+.PHONY : composite.cpp.s
+
 cone.o: cone.cpp.o
 .PHONY : cone.o
 
@@ -571,6 +595,9 @@ help:
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
+	@echo "... composite.o"
+	@echo "... composite.i"
+	@echo "... composite.s"
 	@echo "... cone.o"
 	@echo "... cone.i"
 	@echo "... cone.s"

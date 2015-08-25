@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/framework.dir/sphere.cpp.o"
   "CMakeFiles/framework.dir/hit.cpp.o"
   "CMakeFiles/framework.dir/renderer.cpp.o"
+  "CMakeFiles/framework.dir/composite.cpp.o"
   "CMakeFiles/framework.dir/cone.cpp.o"
   "libframework.pdb"
   "libframework.a"

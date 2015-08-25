@@ -394,9 +394,32 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o.provides: framework/CMakeFiles
 
 framework/CMakeFiles/framework.dir/renderer.cpp.o.provides.build: framework/CMakeFiles/framework.dir/renderer.cpp.o
 
+framework/CMakeFiles/framework.dir/composite.cpp.o: framework/CMakeFiles/framework.dir/flags.make
+framework/CMakeFiles/framework.dir/composite.cpp.o: ../framework/composite.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/composite.cpp.o"
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/composite.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/composite.cpp
+
+framework/CMakeFiles/framework.dir/composite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/framework.dir/composite.cpp.i"
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/composite.cpp > CMakeFiles/framework.dir/composite.cpp.i
+
+framework/CMakeFiles/framework.dir/composite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/framework.dir/composite.cpp.s"
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/composite.cpp -o CMakeFiles/framework.dir/composite.cpp.s
+
+framework/CMakeFiles/framework.dir/composite.cpp.o.requires:
+.PHONY : framework/CMakeFiles/framework.dir/composite.cpp.o.requires
+
+framework/CMakeFiles/framework.dir/composite.cpp.o.provides: framework/CMakeFiles/framework.dir/composite.cpp.o.requires
+	$(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.o.provides.build
+.PHONY : framework/CMakeFiles/framework.dir/composite.cpp.o.provides
+
+framework/CMakeFiles/framework.dir/composite.cpp.o.provides.build: framework/CMakeFiles/framework.dir/composite.cpp.o
+
 framework/CMakeFiles/framework.dir/cone.cpp.o: framework/CMakeFiles/framework.dir/flags.make
 framework/CMakeFiles/framework.dir/cone.cpp.o: ../framework/cone.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object framework/CMakeFiles/framework.dir/cone.cpp.o"
 	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/framework.dir/cone.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/cone.cpp
 
@@ -434,6 +457,7 @@ framework_OBJECTS = \
 "CMakeFiles/framework.dir/sphere.cpp.o" \
 "CMakeFiles/framework.dir/hit.cpp.o" \
 "CMakeFiles/framework.dir/renderer.cpp.o" \
+"CMakeFiles/framework.dir/composite.cpp.o" \
 "CMakeFiles/framework.dir/cone.cpp.o"
 
 # External object files for target framework
@@ -454,6 +478,7 @@ framework/libframework.a: framework/CMakeFiles/framework.dir/material.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/sphere.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/hit.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/renderer.cpp.o
+framework/libframework.a: framework/CMakeFiles/framework.dir/composite.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/cone.cpp.o
 framework/libframework.a: framework/CMakeFiles/framework.dir/build.make
 framework/libframework.a: framework/CMakeFiles/framework.dir/link.txt
@@ -480,6 +505,7 @@ framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/sphere.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/hit.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/renderer.cpp.o.requires
+framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/composite.cpp.o.requires
 framework/CMakeFiles/framework.dir/requires: framework/CMakeFiles/framework.dir/cone.cpp.o.requires
 .PHONY : framework/CMakeFiles/framework.dir/requires
 
