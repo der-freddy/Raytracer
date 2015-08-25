@@ -672,12 +672,19 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o
  ../external/glm-0.9.5.3/glm/vec3.hpp
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
+ ../framework/box.hpp
+ ../framework/camera.hpp
+ ../framework/light.hpp
+ ../framework/material.hpp
+ ../framework/shape.hpp
+ ../framework/sphere.hpp
  /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
  /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
  /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
  /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
  /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp
  /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
+ /home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o
  ../external/glm-0.9.5.3/glm/common.hpp
  ../external/glm-0.9.5.3/glm/detail/_fixes.hpp

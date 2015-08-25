@@ -13,8 +13,9 @@ class Composite: public Shape
 {
 public:
 	Composite(std::string name);
+	~Composite();
 	void addShape(std::shared_ptr<Shape> s);
-	std::shared_ptr<Shape> getShapes();
+	//std::shared_ptr<Shape> getShapes();
 	std::shared_ptr<Shape> getShape(std::string name);
 
 private:

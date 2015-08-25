@@ -13,6 +13,7 @@ public:
 	//Constructor
 	Shape();
 	Shape(std::string name, std::shared_ptr<Material> material);
+	Shape(std::string name);
 	//Destructor
 	virtual ~Shape();
 	

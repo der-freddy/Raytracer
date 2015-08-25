@@ -671,12 +671,19 @@ framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/v
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vec3.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vec4.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../external/glm-0.9.5.3/glm/vector_relational.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/box.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/camera.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/light.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/material.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/shape.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/sphere.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/color.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/pixel.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ppmwriter.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/ray.hpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.cpp
 framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/renderer.hpp
+framework/CMakeFiles/framework.dir/renderer.cpp.o: ../framework/scene.hpp
 
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/common.hpp
 framework/CMakeFiles/framework.dir/scene.cpp.o: ../external/glm-0.9.5.3/glm/detail/_fixes.hpp
