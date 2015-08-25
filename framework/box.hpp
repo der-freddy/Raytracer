@@ -27,7 +27,7 @@ class Box : public Shape
 
 	std::ostream& print(std::ostream & os) const override;
 
-	bool intersectBox(Ray const&) const; 
+	bool intersect(Ray const&, float& d) const override; 
 
 	private:
 		glm::vec3 _max;

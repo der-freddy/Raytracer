@@ -30,7 +30,6 @@ public:
 
  	std::map<std::string, std::shared_ptr<Material>> material() const;
 
-// private:
   std::map<std::string, std::shared_ptr<Material>> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;
   Camera cam_;

@@ -16,6 +16,7 @@
 #include <string>
 #include <glm/glm.hpp>
 #include "ray.hpp"
+#include "scene.hpp"
 
 class Renderer
 {
@@ -38,6 +39,7 @@ private:
   std::vector<Color> colorbuffer_;
   std::string filename_;
   PpmWriter ppm_;
+  std::shared_ptr<Scene> scene_;
 };
 
 #endif // #ifndef BUW_RENDERER_HPP

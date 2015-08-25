@@ -48,7 +48,7 @@ std::ostream& Box::print(std::ostream& os) const
 
 
 
-bool Box::intersectBox(Ray const& r) const
+bool Box::intersect(Ray const& r, float& d) const
 {
 	//Calculate intersection distances of x edges
 	double tx1 = (_min.x - r.origin_.x)/glm::normalize(r.direction_).x;

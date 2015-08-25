@@ -9,7 +9,6 @@ Shape::Shape(std::string name, std::shared_ptr<Material> material): _name{name},
 	//std::cout << _name << "(Shape) created\n";
 }
 
-
 Shape::~Shape()
 {
 	//std::cout << _name <<"(Shape) destroyed\n";

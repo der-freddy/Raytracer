@@ -18,7 +18,7 @@ public:
 	glm::vec3 getDir();
 	glm::vec3 getUp();//everybody
 
-private:
+
 
 	std::string name_;
 	double fov_x_;

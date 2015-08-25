@@ -19,17 +19,16 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file)
 
 void Renderer::render()
 {
-  const std::size_t checkersize = 20;
-
   for (unsigned y = 0; y < height_; ++y) {
     for (unsigned x = 0; x < width_; ++x) {
-      Pixel p(x,y);
-      if ( ((x/checkersize)%2) != ((y/checkersize)%2)) {
-        p.color = Color(0.0, 1.0, float(x)/height_);
-      } else {
-        p.color = Color(1.0, 0.0, float(y)/width_);
-      }
 
+      int x_pos = x - (width_/2);
+      int y_pos = y - (height_/2);
+
+      Ray ray{{scene_->cam_.eye_,}, {x_pos, y_pos, -1.0}};
+
+      Pixel p(x,y);
+        p.color = raytrace(ray, Color{0.0,0.0,0.0}, 1);
       write(p);
     }
   }
@@ -50,15 +49,19 @@ void Renderer::write(Pixel const& p)
   }
 
   ppm_.write(p);
+}
 
-// Color Renderer::raytrace(Ray const& ray, Color color, int depth)
-// {
-//   Hit closestIntersec{scene->allObjects->closestIntersec(ray)}
-//     if(closestIntersec.hit_== true)
-//     {
-//       color = closestIntersec.shape_.material.irgendwas;
-//     }
-//     return color;
-// }
+Color Renderer::raytrace(Ray const& ray, Color color, int depth)
+{
+  float d = 0.0f;
 
+  for (std::map<std::string, std::shared_ptr<Shape>>::iterator i = scene_->shapes_.begin();
+    i != scene_->shapes_.end(); ++i)
+  {
+    if(i->second->intersect(ray, d))
+    {
+      color = i->second->material()->kd();
+    }
+  }
+  return color;
 }
