@@ -868,9 +868,39 @@ iostream
 color.hpp
 -
 
+../framework/pixel.hpp
+iosfwd
+-
+color.hpp
+-
+
+../framework/ppmwriter.hpp
+string
+-
+vector
+-
+pixel.hpp
+-
+
 ../framework/ray.hpp
 glm/glm.hpp
 -
+
+../framework/renderer.hpp
+color.hpp
+../framework/color.hpp
+pixel.hpp
+../framework/pixel.hpp
+ppmwriter.hpp
+../framework/ppmwriter.hpp
+string
+-
+glm/glm.hpp
+-
+ray.hpp
+../framework/ray.hpp
+scene.hpp
+../framework/scene.hpp
 
 ../framework/scene.hpp
 map
@@ -936,7 +966,7 @@ glm/vec3.hpp
 shape.hpp
 ../framework/shape.hpp
 
-/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp
+/home/hans/Desktop/Raytracer/tests/main.cpp
 catch.hpp
 -
 glm/vec3.hpp
@@ -946,11 +976,13 @@ glm/glm.hpp
 glm/gtx/intersect.hpp
 -
 sphere.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/sphere.hpp
+/home/hans/Desktop/Raytracer/tests/sphere.hpp
 box.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/box.hpp
+/home/hans/Desktop/Raytracer/tests/box.hpp
 iostream
 -
 sdfloader.hpp
-/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/sdfloader.hpp
+/home/hans/Desktop/Raytracer/tests/sdfloader.hpp
+renderer.hpp
+/home/hans/Desktop/Raytracer/tests/renderer.hpp
 

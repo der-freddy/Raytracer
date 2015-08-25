@@ -4,28 +4,28 @@
 
 int main(int argc, char* argv[])
 {
-  unsigned const width = 600;
-  unsigned const height = 600;
-  std::string const filename = "./checkerboard.ppm";
+  // unsigned const width = 600;
+  // unsigned const height = 600;
+  // std::string const filename = "./checkerboard.ppm";
 
-  Renderer app(width, height, filename);
+  // Renderer app(width, height, filename);
 
-  std::thread thr([&app]() { app.render(); });
+  // std::thread thr([&app]() { app.render(); });
 
-  Window win(glm::ivec2(width,height));
+  // Window win(glm::ivec2(width,height));
 
-  while (!win.shouldClose()) {
-    if (win.isKeyPressed(GLFW_KEY_ESCAPE)) {
-      win.stop();
-    }
+  // while (!win.shouldClose()) {
+  //   if (win.isKeyPressed(GLFW_KEY_ESCAPE)) {
+  //     win.stop();
+  //   }
 
-    glDrawPixels( width, height, GL_RGB, GL_FLOAT
-                , app.colorbuffer().data());
+  //   glDrawPixels( width, height, GL_RGB, GL_FLOAT
+  //               , app.colorbuffer().data());
 
-    win.update();
-  }
+  //   win.update();
+  // }
 
-  thr.join();
+  // thr.join();
 
-  return 0;
+  // return 0;
 }

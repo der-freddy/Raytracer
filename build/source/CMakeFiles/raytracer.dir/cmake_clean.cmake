@@ -1,10 +1,10 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/raytracer.dir/raytracer.cpp.o"
-  "../build/Release/raytracer.pdb"
-  "../build/Release/raytracer"
+  "../build/Debug/raytracer.pdb"
+  "../build/Debug/raytracer"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/raytracer.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/raytracer.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

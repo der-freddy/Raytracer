@@ -25,6 +25,11 @@ void Scene::addCam(Camera camera)
 	cam_ = camera;
 }
 
+void Scene::printScene()
+{
+	std::cout << "scene" << std::endl;
+}
+
 std::shared_ptr<Material> Scene::getMaterial(std::string name) const
 {
 	auto i = materials_.find(name);
