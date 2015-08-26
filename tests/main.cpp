@@ -174,13 +174,13 @@ TEST_CASE("sdfloader", "[checkload]")
 	std::string p = "../framework/input/sdf_test.txt";
 	s.readSdf(p);
 
-	// REQUIRE(s.scene().material().size() == 1);
+	REQUIRE(s.scene().material().size() == 2);
 
-	// REQUIRE(s.scene().shapes_.size() == 1);
+	REQUIRE(s.scene().shapes_.size() == 2);
 
-	// REQUIRE(s.scene().lights_.size() == 1);
+	REQUIRE(s.scene().lights_.size() == 1);
 
-	// REQUIRE(s.scene().cam_.getName() == "eye");
+	REQUIRE(s.scene().cam_.getName() == "eye");
 
 	std::shared_ptr<Scene> scene = std::make_shared<Scene>(s.scene());
 

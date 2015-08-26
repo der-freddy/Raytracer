@@ -1,0 +1,5 @@
+/home/freddy/Dokumente/Studium/Prog/Raytracer/build/source/CMakeFiles/example.dir
+/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir
+/home/freddy/Dokumente/Studium/Prog/Raytracer/build/external/glfw-3.0.3/src/CMakeFiles/glfw.dir
+/home/freddy/Dokumente/Studium/Prog/Raytracer/build/source/CMakeFiles/raytracer.dir
+/home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests/CMakeFiles/tests.dir

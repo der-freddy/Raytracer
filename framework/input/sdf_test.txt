@@ -2,5 +2,6 @@ define material red 1 0 0 1 0 0 1 0 0 10
 define material green 0 1 0 0 1 0 0 1 0 10
 define shape sphere sphere1 1 0 -5 2 red
 define shape sphere sphere2 -1 0 -6 2 green
+define shape composite root sphere1 sphere2
 define camera eye 60.0 0 0 0
 define light diffuse spot1 -500 800 0 0.8 0.8 0.8
