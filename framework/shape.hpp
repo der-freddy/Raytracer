@@ -5,6 +5,7 @@
 #include "ray.hpp"
 #include <iostream>
 #include <memory>
+#include "hit.hpp"
 
 class Shape
 {
@@ -21,7 +22,7 @@ public:
 
 	virtual double volume() const = 0;
 
-	virtual bool intersect(Ray const&, float& d) const = 0; 
+	virtual Hit intersect(Ray const&) const = 0; 
 
 	std::shared_ptr<Material> material() const;
 

@@ -58,7 +58,6 @@ std::shared_ptr<Composite> Scene::getComposites() const
 
 std::shared_ptr<Shape> Scene::getShape(std::string const& name) const
 {
-
 	auto i = shapes_.find(name);
 	
 	if( i != shapes_.end())

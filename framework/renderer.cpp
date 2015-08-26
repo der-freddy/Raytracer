@@ -16,6 +16,8 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_
   , filename_(file)
   , ppm_(width_, height_)
   , scene_(scene)
+  , fovDistance_(-(0.5 * width_ / std::tan(
+        0.5 * scene_->cam_.fov_x_ * M_PI / 180)))
 {}
 
 void Renderer::render()
@@ -26,7 +28,7 @@ void Renderer::render()
       int x_pos = x - (width_/2);
       int y_pos = y - (height_/2);
 
-      Ray ray{{0.0, 0.0, 0.0}, {x_pos, y_pos, -1.0}};
+      Ray ray{{0.0, 0.0, 0.0}, {x_pos, y_pos, fovDistance_}};
       Pixel p(x,y);
         p.color = raytrace(ray, Color{0.0,0.0,0.0}, 1);
       write(p);
@@ -57,16 +59,31 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
   Color ambient(0.0, 0.0, 0.0);
   typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
   
+  Hit hit{};
+  
   for (it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
   {
-    if(i->second->intersect(ray, d))
-    {
-      color = i->second->material()->kd();
-    }
-    else
-    {
-      color = ambient;
-    }
+  //  Hit hit_temp{i->second->intersect(ray)};
+
+    // if(i->second->intersect(ray).)
+    // {
+    //   color = i->second->material()->kd();
+    // }
+    // else
+    // {
+    //   color = ambient;
+    // }
   }
+  // for (it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
+  // {
+  //   if(i->second->intersect(ray, d))
+  //   {
+  //     color = i->second->material()->kd();
+  //   }
+  //   else
+  //   {
+  //     color = ambient;
+  //   }
+  // }
   return color;
 }

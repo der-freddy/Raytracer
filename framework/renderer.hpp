@@ -17,6 +17,7 @@
 #include <glm/glm.hpp>
 #include "ray.hpp"
 #include "scene.hpp"
+#include "hit.hpp"
 
 class Renderer
 {
@@ -41,6 +42,7 @@ private:
   std::string filename_;
   PpmWriter ppm_;
   std::shared_ptr<Scene> scene_;
+  float fovDistance_;
 };
 
 #endif // #ifndef BUW_RENDERER_HPP

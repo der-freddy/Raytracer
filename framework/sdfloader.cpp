@@ -93,14 +93,13 @@ void Sdfloader::readSdf(std::string path)
 
 void Sdfloader::issprint(std::istringstream& iss)
 {
-
-
   std::string name;
   while(iss >> name)
   {
     std::cout << name << std::endl;
     std::shared_ptr<Shape> shape_ptr = scene_.getShape(name);
-    scene_.getComposites()->addShape(shape_ptr);
+    std::cout << "hi" << std::endl;
+   // scene_.composites_->addShape(shape_ptr);
   }
 }
 

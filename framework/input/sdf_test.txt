@@ -1,5 +1,6 @@
 define material red 1 0 0 1 0 0 1 0 0 0 10
-define shape sphere sphere1 0 0 -20 100 red
+define shape sphere sphere1 1 0 -5 2 red
+define shape sphere sphere1 -1 0 -5 2 red
 define shape box box2 0 0 0 0 0 0 red
 define shape composite sphere1 box2
 define camera eye 60.0 0 0 0

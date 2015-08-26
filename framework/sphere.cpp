@@ -43,7 +43,18 @@ std::ostream& Sphere::print(std::ostream& os) const
 	return os;
 }
 
-bool Sphere::intersect(Ray const& ray, float& d) const
+Hit Sphere::intersect(Ray const& ray) const
 {
-	return glm::intersectRaySphere(ray.origin_, glm::normalize(ray.direction_),_mp, _r, d);
+	Hit intersec;
+
+	intersec.hit_ = glm::intersectRaySphere(ray.origin_, glm::normalize(ray.direction_),_mp, _r, intersec.intersect_, intersec.normal_);
+
+	if(intersec.hit_)
+	{
+		intersec.distance_ = glm::distance(ray.origin_, intersec.intersect_);
+	}
+
+	intersec.shape_ = std::make_shared<Sphere>(*this);
+
+	return intersec;
 }
