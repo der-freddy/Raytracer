@@ -58,32 +58,18 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
   float d = 1.0f;
   Color ambient(0.0, 0.0, 0.0);
   typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
-  
+  double closest = INFINITY;
   Hit hit{};
   
-  for (it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
+  for(it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
   {
-  //  Hit hit_temp{i->second->intersect(ray)};
+    Hit hit_temp{i->second->intersect(ray)};
 
-    // if(i->second->intersect(ray).)
-    // {
-    //   color = i->second->material()->kd();
-    // }
-    // else
-    // {
-    //   color = ambient;
-    // }
+    if(hit_temp.distance_ < closest) 
+    {
+      closest = hit_temp.distance_;
+      hit = hit_temp;
+    }
   }
-  // for (it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
-  // {
-  //   if(i->second->intersect(ray, d))
-  //   {
-  //     color = i->second->material()->kd();
-  //   }
-  //   else
-  //   {
-  //     color = ambient;
-  //   }
-  // }
-  return color;
+    return hit.shape_->material()->kd();
 }

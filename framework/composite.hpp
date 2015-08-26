@@ -17,7 +17,7 @@ public:
 	void addShape(std::shared_ptr<Shape> s);
 	double area() const override;
 	double volume() const override;
-	bool intersect(Ray const& ray, float& d) const;
+	Hit intersect(Ray const& ray) const override;
 	std::shared_ptr<Shape> getShape(std::string name);
 	std::map<std::string, std::shared_ptr<Shape>> getShapes();
 

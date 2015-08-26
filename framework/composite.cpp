@@ -21,9 +21,9 @@ double Composite::area() const
 {
 	return 0;
 }
-bool Composite::intersect(Ray const& ray, float& d) const
+Hit Composite::intersect(Ray const& ray) const
 {
-	return false;
+	return;
 }
 
 std::shared_ptr<Shape> Composite::getShape(std::string name)
