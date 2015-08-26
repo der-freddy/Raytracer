@@ -21,6 +21,7 @@ double Composite::area() const
 {
 	return 0;
 }
+
 Hit Composite::intersect(Ray const& ray) const
 {
 	return;

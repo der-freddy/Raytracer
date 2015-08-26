@@ -84,6 +84,5 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
     ambient = intersection.shape_->material()->kd();
   }
 
-  
-    else return ambient;
+  return ambient;
 } 
