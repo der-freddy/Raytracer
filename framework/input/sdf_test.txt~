@@ -1,7 +1,0 @@
-define material red 1 0 0 1 0 0 1 0 0 0 10
-define material green 0 1 0 0 1 0 0 1 0 0 10
-define shape sphere sphere1 1 0 -20 399.99 red
-define shape sphere sphere2 0. 0 -20 50 green
-define camera eye 45.0 0 0 0
-define light diffuse spot1 -500 800 0 0.8 0.8 0.8
-

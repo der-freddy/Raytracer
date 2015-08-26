@@ -57,8 +57,7 @@ void Sdfloader::readSdf(std::string path)
         else if(sub == "composite")
         {
 
-          issprint(iss);
-          //create_composite(iss);
+          create_composite(iss);
 
         }
       }
@@ -91,7 +90,7 @@ void Sdfloader::readSdf(std::string path)
 
 }
 
-void Sdfloader::issprint(std::istringstream& iss)
+void Sdfloader::create_composite(std::istringstream& iss)
 {
   std::string name;
   iss >> name;
@@ -104,10 +103,11 @@ void Sdfloader::issprint(std::istringstream& iss)
     toAddCom->addShape(shape_ptr);
   }
 
-  if(scene_.getComposites() = nullptr)
+  if(scene_.getComposites() == nullptr)
   {
     scene_.addComposite(toAddCom);
   }
+
 }
 
 
