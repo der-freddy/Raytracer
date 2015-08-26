@@ -1,5 +1,0 @@
-/home/hans/Desktop/Raytracer/build/source/CMakeFiles/example.dir
-/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir
-/home/hans/Desktop/Raytracer/build/external/glfw-3.0.3/src/CMakeFiles/glfw.dir
-/home/hans/Desktop/Raytracer/build/source/CMakeFiles/raytracer.dir
-/home/hans/Desktop/Raytracer/build/tests/CMakeFiles/tests.dir
