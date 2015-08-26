@@ -24,6 +24,8 @@ void Sdfloader::readSdf(std::string path)
 
   file.open(path, std::ios::in);
 
+
+
   while(!file.eof())
   {
     getline(file, s);
@@ -54,7 +56,10 @@ void Sdfloader::readSdf(std::string path)
         }
         else if(sub == "composite")
         {
-          create_composite(iss);
+
+          issprint(iss);
+          //create_composite(iss);
+
         }
       }
       else if(sub == "light")
@@ -86,8 +91,23 @@ void Sdfloader::readSdf(std::string path)
 
 }
 
+void Sdfloader::issprint(std::istringstream& iss)
+{
+
+
+  std::string name;
+  while(iss >> name)
+  {
+    std::cout << name << std::endl;
+    std::shared_ptr<Shape> shape_ptr = scene_.getShape(name);
+    scene_.getComposites()->addShape(shape_ptr);
+  }
+}
+
 // void Sdfloader::create_composite(std::istringstream& iss)
 // {
+//   iss >> shape;
+
 
 // }
 
@@ -111,7 +131,7 @@ void Sdfloader::create_material(std::istringstream& iss)
 
   scene_.addMaterial(name, material);
 
-    std::cout << "Material added" << std::endl;
+    std::cout << name << " added" << std::endl;
 }
 
 void Sdfloader::create_box(std::istringstream& iss)
@@ -134,7 +154,7 @@ void Sdfloader::create_box(std::istringstream& iss)
 
   scene_.addShape(name, box);
 
-  std::cout << "Box added" << std::endl;
+  std::cout << name << " added" << std::endl;
 }
 
 void Sdfloader::create_sphere(std::istringstream& iss)
@@ -156,7 +176,7 @@ void Sdfloader::create_sphere(std::istringstream& iss)
 
   scene_.addShape(name, sphere);
 
-  std::cout << "Sphere added" << std::endl;
+  std::cout << name << " added" << std::endl;
 }
 
 void Sdfloader::create_cam(std::istringstream& iss)
@@ -183,7 +203,7 @@ void Sdfloader::create_cam(std::istringstream& iss)
 
   scene_.addCam(camera);
 
-  std::cout << "Cam added" << std::endl;
+  std::cout << name << " added" << std::endl;
 }
 
 void Sdfloader::create_light(std::istringstream& iss)
@@ -204,6 +224,6 @@ void Sdfloader::create_light(std::istringstream& iss)
 
   scene_.addLight(name, light);
 
-  std::cout << "Light added" << std::endl;
+  std::cout << name << " added" << std::endl;
 
 }

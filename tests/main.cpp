@@ -176,7 +176,7 @@ TEST_CASE("sdfloader", "[checkload]")
 
 	REQUIRE(s.scene().material().size() == 1);
 
-	REQUIRE(s.scene().shapes_.size() == 1);
+	REQUIRE(s.scene().shapes_.size() == 2);
 
 	REQUIRE(s.scene().lights_.size() == 1);
 

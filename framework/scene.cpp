@@ -4,7 +4,8 @@ Scene::Scene():
 shapes_(),
 cam_(),
 materials_(),
-lights_()
+lights_(),
+composites_()
 {}
 
 Scene::~Scene()
@@ -30,10 +31,11 @@ void Scene::printScene()
 	std::cout << "scene" << std::endl;
 }
 
-std::shared_ptr<Material> Scene::getMaterial(std::string name) const
+std::shared_ptr<Material> Scene::getMaterial(std::string const& name) const
 {
 	auto i = materials_.find(name);
-	if (i != materials_.end()) {
+	if (i != materials_.end())
+	{
 		return i -> second;
 	}
 	//else return Material{};
@@ -52,6 +54,19 @@ void Scene::addLight(std::string name, std::shared_ptr<Light> light)
 std::shared_ptr<Composite> Scene::getComposites() const
 {
 	return composites_;
+}
+
+std::shared_ptr<Shape> Scene::getShape(std::string const& name) const
+{
+
+	auto i = shapes_.find(name);
+	
+	if( i != shapes_.end())
+	{
+
+		return i -> second;
+		std::cout << name << std::endl;
+	}
 }
 // std::ostream& operator<<(std::ostream& output, Scene const& scene)
 // {
