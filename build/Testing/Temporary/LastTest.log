@@ -1,0 +1,30 @@
+Start testing: Aug 26 22:27 CEST
+----------------------------------------------------------
+1/1 Testing: tests
+1/1 Test: tests
+Command: "/home/hans/Desktop/Raytracer/build/build/Release/tests"
+Directory: /home/hans/Desktop/Raytracer/build
+"tests" start time: Aug 26 22:27 CEST
+Output:
+----------------------------------------------------------
+red added
+green added
+blue added
+white added
+box1 added
+eye added
+spot1 added
+ambi added
+===============================================================================
+test cases: 1 | 1 passed
+assertions: - none -
+
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"tests" end time: Aug 26 22:27 CEST
+"tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 26 22:27 CEST

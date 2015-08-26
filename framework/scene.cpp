@@ -5,7 +5,8 @@ shapes_(),
 cam_(),
 materials_(),
 lights_(),
-composites_()
+composites_(),
+ambient_()
 {}
 
 Scene::~Scene()
@@ -71,4 +72,9 @@ std::shared_ptr<Shape> Scene::getShape(std::string const& name) const
 void Scene::addComposite(std::shared_ptr<Composite> com)
 {
 	composites_ = com;
+}
+
+void Scene::addAmbient(Color c)
+{
+	ambient_ += c;
 }

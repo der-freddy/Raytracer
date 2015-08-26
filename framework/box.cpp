@@ -50,26 +50,61 @@ std::ostream& Box::print(std::ostream& os) const
 
  Hit Box::intersect(Ray const& r) const
  {
-// 	//Calculate intersection distances of x edges
-// 	double tx1 = (_min.x - r.origin_.x)/glm::normalize(r.direction_).x;
-// 	double tx2 = (_max.x - r.origin_.x)/glm::normalize(r.direction_).x;
-	
-// 	double tnear = std::min(tx1, tx2);
-// 	double tfar = std::max(tx1, tx2);
-	
-// 	//Calculate intersection distances of y edges
-// 	double ty1 = (_min.y - r.origin_.y)/glm::normalize(r.direction_).y;
-// 	double ty2 = (_max.y - r.origin_.y)/glm::normalize(r.direction_).y;
-	
-// 	tnear = std::max(tnear, std::min(ty1, ty2));
-// 	tfar = std::min(tfar, std::max(ty1, ty2));
-	
-// 	//Calculate intersection distance of z edges
-// 	double tz1 = (_min.z - r.origin_.z)/glm::normalize(r.direction_).z;
-// 	double tz2 = (_max.z - r.origin_.z)/glm::normalize(r.direction_).z;
-	
-// 	tnear = std::max(tnear, std::min(tz1, tz2));
-// 	tfar = std::min(tfar, std::max(tz1, tz2));
-	
-// 	return tfar >= std::max(0.0, tnear);
- }
+    double t1 = (_min.x - r.origin_.x)/glm::normalize(r.direction_).x;
+    double t2 = (_max.x - r.origin_.x)/glm::normalize(r.direction_).x;
+    double tmin = std::min(t1, t2);
+    double tmax = std::max(t1, t2);
+
+    t1 = (_min.y - r.origin_.y)/glm::normalize(r.direction_).y;
+    t2 = (_max.y - r.origin_.y)/glm::normalize(r.direction_).y;
+    tmin = std::max(tmin, std::min(t1, t2));
+    tmax = std::min(tmax, std::max(t1, t2));
+
+    t1 = (_min.z - r.origin_.z)/glm::normalize(r.direction_).z;
+    t2 = (_max.z - r.origin_.z)/glm::normalize(r.direction_).z;
+    tmin = std::max(tmin, std::min(t1, t2));
+    tmax = std::min(tmax, std::max(t1, t2));
+
+    Hit intersec{};
+
+    if (tmax > std::max(0.0, tmin)) {
+        intersec.distance_ = sqrt(
+            tmin*tmin*(
+                r.direction_.x*r.direction_.x +
+                r.direction_.y*r.direction_.y +
+                r.direction_.z*r.direction_.z
+            )
+        );
+
+        intersec.intersect_ = glm::vec3{
+            tmin*r.direction_.x, tmin*r.direction_.y, tmin*r.direction_.z
+        };
+        intersec.normal_ = normal(intersec.intersect_);
+        intersec.shape_ = std::make_shared<Box>(*this);
+        intersec.hit_ = true;
+    }
+
+    return intersec;
+}
+
+glm::vec3 Box::normal(glm::vec3 const& insec) const {
+
+    glm::vec3 normal{ INFINITY, INFINITY, INFINITY };
+    const double epsilon = 5.97e-5;
+
+    if (abs(_min.x - insec.x) < epsilon) {
+        normal = glm::vec3{ -1.0, 0.0, 0.0 };
+    } else if (abs(_min.y - insec.y) < epsilon) {
+        normal = glm::vec3{ 0.0, -1.0, 0.0 };
+    } else if (abs(_min.z - insec.z) < epsilon) {
+        normal = glm::vec3{ 0.0, 0.0, 1.0 };
+    } else if (abs(_max.x - insec.x) < epsilon) {
+        normal = glm::vec3{ 1.0, 0.0, 0.0 };
+    } else if (abs(_max.y - insec.y) < epsilon) {
+        normal = glm::vec3{ 0.0, 1.0, 0.0 };
+    } else if (abs(_max.z - insec.z) < epsilon) {
+        normal = glm::vec3{ 0.0, 0.0, -1.0 };
+    }
+
+    return  normal;
+}

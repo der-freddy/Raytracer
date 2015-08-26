@@ -56,9 +56,7 @@ void Sdfloader::readSdf(std::string path)
         }
         else if(sub == "composite")
         {
-
           create_composite(iss);
-
         }
       }
       else if(sub == "light")
@@ -70,7 +68,7 @@ void Sdfloader::readSdf(std::string path)
         }
         else if(sub == "ambient")
         {
-
+          create_ambient(iss);
         }
       }
       else if(sub == "camera")
@@ -223,6 +221,21 @@ void Sdfloader::create_light(std::istringstream& iss)
   std::shared_ptr<Light> light = std::make_shared<Light>(name, location, color);
 
   scene_.addLight(name, light);
+
+  std::cout << name << " added" << std::endl;
+}
+
+void Sdfloader::create_ambient(std::istringstream& iss)
+{
+  //creation of 
+  std::string name;
+  float x,y,z;
+  
+  iss >> name >> x >> y >> z;
+
+  Color color{x,y,z};
+
+  scene_.addAmbient(color);
 
   std::cout << name << " added" << std::endl;
 

@@ -19,6 +19,13 @@ struct Color
   float g;
   float b;
 
+  Color(): 
+  r{0.0},
+  g{0.0},
+  b{0.0}
+  {}
+
+
   friend std::ostream& operator<<(std::ostream& os, Color const& c)
   {
     os << "(" << c.r << "," << c.g << "," << c.b << ")";

@@ -29,6 +29,8 @@ class Box : public Shape
 
 	Hit intersect(Ray const&) const override; 
 
+	glm::vec3 normal(glm::vec3 const&) const;
+
 	private:
 		glm::vec3 _max;
 		glm::vec3 _min;

@@ -29,6 +29,7 @@ public:
 	void create_box(std::istringstream&);
 	void create_cam(std::istringstream&);
 	void create_light(std::istringstream&);
+	void create_ambient(std::istringstream&);
 	void issprint(std::istringstream&);
 
 private:
