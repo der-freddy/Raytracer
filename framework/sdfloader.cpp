@@ -101,7 +101,6 @@ void Sdfloader::issprint(std::istringstream& iss)
   while(iss >> name)
   {
     std::shared_ptr<Shape> shape_ptr = scene_.getShape(name);
-   // scene_.composites_->addShape(shape_ptr);
     toAddCom->addShape(shape_ptr);
   }
 
@@ -111,12 +110,6 @@ void Sdfloader::issprint(std::istringstream& iss)
   }
 }
 
-// void Sdfloader::create_composite(std::istringstream& iss)
-// {
-//   iss >> shape;
-
-
-// }
 
 void Sdfloader::create_material(std::istringstream& iss)
 {
