@@ -1,13 +1,11 @@
 #ifndef BUW_COMPOSITE_HPP
 #define BUW_COMPOSITE_HPP
-
 #include <memory>
 #include <map>
 #include <shape.hpp>
 #include <box.hpp>
 #include <sphere.hpp>
 #include <string>
-
 
 class Composite: public Shape
 {
