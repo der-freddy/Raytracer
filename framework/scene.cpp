@@ -68,9 +68,8 @@ std::shared_ptr<Shape> Scene::getShape(std::string const& name) const
 		std::cout << name << std::endl;
 	}
 }
-// std::ostream& operator<<(std::ostream& output, Scene const& scene)
-// {
-    // for(auto i : scene.materials)
-        // output << i.second << std::endl << std::endl;
-    // return output;
-// }
+
+void Scene::addComposite(std::shared_ptr<Composite> com)
+{
+	composites_ = com;
+}

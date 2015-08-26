@@ -26,15 +26,19 @@ void printScene();
 
  	void addCam(Camera);
 
- 	std::shared_ptr<Material> getMaterial(std::string const& name) const;
-
  	void addLight(std::string, std::shared_ptr<Light>);
+
+ 	void addComposite(std::shared_ptr<Composite> com);
+
+ 	std::shared_ptr<Material> getMaterial(std::string const& name) const;
 
  	std::map<std::string, std::shared_ptr<Material>> material() const;
 
  	std::shared_ptr<Composite> getComposites() const;
 
  	std::shared_ptr<Shape> getShape(std::string const& name) const;
+
+
  	//private:
   std::map<std::string, std::shared_ptr<Material>> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;

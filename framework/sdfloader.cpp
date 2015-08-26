@@ -93,14 +93,20 @@ void Sdfloader::readSdf(std::string path)
 
 void Sdfloader::issprint(std::istringstream& iss)
 {
-
-
   std::string name;
+  iss >> name;
+  
+  std::shared_ptr<Composite> toAddCom = std::make_shared<Composite>(Composite(name));
+  
   while(iss >> name)
   {
-    std::cout << name << std::endl;
     std::shared_ptr<Shape> shape_ptr = scene_.getShape(name);
-    scene_.getComposites()->addShape(shape_ptr);
+    toAddCom->addShape(shape_ptr);
+  }
+
+  if(scene_.getComposites() = nullptr)
+  {
+    scene_.addComposite(toAddCom);
   }
 }
 
