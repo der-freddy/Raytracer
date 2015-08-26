@@ -32,8 +32,9 @@ public:
     return colorbuffer_;
   }
 
-
   Color raytrace(Ray const& ray, Color color, int depth);
+
+  Hit closestIntersection(Ray const&);
 
 private:
   unsigned width_;

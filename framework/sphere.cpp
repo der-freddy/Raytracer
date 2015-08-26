@@ -45,7 +45,7 @@ std::ostream& Sphere::print(std::ostream& os) const
 
 Hit Sphere::intersect(Ray const& ray) const
 {
-	Hit intersec;
+	Hit intersec{};
 
 	intersec.hit_ = glm::intersectRaySphere(ray.origin_, glm::normalize(ray.direction_),_mp, _r, intersec.intersect_, intersec.normal_);
 

@@ -53,14 +53,12 @@ void Renderer::write(Pixel const& p)
   ppm_.write(p);
 }
 
-Color Renderer::raytrace(Ray const& ray, Color color, int depth)
+Hit Renderer::closestIntersection(Ray const& ray) 
 {
-  float d = 1.0f;
-  Color ambient(0.0, 0.0, 0.0);
-  typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
   double closest = INFINITY;
   Hit hit{};
-  
+  typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
+
   for(it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
   {
     Hit hit_temp{i->second->intersect(ray)};
@@ -71,5 +69,21 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
       hit = hit_temp;
     }
   }
-    return hit.shape_->material()->kd();
+  return hit;
 }
+
+Color Renderer::raytrace(Ray const& ray, Color color, int depth)
+{
+  float d = 1.0f;
+  Color ambient(0.0, 0.0, 0.0);
+
+  Hit intersection{closestIntersection(ray)};
+
+  if(intersection.hit_)
+  {
+    ambient = intersection.shape_->material()->kd();
+  }
+
+  
+    else return ambient;
+} 
