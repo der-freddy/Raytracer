@@ -83,8 +83,7 @@ Color Renderer::getDiffuse(Hit const& hit) const
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
   {
-<<<<<<< HEAD
-    glm::vec3 L = (i->second->getLocation() - hit.getIntersect());
+    glm::vec3 L = glm::normalize(i->second->getLocation() - hit.getIntersect());
     glm::vec3 N = (hit.normal_);
 
     float dot = glm::dot(L, N);
@@ -92,17 +91,6 @@ Color Renderer::getDiffuse(Hit const& hit) const
     {
       diff += (i->second->getLd() * hit.shape_->material()->m() * dot);
     }
-=======
-    std::cout << "test1" << std::endl;
-    float a = (glm::dot(i->second->getLocation()-hit.getIntersect(), hit.normal_));
-    std::cout << "test2" << std::endl;
-    Color diffTemp {a ,a ,a};
-    std::cout << "test3" << std::endl;
-    diffTemp += diffTemp*diff;
-    // diffTemp += diffTemp*(i->second->getLd())*(hit.shape_->material()->kd());
-    std::cout << "test4" << std::endl;
-    diff += diffTemp;
->>>>>>> c93e590d22a956e93a842fb2d9247828e64f3ac1
   }
   return diff;
 }
