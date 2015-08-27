@@ -40,6 +40,7 @@ public:
   Color ks(std::shared_ptr<Shape> shape) const;
 
   Color getDiffuse(Hit const&) const;
+  
 
 private:
   unsigned width_;

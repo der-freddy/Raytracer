@@ -78,15 +78,19 @@ Color Renderer::ks(std::shared_ptr<Shape> shape) const
 
 Color Renderer::getDiffuse(Hit const& hit) const
 {
+  Color diff{}; 
   typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
-  Color diff{};
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
   {
-    float a = (glm::dot(i->second->getLocation()-hit.getIntersect(), hit.normal_));
-    Color diffTemp {a ,a ,a};
-    diffTemp * i->second->getLd()*hit.shape_->material()->kd();
-    diff += diffTemp;
+    glm::vec3 L = (i->second->getLocation() - hit.getIntersect());
+    glm::vec3 N = (hit.normal_);
+
+    float dot = glm::dot(L, N);
+    if(dot > 0)
+    {
+      diff += (i->second->getLd() * hit.shape_->material()->m() * dot);
+    }
   }
   return diff;
 }
@@ -119,8 +123,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = intersection.shape_->material()->kd()+getDiffuse(intersection);
+    ambient = (getDiffuse(intersection)*intersection.shape_->material()->kd()) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
   }
-
   return ambient;
 } 

@@ -57,10 +57,23 @@ struct Color
 
   friend Color operator*(Color const& a, Color const& b)
   {
-    auto tmp(a);
-    tmp * b;
+    float x, y, z;
+    x = b.r*a.r;
+    y = b.g*a.g;
+    z = b.b*a.b;
+    Color col{x,y,z};
+    return col;
+  }
+
+  friend Color operator*(Color const& a, float const& b)
+  {
+  	auto tmp(a);
+    tmp.r = tmp.r*b;
+    tmp.g = tmp.g*b;
+    tmp.b = tmp.b*b;
     return tmp;
   }
+
 
 
   friend Color operator-(Color const& a, Color const& b)
