@@ -83,9 +83,14 @@ Color Renderer::getDiffuse(Hit const& hit) const
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
   {
+    std::cout << "test1" << std::endl;
     float a = (glm::dot(i->second->getLocation()-hit.getIntersect(), hit.normal_));
+    std::cout << "test2" << std::endl;
     Color diffTemp {a ,a ,a};
-    diffTemp * i->second->getLd()*hit.shape_->material()->kd();
+    std::cout << "test3" << std::endl;
+    diffTemp += diffTemp*diff;
+    // diffTemp += diffTemp*(i->second->getLd())*(hit.shape_->material()->kd());
+    std::cout << "test4" << std::endl;
     diff += diffTemp;
   }
   return diff;
