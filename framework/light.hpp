@@ -8,14 +8,16 @@
 class Light
 {
 public:
-	Light(std::string name, glm::vec3 const & location, Color const& col);
+	Light(std::string name, glm::vec3 const & location, Color const& la, Color const& ld);
 	std::string getName() const;
-	Color getColor() const;
+	Color getLa() const;
+	Color getLd() const;
 	glm::vec3 getLocation() const;
 
 private:
 	std::string name_;
 	glm::vec3 location_;
-	Color color_;
+	Color la_;
+	Color ld_;
 };
 #endif

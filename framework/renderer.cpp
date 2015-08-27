@@ -53,6 +53,22 @@ void Renderer::write(Pixel const& p)
   ppm_.write(p);
 }
 
+
+Color Renderer::ka(std::shared_ptr<Shape> shape) const
+{
+  return shape->material()->ka();
+}
+
+Color Renderer::kd(std::shared_ptr<Shape> shape) const
+{
+  return shape->material()->kd();
+}
+
+Color Renderer::ks(std::shared_ptr<Shape> shape) const
+{
+  return shape->material()->ks();
+}
+
 Hit Renderer::closestIntersection(Ray const& ray) 
 {
   double closest = INFINITY;

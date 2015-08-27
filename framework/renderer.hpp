@@ -35,6 +35,9 @@ public:
   Color raytrace(Ray const& ray, Color color, int depth);
 
   Hit closestIntersection(Ray const&);
+  Color ka(std::shared_ptr<Shape> shape) const;
+  Color kd(std::shared_ptr<Shape> shape) const;
+  Color ks(std::shared_ptr<Shape> shape) const;
 
 private:
   unsigned width_;

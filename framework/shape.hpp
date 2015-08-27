@@ -26,6 +26,12 @@ public:
 
 	std::shared_ptr<Material> material() const;
 
+	Color ka() const;
+
+	Color kd() const;
+
+	Color ks() const;
+
 	std::string name() const;
 
 	virtual std::ostream& print(std::ostream& os) const;
