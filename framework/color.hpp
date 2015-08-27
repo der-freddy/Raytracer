@@ -55,6 +55,14 @@ struct Color
     return tmp;
   }
 
+  friend Color operator*(Color const& a, Color const& b)
+  {
+    auto tmp(a);
+    tmp * b;
+    return tmp;
+  }
+
+
   friend Color operator-(Color const& a, Color const& b)
   {
     auto tmp(a);

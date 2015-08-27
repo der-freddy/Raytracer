@@ -3,7 +3,7 @@ define material green 0 1 0 0 1 0 0 1 0 10
 define material blue 0 0 1 0 0 1 0 0 1 10
 define material white 1 1 1 1 1 1 1 1 1 10
 define shape box box1 0 0 -1 3 2 -5 red
-define shape sphere sphere1 0 0 -4 2 green
+define shape sphere sphere1 -8 0 0 5 green
 define camera eye 60.0 0 0 0
-define light diffuse spot1 -500 800 0 0.2 0.2 0.2 0.2 0.2 0.2
-define light ambient ambi 0.3 0.3 0.3
+define light diffuse spot1 -500 800 0 0.8 0.8 0.8 0.8 0.8 0.8
+define light ambient ambi 0.8 0.8 0.8

@@ -6,7 +6,7 @@ cam_(),
 materials_(),
 lights_(),
 composites_(),
-ambient_()
+globalAmbient_()
 {}
 
 Scene::~Scene()
@@ -76,5 +76,5 @@ void Scene::addComposite(std::shared_ptr<Composite> com)
 
 void Scene::addAmbient(Color c)
 {
-	ambient_ += c;
+	globalAmbient_ += c;
 }

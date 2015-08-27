@@ -39,6 +39,8 @@ public:
   Color kd(std::shared_ptr<Shape> shape) const;
   Color ks(std::shared_ptr<Shape> shape) const;
 
+  Color getDiffuse(Hit const&) const;
+
 private:
   unsigned width_;
   unsigned height_;
@@ -47,6 +49,7 @@ private:
   PpmWriter ppm_;
   std::shared_ptr<Scene> scene_;
   float fovDistance_;
+
 };
 
 #endif // #ifndef BUW_RENDERER_HPP

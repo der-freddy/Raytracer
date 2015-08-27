@@ -45,7 +45,7 @@ public:
   std::map<std::string, std::shared_ptr<Material>> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;
   Camera cam_;
-  Color ambient_;
+  Color globalAmbient_;
   std::map<std::string, std::shared_ptr<Light>> lights_;
   std::shared_ptr<Composite> composites_;
 

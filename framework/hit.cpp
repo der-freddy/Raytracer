@@ -8,3 +8,8 @@ Hit::Hit(bool hit, double distance, glm::vec3 const& intersect, glm::vec3 normal
 		std::shared_ptr<Shape> shape):
 hit_{hit}, distance_{distance}, intersect_{intersect}, shape_{shape}
 {}
+
+glm::vec3 Hit::getIntersect() const
+{
+	return intersect_;
+}

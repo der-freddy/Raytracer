@@ -13,6 +13,8 @@ struct Hit
 	Hit(bool hit, double distance, glm::vec3 const& intersect, glm::vec3 normal_,
 	std::shared_ptr<Shape> shape);
 
+	glm::vec3 getIntersect() const;
+
 	bool hit_;
 	double distance_;
 	glm::vec3 intersect_;

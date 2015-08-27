@@ -22,6 +22,13 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_
 
 void Renderer::render()
 {
+  typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
+
+  for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
+  {
+    scene_->globalAmbient_ += i->second->getLa();
+  }
+
   for (unsigned y = 0; y < height_; ++y) {
     for (unsigned x = 0; x < width_; ++x) {
 
@@ -69,6 +76,21 @@ Color Renderer::ks(std::shared_ptr<Shape> shape) const
   return shape->material()->ks();
 }
 
+Color Renderer::getDiffuse(Hit const& hit) const
+{
+  typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
+  Color diff{};
+
+  for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
+  {
+    float a = (glm::dot(i->second->getLocation()-hit.getIntersect(), hit.normal_));
+    Color diffTemp {a ,a ,a};
+    diffTemp * i->second->getLd()*hit.shape_->material()->kd();
+    diff += diffTemp;
+  }
+  return diff;
+}
+
 Hit Renderer::closestIntersection(Ray const& ray) 
 {
   double closest = INFINITY;
@@ -97,7 +119,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = intersection.shape_->material()->kd();
+    ambient = intersection.shape_->material()->kd()+getDiffuse(intersection);
   }
 
   return ambient;
