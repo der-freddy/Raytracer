@@ -57,6 +57,7 @@ struct Color
 
   friend Color operator*(Color const& a, Color const& b)
   {
+<<<<<<< HEAD
     float x, y, z;
     x = b.r*a.r;
     y = b.g*a.g;
@@ -71,9 +72,20 @@ struct Color
     tmp.r = tmp.r*b;
     tmp.g = tmp.g*b;
     tmp.b = tmp.b*b;
+=======
+    auto tmp(a);
+    tmp *= b;
+>>>>>>> c93e590d22a956e93a842fb2d9247828e64f3ac1
     return tmp;
   }
 
+  Color& operator*=(Color const& other)
+  {
+    r *= other.r;
+    g *= other.g;
+    b *= other.b;
+    return *this;
+  }
 
 
   friend Color operator-(Color const& a, Color const& b)
