@@ -216,9 +216,13 @@ void Sdfloader::create_light(std::istringstream& iss)
 
   iss >> x >> y >> z;
 
-  Color color{x,y,z};
+  Color la{x,y,z};
 
-  std::shared_ptr<Light> light = std::make_shared<Light>(name, location, color);
+  iss >> x >> y >> z;
+
+  Color ld{x,y,z};
+
+  std::shared_ptr<Light> light = std::make_shared<Light>(Light(name, location, la, ld));
 
   scene_.addLight(name, light);
 
