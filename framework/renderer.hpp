@@ -14,6 +14,7 @@
 #include "pixel.hpp"
 #include "ppmwriter.hpp"
 #include <string>
+#include <cmath>
 #include <glm/glm.hpp>
 #include "ray.hpp"
 #include "scene.hpp"
@@ -40,6 +41,7 @@ public:
   Color ks(std::shared_ptr<Shape> shape) const;
 
   Color getDiffuse(Hit const&) const;
+  Color getSpecular(Hit const& hit, Ray const& ray) const;
   
 
 private:

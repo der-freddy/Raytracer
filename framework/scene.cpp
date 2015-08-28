@@ -69,6 +69,11 @@ std::shared_ptr<Shape> Scene::getShape(std::string const& name) const
 	}
 }
 
+Camera Scene::getCam() const
+{
+	return cam_;
+}
+
 void Scene::addComposite(std::shared_ptr<Composite> com)
 {
 	composites_ = com;

@@ -95,6 +95,27 @@ Color Renderer::getDiffuse(Hit const& hit) const
   return diff;
 }
 
+Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
+{
+  Color spec{};
+  typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
+
+  for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
+  {
+    glm::vec3 R = (i->second->getLocation() - ray.direction_);
+    glm::vec3 V = glm::normalize(ray.direction_);
+
+    float dot = glm::dot(R,V);
+    // if(dot > 0)
+    // {
+      spec += (i->second->getLd() * hit.shape_->material()->ks() * pow(dot,0.5));
+      std::cout << dot <<std::endl;
+      return spec;
+    // }
+    
+  }
+}
+
 Hit Renderer::closestIntersection(Ray const& ray) 
 {
   double closest = INFINITY;
@@ -123,7 +144,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = (getDiffuse(intersection)*intersection.shape_->material()->kd()) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
+    ambient = (getDiffuse(intersection)*intersection.shape_->material()->kd()) + (getSpecular(intersection, ray)) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
   }
   return ambient;
 } 

@@ -40,6 +40,8 @@ public:
 
  	std::shared_ptr<Shape> getShape(std::string const& name) const;
 
+ 	Camera getCam() const;
+
 
  	//private:
   std::map<std::string, std::shared_ptr<Material>> materials_;

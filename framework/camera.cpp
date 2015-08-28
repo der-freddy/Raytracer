@@ -24,22 +24,22 @@ std::string Camera::getName() const
 	return name_;
 }
 
-double Camera::getFov_x()
+double Camera::getFov_x() const
 {
 	return fov_x_;
 }
 
-glm::vec3 Camera::getEye()
+glm::vec3 Camera::getEye() const
 {
 	return eye_;
 }
 
-glm::vec3 Camera::getDir()
+glm::vec3 Camera::getDir() const
 {
 	return dir_;
 }
 
-glm::vec3 Camera::getUp()//everybody
+glm::vec3 Camera::getUp() const //everybody
 {
 	return up_;
 }
