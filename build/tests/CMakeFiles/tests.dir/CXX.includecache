@@ -917,6 +917,8 @@ ppmwriter.hpp
 ../framework/ppmwriter.hpp
 string
 -
+cmath
+-
 glm/glm.hpp
 -
 ray.hpp
@@ -998,7 +1000,7 @@ shape.hpp
 hit.hpp
 ../framework/hit.hpp
 
-/home/hans/Desktop/Raytracer/tests/main.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp
 catch.hpp
 -
 glm/vec3.hpp
@@ -1008,13 +1010,13 @@ glm/glm.hpp
 glm/gtx/intersect.hpp
 -
 sphere.hpp
-/home/hans/Desktop/Raytracer/tests/sphere.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/sphere.hpp
 box.hpp
-/home/hans/Desktop/Raytracer/tests/box.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/box.hpp
 iostream
 -
 sdfloader.hpp
-/home/hans/Desktop/Raytracer/tests/sdfloader.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/sdfloader.hpp
 renderer.hpp
-/home/hans/Desktop/Raytracer/tests/renderer.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/renderer.hpp
 

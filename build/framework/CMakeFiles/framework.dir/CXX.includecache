@@ -660,25 +660,25 @@ shape.hpp
 hit.hpp
 ../framework/hit.hpp
 
-/home/hans/Desktop/Raytracer/framework/color.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
 iostream
 -
 
-/home/hans/Desktop/Raytracer/framework/hit.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/hit.hpp
 glm/vec3.hpp
 -
 ray.hpp
-/home/hans/Desktop/Raytracer/framework/ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
 memory
 -
 
-/home/hans/Desktop/Raytracer/framework/pixel.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
 iosfwd
 -
 color.hpp
 -
 
-/home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
 string
 -
 vector
@@ -686,33 +686,35 @@ vector
 pixel.hpp
 -
 
-/home/hans/Desktop/Raytracer/framework/ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
 glm/glm.hpp
 -
 
-/home/hans/Desktop/Raytracer/framework/renderer.cpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp
 renderer.hpp
-/home/hans/Desktop/Raytracer/framework/renderer.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
 
-/home/hans/Desktop/Raytracer/framework/renderer.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
 color.hpp
-/home/hans/Desktop/Raytracer/framework/color.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
 pixel.hpp
-/home/hans/Desktop/Raytracer/framework/pixel.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
 ppmwriter.hpp
-/home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
 string
+-
+cmath
 -
 glm/glm.hpp
 -
 ray.hpp
-/home/hans/Desktop/Raytracer/framework/ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
 scene.hpp
-/home/hans/Desktop/Raytracer/framework/scene.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.hpp
 hit.hpp
-/home/hans/Desktop/Raytracer/framework/hit.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/hit.hpp
 
-/home/hans/Desktop/Raytracer/framework/scene.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.hpp
 map
 -
 shape.hpp
