@@ -36,14 +36,14 @@ public:
   Color raytrace(Ray const& ray, Color color, int depth);
 
   Hit closestIntersection(Ray const&);
+  bool closestIntersection(Hit const&, std::shared_ptr<Light> const&) const; 
   Color ka(std::shared_ptr<Shape> shape) const;
   Color kd(std::shared_ptr<Shape> shape) const;
   Color ks(std::shared_ptr<Shape> shape) const;
 
   Color getDiffuse(Hit const&) const;
   Color getSpecular(Hit const& hit) const;
-  Color getRefl(Hit const& hit, float depth, Ray const&);
-  
+  Color getRefl(Hit const& hit, float depth, Ray const&);  
 
 private:
   unsigned width_;

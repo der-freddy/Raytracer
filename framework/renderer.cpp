@@ -105,19 +105,29 @@ Color Renderer::getSpecular(Hit const& hit) const
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
   {
-    
-    glm::vec3 camVec = glm::normalize(hit.normal_ - scene_->cam_.getEye());
+    if(closestIntersection(hit, i->second))
+    {
+      glm::vec3 camVec = glm::normalize(hit.normal_ - scene_->cam_.getEye());
 
-    glm::vec3 lightVec = glm::normalize(hit.normal_ - i->second->getLocation());
+      glm::vec3 lightVec = glm::normalize(hit.normal_ - i->second->getLocation());
 
-    double angle = glm::dot(lightVec, camVec);
-    double value = std::abs(std::pow(angle, hit.shape_->material()->m()));
+      double angle = glm::dot(lightVec, camVec);
+      double value = std::abs(std::pow(angle, hit.shape_->material()->m()));
 
-    spec += hit.shape_->material()->ks() * i->second->getLd() * std::max(value, 0.0);
+      spec += hit.shape_->material()->ks() * i->second->getLd() * std::max(value, 0.0);
+    }
   }
 
 return spec;
 }
+
+bool Renderer::closestIntersection(Hit const& hit, std::shared_ptr<Light> const& light) const 
+{
+  Ray ray{light->getLocation(), glm::normalize(glm::normalize(hit.normal_) - light->getLocation())};
+  Hit hit_temp{hit.shape_->intersect(ray)};
+  return hit_temp.distance_ >= hit.distance_;
+}
+
 
 Hit Renderer::closestIntersection(Ray const& ray) 
 {
