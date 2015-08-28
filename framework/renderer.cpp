@@ -97,23 +97,40 @@ Color Renderer::getDiffuse(Hit const& hit) const
 
 Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
 {
+
+  
   Color spec{};
   typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
   {
-    glm::vec3 R = (i->second->getLocation() - ray.direction_);
-    glm::vec3 V = glm::normalize(ray.direction_);
-
-    float dot = glm::dot(R,V);
-    // if(dot > 0)
-    // {
-      spec += (i->second->getLd() * hit.shape_->material()->ks() * pow(dot,0.5));
-      std::cout << dot <<std::endl;
-      return spec;
-    // }
     
+    glm::vec3 camVec = glm::normalize(scene_->cam_.getEye() - hit.getIntersect() );
+
+    glm::vec3 lightVec = glm::normalize(i->second->getLocation()- hit.getIntersect());
+
+    double angle = glm::dot(lightVec, camVec);
+    double value = std::pow(angle, hit.shape_->material()->m());
+
+    spec += hit.shape_->material()->ks() * std::max(value, 0.0);
+    std::cout << value << std::endl;
   }
+    // glm::vec3 V = (ray.direction_);
+    // glm::vec3 L = (hit.getIntersect() - i->second->getLocation());
+    // glm::vec3 R = (L - 2.0f * glm::dot(L, hit.normal_) *  (hit.normal_));
+
+    // float dot = glm::dot(V,R);
+
+  //   if(dot > 0)
+  //   {
+  //     spec += (hit.shape_->material()->ks() * pow(dot, 20)); 
+  //   }
+
+  //     //std::cout << ray.direction_.x << ", " << ray.direction_.y << ", " << ray.direction_.z << ", " << std::endl;
+  // }
+     //std::cout << spec.r << std::endl;
+
+return spec;
 }
 
 Hit Renderer::closestIntersection(Ray const& ray) 
@@ -144,7 +161,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = (getDiffuse(intersection)*intersection.shape_->material()->kd()) + (getSpecular(intersection, ray)) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
+    ambient = (getDiffuse(intersection) + (getSpecular(intersection, ray))  * intersection.shape_->material()->kd()) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
   }
   return ambient;
 } 
