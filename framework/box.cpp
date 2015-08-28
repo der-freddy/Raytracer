@@ -68,30 +68,28 @@ std::ostream& Box::print(std::ostream& os) const
     Hit intersec{};
 
     if (tmax > std::max(0.0, tmin)) {
-      intersec.distance_ = sqrt(
-        tmin*tmin*
-        (
-          r.direction_.x*r.direction_.x +
-          r.direction_.y*r.direction_.y +
-          r.direction_.z*r.direction_.z
-        )
-      );
 
+      intersec.distance_ = tmin - 0.0001f;
+      // sqrt(
+      // (
+      //  intersec.intersect_.x* intersec.intersect_.x +
+      //  intersec.intersect_.y* intersec.intersect_.y +
+      //  intersec.intersect_.z* intersec.intersect_      // );
       intersec.intersect_ = glm::vec3{
-          tmin*r.direction_.x, tmin*r.direction_.y, tmin*r.direction_.z
+          intersec.distance_*glm::normalize(r.direction_).x, intersec.distance_ * glm::normalize(r.direction_).y, intersec.distance_ * glm::normalize(r.direction_).z
       };
       intersec.normal_ = normal(intersec.intersect_);
       intersec.shape_ = std::make_shared<Box>(*this);
       intersec.hit_ = true;
     }
-
+    //std::cout << intersec.intersect_.z << std::endl;
     return intersec;
 }
 
 glm::vec3 Box::normal(glm::vec3 const& insec) const {
 
   glm::vec3 normal{ INFINITY, INFINITY, INFINITY };
-  const double epsilon = 0.1;
+  const double epsilon = 0.0001;
 
   if (abs(_min.x - insec.x) < epsilon) {
       normal = glm::vec3{ -1.0, 0.0, 0.0 };

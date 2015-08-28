@@ -115,12 +115,12 @@ Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
   {
     
-    glm::vec3 camVec = glm::normalize(scene_->cam_.getEye() - hit.getIntersect() );
+    glm::vec3 camVec = glm::normalize(hit.normal_ - scene_->cam_.getEye());
 
-    glm::vec3 lightVec = glm::normalize(i->second->getLocation()- hit.getIntersect());
+    glm::vec3 lightVec = glm::normalize(hit.normal_ - i->second->getLocation());
 
     double angle = glm::dot(lightVec, camVec);
-    double value = std::pow(angle, hit.shape_->material()->m());
+    double value = std::abs(std::pow(angle, hit.shape_->material()->m()));
 
     spec += hit.shape_->material()->ks() * i->second->getLd() * std::max(value, 0.0);
     std::cout << value << std::endl;
