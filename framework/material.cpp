@@ -1,9 +1,9 @@
 #include "material.hpp"
 
-Material::Material(): _name{"untitled_material"}, _ka{1.0f,1.0f,1.0f}, _kd{1.0f, 1.0f, 1.0f}, _ks{1.0f, 1.0f, 1.0f}, _m{0}
+Material::Material(): _name{"untitled_material"}, _ka{1.0f,1.0f,1.0f}, _kd{1.0f, 1.0f, 1.0f}, _ks{1.0f, 1.0f, 1.0f}, _m{0}, _s{0}
 {}
 
-Material::Material(std::string name, Color const& ka, Color const& kd,Color const& ks, float m): _name{name}, _ka{ka}, _kd{kd}, _ks{ks}, _m{m}
+Material::Material(std::string name, Color const& ka, Color const& kd,Color const& ks, float m, float s): _name{name}, _ka{ka}, _kd{kd}, _ks{ks}, _m{m}, _s{s}
 {}
 
 Material::~Material()
@@ -27,6 +27,11 @@ Material::~Material()
 	float Material::m() const
 	{
 		return _m;
+	}
+
+	float Material::s() const
+	{
+		return _s;
 	}
 
 	std::string Material::name() const

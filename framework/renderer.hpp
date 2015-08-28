@@ -42,6 +42,7 @@ public:
 
   Color getDiffuse(Hit const&) const;
   Color getSpecular(Hit const& hit, Ray const& ray) const;
+  Color getRef(Hit const& hit, Ray const& ray) const;
   
 
 private:

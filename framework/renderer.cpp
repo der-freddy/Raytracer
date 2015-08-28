@@ -37,7 +37,7 @@ void Renderer::render()
 
       Ray ray{{0.0, 0.0, 0.0}, {x_pos, y_pos, fovDistance_}};
       Pixel p(x,y);
-        p.color = raytrace(ray, Color{0.0,0.0,0.0}, 1);
+        p.color = raytrace(ray, Color{0.0,0.0,0.0}, 3);
       write(p);
     }
   }
@@ -89,11 +89,21 @@ Color Renderer::getDiffuse(Hit const& hit) const
     float dot = glm::dot(L, N);
     if(dot > 0)
     {
-      diff += (i->second->getLd() * hit.shape_->material()->m() * dot);
+      //diff += (i->second->getLd() * hit.shape_->material()->m() * dot);
+      diff += (i->second->getLd() * hit.shape_->material()->kd() * dot);
     }
   }
   return diff;
 }
+
+// Color Renderer::getRef(Hit const& hit, Ray const& ray)
+// {
+//   if(hit.shape_->material->s() > 0)
+//   {
+//     glm::vec3 N = hit.normal_;
+    
+//   }
+// }
 
 Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
 {
@@ -112,7 +122,7 @@ Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
     double angle = glm::dot(lightVec, camVec);
     double value = std::pow(angle, hit.shape_->material()->m());
 
-    spec += hit.shape_->material()->ks() * std::max(value, 0.0);
+    spec += hit.shape_->material()->ks() * i->second->getLd() * std::max(value, 0.0);
     std::cout << value << std::endl;
   }
     // glm::vec3 V = (ray.direction_);
@@ -129,6 +139,8 @@ Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
   //     //std::cout << ray.direction_.x << ", " << ray.direction_.y << ", " << ray.direction_.z << ", " << std::endl;
   // }
      //std::cout << spec.r << std::endl;
+
+
 
 return spec;
 }
@@ -161,7 +173,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = (getDiffuse(intersection) + (getSpecular(intersection, ray))  * intersection.shape_->material()->kd()) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
+    ambient = getDiffuse(intersection) + getSpecular(intersection, ray) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
   }
   return ambient;
 } 

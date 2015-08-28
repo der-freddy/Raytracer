@@ -9,7 +9,7 @@ class Material
 public:
 	//Constructor
 	Material();
-	Material(std::string name, Color const& ka, Color const& kd,Color const& ks, float m);
+	Material(std::string name, Color const& ka, Color const& kd,Color const& ks, float m, float s);
 	~Material();
 
 	Color ka() const;
@@ -19,6 +19,8 @@ public:
 	Color ks() const;
 
 	float m() const;
+
+	float s() const;
 
 	std::string name() const;
 
@@ -30,6 +32,7 @@ public:
 		Color _ks;
 		std::string _name;
 		float _m;
+		float _s;
 };
 
 #endif // BUW_MATERIAL_HPP
