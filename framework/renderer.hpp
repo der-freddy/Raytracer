@@ -41,8 +41,8 @@ public:
   Color ks(std::shared_ptr<Shape> shape) const;
 
   Color getDiffuse(Hit const&) const;
-  Color getSpecular(Hit const& hit, Ray const& ray) const;
-  Color getRef(Hit const& hit, Ray const& ray) const;
+  Color getSpecular(Hit const& hit) const;
+  Color getRefl(Hit const& hit, float depth, Ray const&);
   
 
 private:

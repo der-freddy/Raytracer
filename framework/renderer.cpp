@@ -37,7 +37,7 @@ void Renderer::render()
 
       Ray ray{{0.0, 0.0, 0.0}, {x_pos, y_pos, fovDistance_}};
       Pixel p(x,y);
-        p.color = raytrace(ray, Color{0.0,0.0,0.0}, 3);
+        p.color = raytrace(ray, Color{0.0,0.0,0.0}, 1);
       write(p);
     }
   }
@@ -96,16 +96,7 @@ Color Renderer::getDiffuse(Hit const& hit) const
   return diff;
 }
 
-// Color Renderer::getRef(Hit const& hit, Ray const& ray)
-// {
-//   if(hit.shape_->material->s() > 0)
-//   {
-//     glm::vec3 N = hit.normal_;
-    
-//   }
-// }
-
-Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
+Color Renderer::getSpecular(Hit const& hit) const
 {
 
   
@@ -123,24 +114,7 @@ Color Renderer::getSpecular(Hit const& hit, Ray const& ray) const
     double value = std::abs(std::pow(angle, hit.shape_->material()->m()));
 
     spec += hit.shape_->material()->ks() * i->second->getLd() * std::max(value, 0.0);
-    std::cout << value << std::endl;
   }
-    // glm::vec3 V = (ray.direction_);
-    // glm::vec3 L = (hit.getIntersect() - i->second->getLocation());
-    // glm::vec3 R = (L - 2.0f * glm::dot(L, hit.normal_) *  (hit.normal_));
-
-    // float dot = glm::dot(V,R);
-
-  //   if(dot > 0)
-  //   {
-  //     spec += (hit.shape_->material()->ks() * pow(dot, 20)); 
-  //   }
-
-  //     //std::cout << ray.direction_.x << ", " << ray.direction_.y << ", " << ray.direction_.z << ", " << std::endl;
-  // }
-     //std::cout << spec.r << std::endl;
-
-
 
 return spec;
 }
@@ -164,6 +138,29 @@ Hit Renderer::closestIntersection(Ray const& ray)
   return hit;
 }
 
+Color Renderer::getRefl(Hit const& hit, float depth, Ray const& ray)
+{
+  float refl = hit.shape_->material()->s();
+  Color c(0.0, 0.0, 0.0);
+  if(refl > 0.0f)
+  {
+    glm::vec3 camVec = glm::normalize(ray.direction_);
+
+    glm::vec3 N = glm::normalize(hit.normal_);
+    glm::vec3 R = camVec - (2.0f* glm::dot(camVec, N) * N);
+
+    if(depth < 5)
+    {
+    std::cout << depth << std::endl;
+
+      c = raytrace(Ray{hit.getIntersect()+ R, R}, c, ++depth);
+      c += (c * refl) * hit.shape_->material()->ka();
+    }
+  }
+
+  return c;
+}
+
 Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 {
   float d = 1.0f;
@@ -173,7 +170,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = getDiffuse(intersection) + getSpecular(intersection, ray) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_));
+    ambient = getDiffuse(intersection) + getSpecular(intersection) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_)) + (getRefl(intersection, depth, ray));
   }
   return ambient;
 } 
