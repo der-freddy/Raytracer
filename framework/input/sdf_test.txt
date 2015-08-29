@@ -1,10 +1,12 @@
-define material red 1 0 0 1 0 0 1 1 1 100 1
-define material green 0 1 0 0 1 0 1 1 1 10 0
-define material blue 0 0 1 0 0 1 0.5 0.5 0.5 6
-define material white 1 1 1 1 1 1 1 1 1 0 1
-define shape sphere s1 0 0 -8 1 red
-define shape sphere s2 1 -2 -6 1 green
+define material red 1 0 0 0.5 0 0 1 1 1 50 1 0 0
+define material trans 0 0 0 0 0 0 0 0 0 0 0 0.9 0
+define material blue 0 0 1 0 0 0.5 0.5 0.5 0.5 80 0 0 0
+define material white 1 1 1 0.5 0.5 0.5 1 1 1 800 1 0 0
+define shape sphere s1 -1 0 -8 1 red
+define shape sphere s2 2 0 -8 1 trans
+define shape sphere s3 2 0 -10 1 blue
+define shape sphere s4 3 0 -12 1 blue
+define shape sphere s5 5 0 -8 1 blue
 define camera eye 60.0 0 0 0
-define light diffuse spot1 0 0 10 0.1 0.1 0.1 0.5 0.5 0.5
+define light diffuse spot1 5 5 5 0.1 0.1 0.1 1 1 1
 define light ambient ambi 0.3 0.3 0.3
-

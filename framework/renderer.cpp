@@ -173,44 +173,100 @@ Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
 
 Color Renderer::getRefr(Hit const& hit, Ray const& ray, int depth)
 {
-
-
   // float rindex = hit.shape_->material()->refr();
-  // Color refr(0.0, 0.0, 0.0);
+  // float opacity = hit.shape_->material()->opacity();
+
+  // glm::vec3 camVec = glm::normalize((hit.getIntersect()-ray.origin_));
+
+  // glm::vec3 N = glm::normalize(hit.normal_);
+  
   // if(rindex > 0.0f)
   // {
-  //   glm::vec3 camVec = glm::normalize(ray.direction_);
-
-  //   glm::vec3 N = glm::normalize(hit.normal_);
-  //   glm::vec3 R = camVec - (2.0f* glm::dot(camVec, N) * N);
-
-  //   if(depth < 5)
+  //   if(glm::dot(glm::dot(N, glm::normalize(ray.direction_)) < 0))
   //   {
-  //   std::cout << depth << std::endl;
-
-  //     refl = raytrace(Ray{hit.getIntersect()+ R, R}, refl, ++depth);
-  //     refl += (refl * r) * hit.shape_->material()->ka();
+  //     float n1 = rindex;
+  //     float n2 = 1.0f;
+  //     float cos1 = glm::dot(N, -glm::normalize(ray.direction_));
   //   }
+  //   else
+  //   {
+  //     float n1 = 1.0f;
+  //     float n2 = rindex;
+  //     float cos1 = glm::dot(N, glm::normalize(ray.direction_));
+  //   }
+
+  //   float n = n1/n2;
+
+  //   float disc = 1.0f - ((n*n)*(1.0f-(cos1+cos1)));
+
   // }
 
-  // return refl;
+float rindex = hit.shape_->material()->refr();
+
+Color refr(0.0, 0.0, 0.0);
+ if(rindex > 0.0f)
+  {
+  Color refr(0.0, 0.0, 0.0);
+  
+  rindex = 1.0f/rindex;
+  float opacity = hit.shape_->material()->opacity();
+  glm::vec3 camVec = glm::normalize((hit.getIntersect()-ray.origin_));
+  
+
+  glm::vec3 N = glm::normalize(hit.normal_);  
+  float cosI = -glm::dot(N, glm::normalize(ray.direction_));
+ 
+ 
+    
+    float cosT2 = 1.0f - rindex * rindex * (1.0f - cosI * cosI);
+
+    if(cosI < 0)
+    {
+      glm::vec3 T = ( camVec - 2*-(cosI)*N);
+      
+      T = T  * float((rindex * rindex * cosI - sqrt(cosT2)));
+     
+      refr = raytrace(Ray{(hit.getIntersect() + T * 0.1f), (camVec)}, refr, ++depth);
+      refr += (refr);      
+    }
+    else
+    {
+      glm::vec3 T = ( N * (camVec * rindex));
+      
+      T = T  * float((rindex * rindex * cosI - sqrt(cosT2)));
+         
+      refr = raytrace(Ray{(hit.getIntersect() + T * 0.1f), T}, refr, ++depth);
+      refr += (refr);
+    }
+    return refr;
+  }
+  else
+  {
+    return refr;
+
+  }
+
+
 
   // if((rindex > 0) && (depth < 5))
   // {
 
   //   glm::vec3 N = glm::normalize(hit.normal_);
-  //   float cosI = -glm::dot(N, ray.direction_);
+  //   float n = 1.0f / rindex;
+  //   float cosI = -glm::dot(N, glm::normalize(ray.direction_));
   //   float cosT2 = 1.0f - rindex * rindex * (1.0f - cosI * cosI);
 
   //   if(cosT2 > 0.0f)
   //   {
-  //     glm::vec3 T = ((rindex * ray.direction_) * (rindex * cosI - sqrt(cosT2))) * N;
+  //     glm::vec3 T = ( N * (ray.direction_ * rindex));
+  //     T = T  * float((rindex * rindex * cosI - sqrt(cosT2)));
   //     Color refr(0.0,0.0,0.0);
-  //     refl = raytrace(Ray{hit.getIntersect()+ T, T}, refr, ++depth);
+  //     refr = raytrace(Ray{hit.getIntersect()+ T, T}, refr, ++depth);
   //     refr += refr;
 
   //   }
   // }
+  // return refr;
 }
 
 Color Renderer::raytrace(Ray const& ray, Color color, int depth)
@@ -222,7 +278,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = getDiffuse(intersection) + getSpecular(intersection) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_)) + (getRefl(intersection, depth, ray));
+    ambient = getDiffuse(intersection) + getSpecular(intersection) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_)) + (getRefl(intersection, depth, ray)) + (getRefr(intersection,ray,depth));
   }
   return ambient;
 } 
