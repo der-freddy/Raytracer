@@ -43,7 +43,8 @@ public:
 
   Color getDiffuse(Hit const&) const;
   Color getSpecular(Hit const& hit) const;
-  Color getRefl(Hit const& hit, float depth, Ray const&);  
+  Color getRefl(Hit const& hit, int depth, Ray const&);
+  Color getRefr(Hit const& hit, Ray const& ray, int depth);
 
 private:
   unsigned width_;

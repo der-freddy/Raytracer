@@ -113,7 +113,7 @@ void Sdfloader::create_material(std::istringstream& iss)
 {
   //Material gets name, color for a,d,s and m
   std::string name;
-  float r,g,b,m,s;
+  float r,g,b,m,s, refr, o;
   iss >> name >> r >> g >> b;
   Color ka{r,g,b};
 
@@ -123,9 +123,9 @@ void Sdfloader::create_material(std::istringstream& iss)
   iss >> r >> g >> b;
   Color ks{r,g,b};
 
-  iss >> m >> s;
+  iss >> m >> r >> refr >> o;
   
-  Material material = Material(name, ka, kd, ks, m, s);
+  Material material = Material(name, ka, kd, ks, m, r, refr, o);
 
   scene_.addMaterial(name, material);
 

@@ -123,9 +123,11 @@ return spec;
 
 bool Renderer::closestIntersection(Hit const& hit, std::shared_ptr<Light> const& light) const 
 {
-  Ray ray{light->getLocation(), glm::normalize(glm::normalize(hit.normal_) - light->getLocation())};
+  Ray ray{light->getLocation(),hit.getIntersect() - light->getLocation()};
   Hit hit_temp{hit.shape_->intersect(ray)};
+  
   return hit_temp.distance_ >= hit.distance_;
+
 }
 
 
@@ -148,11 +150,11 @@ Hit Renderer::closestIntersection(Ray const& ray)
   return hit;
 }
 
-Color Renderer::getRefl(Hit const& hit, float depth, Ray const& ray)
+Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
 {
-  float refl = hit.shape_->material()->s();
-  Color c(0.0, 0.0, 0.0);
-  if(refl > 0.0f)
+  int r = hit.shape_->material()->refl();
+  Color refl(0.0, 0.0, 0.0);
+  if(r > 0.0f)
   {
     glm::vec3 camVec = glm::normalize(ray.direction_);
 
@@ -161,14 +163,55 @@ Color Renderer::getRefl(Hit const& hit, float depth, Ray const& ray)
 
     if(depth < 5)
     {
-    std::cout << depth << std::endl;
 
-      c = raytrace(Ray{hit.getIntersect()+ R, R}, c, ++depth);
-      c += (c * refl) * hit.shape_->material()->ka();
+      refl = raytrace(Ray{hit.getIntersect()+ R, R}, refl, ++depth);
+      refl += (refl * r) * hit.shape_->material()->ka();
     }
   }
 
-  return c;
+  return refl;
+}
+
+Color Renderer::getRefr(Hit const& hit, Ray const& ray, int depth)
+{
+
+
+  // float rindex = hit.shape_->material()->refr();
+  // Color refr(0.0, 0.0, 0.0);
+  // if(rindex > 0.0f)
+  // {
+  //   glm::vec3 camVec = glm::normalize(ray.direction_);
+
+  //   glm::vec3 N = glm::normalize(hit.normal_);
+  //   glm::vec3 R = camVec - (2.0f* glm::dot(camVec, N) * N);
+
+  //   if(depth < 5)
+  //   {
+  //   std::cout << depth << std::endl;
+
+  //     refl = raytrace(Ray{hit.getIntersect()+ R, R}, refl, ++depth);
+  //     refl += (refl * r) * hit.shape_->material()->ka();
+  //   }
+  // }
+
+  // return refl;
+
+  // if((rindex > 0) && (depth < 5))
+  // {
+
+  //   glm::vec3 N = glm::normalize(hit.normal_);
+  //   float cosI = -glm::dot(N, ray.direction_);
+  //   float cosT2 = 1.0f - rindex * rindex * (1.0f - cosI * cosI);
+
+  //   if(cosT2 > 0.0f)
+  //   {
+  //     glm::vec3 T = ((rindex * ray.direction_) * (rindex * cosI - sqrt(cosT2))) * N;
+  //     Color refr(0.0,0.0,0.0);
+  //     refl = raytrace(Ray{hit.getIntersect()+ T, T}, refr, ++depth);
+  //     refr += refr;
+
+  //   }
+  // }
 }
 
 Color Renderer::raytrace(Ray const& ray, Color color, int depth)
