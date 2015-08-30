@@ -17,10 +17,6 @@ public:
 	Shape(std::string name);
 	//Destructor
 	virtual ~Shape();
-	
-	virtual double area() const = 0;
-
-	virtual double volume() const = 0;
 
 	virtual Hit intersect(Ray const&) const = 0; 
 

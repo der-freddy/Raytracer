@@ -20,10 +20,6 @@ class Sphere : public Shape
 
 		double radius() const;
 
-		double area() const override;
-
-		double volume() const override;
-
 		std::ostream& print(std::ostream& os) const override;
 
 		Hit intersect(Ray const& ray) const override;

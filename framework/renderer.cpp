@@ -129,26 +129,6 @@ bool Renderer::closestIntersection(Hit const& hit, std::shared_ptr<Light> const&
 
 }
 
-
-Hit Renderer::closestIntersection(Ray const& ray) 
-{
-  double closest = INFINITY;
-  Hit hit{};
-  typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
-
-  for(it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
-  {
-    Hit hit_temp{i->second->intersect(ray)};
-
-    if(hit_temp.distance_ < closest) 
-    {
-      closest = hit_temp.distance_;
-      hit = hit_temp;
-    }
-  }
-  return hit;
-}
-
 Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
 {
   int r = hit.shape_->material()->refl();
@@ -173,34 +153,6 @@ Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
 
 Color Renderer::getRefr(Hit const& hit, Ray const& ray, int depth)
 {
-  // float rindex = hit.shape_->material()->refr();
-  // float opacity = hit.shape_->material()->opacity();
-
-  // glm::vec3 camVec = glm::normalize((hit.getIntersect()-ray.origin_));
-
-  // glm::vec3 N = glm::normalize(hit.normal_);
-  
-  // if(rindex > 0.0f)
-  // {
-  //   if(glm::dot(glm::dot(N, glm::normalize(ray.direction_)) < 0))
-  //   {
-  //     float n1 = rindex;
-  //     float n2 = 1.0f;
-  //     float cos1 = glm::dot(N, -glm::normalize(ray.direction_));
-  //   }
-  //   else
-  //   {
-  //     float n1 = 1.0f;
-  //     float n2 = rindex;
-  //     float cos1 = glm::dot(N, glm::normalize(ray.direction_));
-  //   }
-
-  //   float n = n1/n2;
-
-  //   float disc = 1.0f - ((n*n)*(1.0f-(cos1+cos1)));
-
-  // }
-
 float rindex = hit.shape_->material()->refr();
 
 Color refr(0.0, 0.0, 0.0);
@@ -276,8 +228,18 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 {
   float d = 1.0f;
   Color ambient(0.0, 0.0, 0.0);
+  Hit intersection{};
+  float closest = INFINITY;
+  for(auto shape : scene_->shapes_)
+  {
+    Hit hit_temp{shape.second->intersect(ray)};
 
-  Hit intersection{closestIntersection(ray)};
+    if(hit_temp.distance_ < closest) 
+    {
+      closest = hit_temp.distance_;
+      intersection = hit_temp;
+    }
+  }
 
   if(intersection.hit_)
   {

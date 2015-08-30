@@ -10,21 +10,25 @@ Composite::~Composite()
 
 void Composite::addShape(std::shared_ptr<Shape> s)
 {
-	shapes_[s -> name()] = s;
-}
-
-double Composite::volume() const
-{
-	return 0;
-}
-double Composite::area() const
-{
-	return 0;
+	shapes_[s->name()] = s;
 }
 
 Hit Composite::intersect(Ray const& ray) const
 {
-	return;
+	double closest = INFINITY;
+  Hit hit{};
+
+  for(auto shape : shapes_)
+  {
+    Hit hit_temp{shape.second->intersect(ray)};
+
+    if(hit_temp.distance_ < closest) 
+    {
+      closest = hit_temp.distance_;
+      hit = hit_temp;
+    }
+  }
+  return hit;
 }
 
 std::shared_ptr<Shape> Composite::getShape(std::string name)

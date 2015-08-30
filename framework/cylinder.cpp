@@ -27,14 +27,3 @@ height_{height}
 
 Cylinder::~Cylinder()
 {}
-
-double Cylinder::volume() const
-{
-	return (M_PI*r_*r_)*height_;
-}
-
-double Cylinder::area() const
-{
-	float cf = 2*M_PI*r_;
-	return 2*(M_PI*r_*r_)+cf;
-}

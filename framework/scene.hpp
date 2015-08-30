@@ -28,20 +28,15 @@ public:
 
  	void addLight(std::string, std::shared_ptr<Light>);
 
- 	void addComposite(std::shared_ptr<Composite> com);
-
  	void addAmbient(Color c);
 
  	std::shared_ptr<Material> getMaterial(std::string const& name) const;
 
  	std::map<std::string, std::shared_ptr<Material>> material() const;
 
- 	std::shared_ptr<Composite> getComposites() const;
-
- 	std::shared_ptr<Shape> getShape(std::string const& name) const;
+ 	std::shared_ptr<Shape> getShape(std::string const& name);
 
  	Camera getCam() const;
-
 
  	//private:
   std::map<std::string, std::shared_ptr<Material>> materials_;
@@ -49,8 +44,6 @@ public:
   Camera cam_;
   Color globalAmbient_;
   std::map<std::string, std::shared_ptr<Light>> lights_;
-  std::shared_ptr<Composite> composites_;
-
 };
 
 #endif

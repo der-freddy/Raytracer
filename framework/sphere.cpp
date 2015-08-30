@@ -28,14 +28,6 @@ double Sphere::radius() const
 {
 	return _r;
 }
-double Sphere::volume() const
-{
-	return (4.0/3.0)*M_PI*_r*_r*_r;
-}
-double Sphere::area() const
-{
-	return 4.0*M_PI*_r*_r;
-}
 
 std::ostream& Sphere::print(std::ostream& os) const
 {

@@ -26,20 +26,6 @@ glm::vec3 Box::max() const
 	return _max;
 }
 
-double Box::volume() const
-{
-	glm::vec3 vec = _max - _min;
-
-	return fabs(vec.x * vec.y * vec.z);
-}
-
-double Box::area() const
-{	
-	glm::vec3 vec = _max - _min;
-
-	return 2*fabs((vec.x * vec.y) + (vec.x * vec.z) + (vec.y * vec.z));
-}
-
 std::ostream& Box::print(std::ostream& os) const
 {
 	os << "[Box: " << _name << "]\n[Matierial: " << _material << "]\n[Min: " << _min.x << "," << _min.y << "," << _min.z << "]\n[Max: " << _max.x << "," << _max.y << "," << _max.z << "]\n";
