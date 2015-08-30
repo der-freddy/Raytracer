@@ -40,7 +40,7 @@ public:
   Color ka(std::shared_ptr<Shape> shape) const;
   Color kd(std::shared_ptr<Shape> shape) const;
   Color ks(std::shared_ptr<Shape> shape) const;
-
+  float shade(Hit const& hit);
   Color getDiffuse(Hit const&) const;
   Color getSpecular(Hit const& hit) const;
   Color getRefl(Hit const& hit, int depth, Ray const&);
