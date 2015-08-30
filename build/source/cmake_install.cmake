@@ -1,4 +1,4 @@
-# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/source
+# Install script for directory: /home/hans/Desktop/Raytracer/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./example"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/build/Release/example")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "/home/hans/Desktop/Raytracer/build/build/Release/example")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./example" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./example")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -55,7 +55,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./raytracer"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/build/Release/raytracer")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "/home/hans/Desktop/Raytracer/build/build/Release/raytracer")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./raytracer" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./raytracer")
     if(CMAKE_INSTALL_DO_STRIP)

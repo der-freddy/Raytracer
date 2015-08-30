@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer
+CMAKE_SOURCE_DIR = /home/hans/Desktop/Raytracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer/build
+CMAKE_BINARY_DIR = /home/hans/Desktop/Raytracer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,19 +64,19 @@ edit_cache/fast: edit_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
+	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
+	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
@@ -86,7 +86,7 @@ install/local/fast: install/local
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -115,7 +115,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -124,14 +124,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles /home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/progress.marks
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles 0
+	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hans/Desktop/Raytracer/build/CMakeFiles /home/hans/Desktop/Raytracer/build/framework/CMakeFiles/progress.marks
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hans/Desktop/Raytracer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/clean
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/clean
 .PHONY : clean
 
 # The main clean target
@@ -140,22 +140,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 framework/CMakeFiles/framework.dir/rule:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/CMakeFiles/framework.dir/rule
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 framework/CMakeFiles/framework.dir/rule
 .PHONY : framework/CMakeFiles/framework.dir/rule
 
 # Convenience name for target.
@@ -164,7 +164,7 @@ framework: framework/CMakeFiles/framework.dir/rule
 
 # fast build rule for target.
 framework/fast:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/build
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/build
 .PHONY : framework/fast
 
 _old_renderer.o: _old_renderer.cpp.o
@@ -172,7 +172,7 @@ _old_renderer.o: _old_renderer.cpp.o
 
 # target to build an object file
 _old_renderer.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/_old_renderer.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/_old_renderer.cpp.o
 .PHONY : _old_renderer.cpp.o
 
 _old_renderer.i: _old_renderer.cpp.i
@@ -180,7 +180,7 @@ _old_renderer.i: _old_renderer.cpp.i
 
 # target to preprocess a source file
 _old_renderer.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/_old_renderer.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/_old_renderer.cpp.i
 .PHONY : _old_renderer.cpp.i
 
 _old_renderer.s: _old_renderer.cpp.s
@@ -188,7 +188,7 @@ _old_renderer.s: _old_renderer.cpp.s
 
 # target to generate assembly for a file
 _old_renderer.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/_old_renderer.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/_old_renderer.cpp.s
 .PHONY : _old_renderer.cpp.s
 
 box.o: box.cpp.o
@@ -196,7 +196,7 @@ box.o: box.cpp.o
 
 # target to build an object file
 box.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.o
 .PHONY : box.cpp.o
 
 box.i: box.cpp.i
@@ -204,7 +204,7 @@ box.i: box.cpp.i
 
 # target to preprocess a source file
 box.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.i
 .PHONY : box.cpp.i
 
 box.s: box.cpp.s
@@ -212,7 +212,7 @@ box.s: box.cpp.s
 
 # target to generate assembly for a file
 box.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/box.cpp.s
 .PHONY : box.cpp.s
 
 camera.o: camera.cpp.o
@@ -220,7 +220,7 @@ camera.o: camera.cpp.o
 
 # target to build an object file
 camera.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.o
 .PHONY : camera.cpp.o
 
 camera.i: camera.cpp.i
@@ -228,7 +228,7 @@ camera.i: camera.cpp.i
 
 # target to preprocess a source file
 camera.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.i
 .PHONY : camera.cpp.i
 
 camera.s: camera.cpp.s
@@ -236,7 +236,7 @@ camera.s: camera.cpp.s
 
 # target to generate assembly for a file
 camera.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
 composite.o: composite.cpp.o
@@ -244,7 +244,7 @@ composite.o: composite.cpp.o
 
 # target to build an object file
 composite.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.o
 .PHONY : composite.cpp.o
 
 composite.i: composite.cpp.i
@@ -252,7 +252,7 @@ composite.i: composite.cpp.i
 
 # target to preprocess a source file
 composite.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.i
 .PHONY : composite.cpp.i
 
 composite.s: composite.cpp.s
@@ -260,7 +260,7 @@ composite.s: composite.cpp.s
 
 # target to generate assembly for a file
 composite.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/composite.cpp.s
 .PHONY : composite.cpp.s
 
 cone.o: cone.cpp.o
@@ -268,7 +268,7 @@ cone.o: cone.cpp.o
 
 # target to build an object file
 cone.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.o
 .PHONY : cone.cpp.o
 
 cone.i: cone.cpp.i
@@ -276,7 +276,7 @@ cone.i: cone.cpp.i
 
 # target to preprocess a source file
 cone.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.i
 .PHONY : cone.cpp.i
 
 cone.s: cone.cpp.s
@@ -284,7 +284,7 @@ cone.s: cone.cpp.s
 
 # target to generate assembly for a file
 cone.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cone.cpp.s
 .PHONY : cone.cpp.s
 
 cylinder.o: cylinder.cpp.o
@@ -292,7 +292,7 @@ cylinder.o: cylinder.cpp.o
 
 # target to build an object file
 cylinder.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.o
 .PHONY : cylinder.cpp.o
 
 cylinder.i: cylinder.cpp.i
@@ -300,7 +300,7 @@ cylinder.i: cylinder.cpp.i
 
 # target to preprocess a source file
 cylinder.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.i
 .PHONY : cylinder.cpp.i
 
 cylinder.s: cylinder.cpp.s
@@ -308,7 +308,7 @@ cylinder.s: cylinder.cpp.s
 
 # target to generate assembly for a file
 cylinder.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/cylinder.cpp.s
 .PHONY : cylinder.cpp.s
 
 glew.o: glew.c.o
@@ -316,7 +316,7 @@ glew.o: glew.c.o
 
 # target to build an object file
 glew.c.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.o
 .PHONY : glew.c.o
 
 glew.i: glew.c.i
@@ -324,7 +324,7 @@ glew.i: glew.c.i
 
 # target to preprocess a source file
 glew.c.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.i
 .PHONY : glew.c.i
 
 glew.s: glew.c.s
@@ -332,7 +332,7 @@ glew.s: glew.c.s
 
 # target to generate assembly for a file
 glew.c.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/glew.c.s
 .PHONY : glew.c.s
 
 hit.o: hit.cpp.o
@@ -340,7 +340,7 @@ hit.o: hit.cpp.o
 
 # target to build an object file
 hit.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.o
 .PHONY : hit.cpp.o
 
 hit.i: hit.cpp.i
@@ -348,7 +348,7 @@ hit.i: hit.cpp.i
 
 # target to preprocess a source file
 hit.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.i
 .PHONY : hit.cpp.i
 
 hit.s: hit.cpp.s
@@ -356,7 +356,7 @@ hit.s: hit.cpp.s
 
 # target to generate assembly for a file
 hit.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/hit.cpp.s
 .PHONY : hit.cpp.s
 
 light.o: light.cpp.o
@@ -364,7 +364,7 @@ light.o: light.cpp.o
 
 # target to build an object file
 light.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.o
 .PHONY : light.cpp.o
 
 light.i: light.cpp.i
@@ -372,7 +372,7 @@ light.i: light.cpp.i
 
 # target to preprocess a source file
 light.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.i
 .PHONY : light.cpp.i
 
 light.s: light.cpp.s
@@ -380,7 +380,7 @@ light.s: light.cpp.s
 
 # target to generate assembly for a file
 light.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/light.cpp.s
 .PHONY : light.cpp.s
 
 material.o: material.cpp.o
@@ -388,7 +388,7 @@ material.o: material.cpp.o
 
 # target to build an object file
 material.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.o
 .PHONY : material.cpp.o
 
 material.i: material.cpp.i
@@ -396,7 +396,7 @@ material.i: material.cpp.i
 
 # target to preprocess a source file
 material.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.i
 .PHONY : material.cpp.i
 
 material.s: material.cpp.s
@@ -404,7 +404,7 @@ material.s: material.cpp.s
 
 # target to generate assembly for a file
 material.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/material.cpp.s
 .PHONY : material.cpp.s
 
 pixel.o: pixel.cpp.o
@@ -412,7 +412,7 @@ pixel.o: pixel.cpp.o
 
 # target to build an object file
 pixel.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.o
 .PHONY : pixel.cpp.o
 
 pixel.i: pixel.cpp.i
@@ -420,7 +420,7 @@ pixel.i: pixel.cpp.i
 
 # target to preprocess a source file
 pixel.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.i
 .PHONY : pixel.cpp.i
 
 pixel.s: pixel.cpp.s
@@ -428,7 +428,7 @@ pixel.s: pixel.cpp.s
 
 # target to generate assembly for a file
 pixel.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/pixel.cpp.s
 .PHONY : pixel.cpp.s
 
 ppmwriter.o: ppmwriter.cpp.o
@@ -436,7 +436,7 @@ ppmwriter.o: ppmwriter.cpp.o
 
 # target to build an object file
 ppmwriter.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
 .PHONY : ppmwriter.cpp.o
 
 ppmwriter.i: ppmwriter.cpp.i
@@ -444,7 +444,7 @@ ppmwriter.i: ppmwriter.cpp.i
 
 # target to preprocess a source file
 ppmwriter.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.i
 .PHONY : ppmwriter.cpp.i
 
 ppmwriter.s: ppmwriter.cpp.s
@@ -452,7 +452,7 @@ ppmwriter.s: ppmwriter.cpp.s
 
 # target to generate assembly for a file
 ppmwriter.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/ppmwriter.cpp.s
 .PHONY : ppmwriter.cpp.s
 
 renderer.o: renderer.cpp.o
@@ -460,7 +460,7 @@ renderer.o: renderer.cpp.o
 
 # target to build an object file
 renderer.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.o
 .PHONY : renderer.cpp.o
 
 renderer.i: renderer.cpp.i
@@ -468,7 +468,7 @@ renderer.i: renderer.cpp.i
 
 # target to preprocess a source file
 renderer.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.i
 .PHONY : renderer.cpp.i
 
 renderer.s: renderer.cpp.s
@@ -476,7 +476,7 @@ renderer.s: renderer.cpp.s
 
 # target to generate assembly for a file
 renderer.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/renderer.cpp.s
 .PHONY : renderer.cpp.s
 
 scene.o: scene.cpp.o
@@ -484,7 +484,7 @@ scene.o: scene.cpp.o
 
 # target to build an object file
 scene.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.o
 .PHONY : scene.cpp.o
 
 scene.i: scene.cpp.i
@@ -492,7 +492,7 @@ scene.i: scene.cpp.i
 
 # target to preprocess a source file
 scene.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.i
 .PHONY : scene.cpp.i
 
 scene.s: scene.cpp.s
@@ -500,7 +500,7 @@ scene.s: scene.cpp.s
 
 # target to generate assembly for a file
 scene.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/scene.cpp.s
 .PHONY : scene.cpp.s
 
 sdfloader.o: sdfloader.cpp.o
@@ -508,7 +508,7 @@ sdfloader.o: sdfloader.cpp.o
 
 # target to build an object file
 sdfloader.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfloader.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfloader.cpp.o
 .PHONY : sdfloader.cpp.o
 
 sdfloader.i: sdfloader.cpp.i
@@ -516,7 +516,7 @@ sdfloader.i: sdfloader.cpp.i
 
 # target to preprocess a source file
 sdfloader.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfloader.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfloader.cpp.i
 .PHONY : sdfloader.cpp.i
 
 sdfloader.s: sdfloader.cpp.s
@@ -524,7 +524,7 @@ sdfloader.s: sdfloader.cpp.s
 
 # target to generate assembly for a file
 sdfloader.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfloader.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sdfloader.cpp.s
 .PHONY : sdfloader.cpp.s
 
 shape.o: shape.cpp.o
@@ -532,7 +532,7 @@ shape.o: shape.cpp.o
 
 # target to build an object file
 shape.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.o
 .PHONY : shape.cpp.o
 
 shape.i: shape.cpp.i
@@ -540,7 +540,7 @@ shape.i: shape.cpp.i
 
 # target to preprocess a source file
 shape.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.i
 .PHONY : shape.cpp.i
 
 shape.s: shape.cpp.s
@@ -548,7 +548,7 @@ shape.s: shape.cpp.s
 
 # target to generate assembly for a file
 shape.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/shape.cpp.s
 .PHONY : shape.cpp.s
 
 sphere.o: sphere.cpp.o
@@ -556,7 +556,7 @@ sphere.o: sphere.cpp.o
 
 # target to build an object file
 sphere.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.o
 .PHONY : sphere.cpp.o
 
 sphere.i: sphere.cpp.i
@@ -564,7 +564,7 @@ sphere.i: sphere.cpp.i
 
 # target to preprocess a source file
 sphere.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.i
 .PHONY : sphere.cpp.i
 
 sphere.s: sphere.cpp.s
@@ -572,7 +572,7 @@ sphere.s: sphere.cpp.s
 
 # target to generate assembly for a file
 sphere.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/sphere.cpp.s
 .PHONY : sphere.cpp.s
 
 window.o: window.cpp.o
@@ -580,7 +580,7 @@ window.o: window.cpp.o
 
 # target to build an object file
 window.cpp.o:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.o
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.o
 .PHONY : window.cpp.o
 
 window.i: window.cpp.i
@@ -588,7 +588,7 @@ window.i: window.cpp.i
 
 # target to preprocess a source file
 window.cpp.i:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.i
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.i
 .PHONY : window.cpp.i
 
 window.s: window.cpp.s
@@ -596,7 +596,7 @@ window.s: window.cpp.s
 
 # target to generate assembly for a file
 window.cpp.s:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.s
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/window.cpp.s
 .PHONY : window.cpp.s
 
 # Help Target
@@ -678,6 +678,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
