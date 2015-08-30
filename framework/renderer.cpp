@@ -172,7 +172,6 @@ Color refr(0.0, 0.0, 0.0);
  
     
     float cosT2 = 1.0f - rindex * rindex * (1.0f - cosI * cosI);
-    std::cout << cosI << std::endl;
     if(cosI < 0)
     {
       glm::vec3 T = ( camVec - 2*-(cosI)*N);
@@ -226,7 +225,6 @@ float Renderer::shade(Hit const& hit)
       {
         shade = 0.0;
       }
-      std::cout << "test" << std::endl;
       return shade;
     }
 
@@ -254,7 +252,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    ambient = ((getDiffuse(intersection) + getSpecular(intersection))) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_)) + (getRefl(intersection, depth, ray)) + (getRefr(intersection,ray,depth));
+    ambient = ((getDiffuse(intersection) + getSpecular(intersection))) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_)) + (getRefl(intersection, depth, ray)) + ((getRefr(intersection,ray,depth)*intersection.shape_->material()->opacity()));
   }
   return ambient;
 } 

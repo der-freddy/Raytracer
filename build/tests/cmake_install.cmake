@@ -1,4 +1,4 @@
-# Install script for directory: /home/hans/Desktop/Raytracer/tests
+# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

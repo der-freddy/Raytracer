@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-tests 228 0.00653888
-=======
-tests 228 0.014925
->>>>>>> deba5f3d4d9d9070713c438beac32ec8adada6bc
+tests 9 0.657486
 ---
