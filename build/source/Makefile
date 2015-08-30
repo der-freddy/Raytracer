@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hans/Desktop/Raytracer
+CMAKE_SOURCE_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hans/Desktop/Raytracer/build
+CMAKE_BINARY_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hans/Desktop/Raytracer/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -64,19 +64,19 @@ edit_cache/fast: edit_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
+	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
+	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
@@ -86,7 +86,7 @@ install/local/fast: install/local
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -115,7 +115,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -124,14 +124,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hans/Desktop/Raytracer/build/CMakeFiles /home/hans/Desktop/Raytracer/build/source/CMakeFiles/progress.marks
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hans/Desktop/Raytracer/build/CMakeFiles 0
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles /home/freddy/Dokumente/Studium/Prog/Raytracer/build/source/CMakeFiles/progress.marks
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/clean
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/clean
 .PHONY : clean
 
 # The main clean target
@@ -140,22 +140,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 source/CMakeFiles/example.dir/rule:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/example.dir/rule
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/example.dir/rule
 .PHONY : source/CMakeFiles/example.dir/rule
 
 # Convenience name for target.
@@ -164,12 +164,12 @@ example: source/CMakeFiles/example.dir/rule
 
 # fast build rule for target.
 example/fast:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/build
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/build
 .PHONY : example/fast
 
 # Convenience name for target.
 source/CMakeFiles/raytracer.dir/rule:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/raytracer.dir/rule
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/raytracer.dir/rule
 .PHONY : source/CMakeFiles/raytracer.dir/rule
 
 # Convenience name for target.
@@ -178,7 +178,7 @@ raytracer: source/CMakeFiles/raytracer.dir/rule
 
 # fast build rule for target.
 raytracer/fast:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/build
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/build
 .PHONY : raytracer/fast
 
 example.o: example.cpp.o
@@ -186,7 +186,7 @@ example.o: example.cpp.o
 
 # target to build an object file
 example.cpp.o:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.o
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.o
 .PHONY : example.cpp.o
 
 example.i: example.cpp.i
@@ -194,7 +194,7 @@ example.i: example.cpp.i
 
 # target to preprocess a source file
 example.cpp.i:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.i
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.i
 .PHONY : example.cpp.i
 
 example.s: example.cpp.s
@@ -202,7 +202,7 @@ example.s: example.cpp.s
 
 # target to generate assembly for a file
 example.cpp.s:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.s
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.s
 .PHONY : example.cpp.s
 
 raytracer.o: raytracer.cpp.o
@@ -210,7 +210,7 @@ raytracer.o: raytracer.cpp.o
 
 # target to build an object file
 raytracer.cpp.o:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/raytracer.cpp.o
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/raytracer.cpp.o
 .PHONY : raytracer.cpp.o
 
 raytracer.i: raytracer.cpp.i
@@ -218,7 +218,7 @@ raytracer.i: raytracer.cpp.i
 
 # target to preprocess a source file
 raytracer.cpp.i:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/raytracer.cpp.i
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/raytracer.cpp.i
 .PHONY : raytracer.cpp.i
 
 raytracer.s: raytracer.cpp.s
@@ -226,7 +226,7 @@ raytracer.s: raytracer.cpp.s
 
 # target to generate assembly for a file
 raytracer.cpp.s:
-	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/raytracer.cpp.s
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(MAKE) -f source/CMakeFiles/raytracer.dir/build.make source/CMakeFiles/raytracer.dir/raytracer.cpp.s
 .PHONY : raytracer.cpp.s
 
 # Help Target
@@ -261,6 +261,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

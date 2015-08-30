@@ -26,19 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hans/Desktop/Raytracer
+CMAKE_SOURCE_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hans/Desktop/Raytracer/build
+CMAKE_BINARY_DIR = /home/freddy/Dokumente/Studium/Prog/Raytracer/build
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/tests.dir/depend.make
@@ -51,17 +51,17 @@ include tests/CMakeFiles/tests.dir/flags.make
 
 tests/CMakeFiles/tests.dir/main.cpp.o: tests/CMakeFiles/tests.dir/flags.make
 tests/CMakeFiles/tests.dir/main.cpp.o: ../tests/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hans/Desktop/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/freddy/Dokumente/Studium/Prog/Raytracer/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object tests/CMakeFiles/tests.dir/main.cpp.o"
-	cd /home/hans/Desktop/Raytracer/build/tests && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/main.cpp.o -c /home/hans/Desktop/Raytracer/tests/main.cpp
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/main.cpp.o -c /home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp
 
 tests/CMakeFiles/tests.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/main.cpp.i"
-	cd /home/hans/Desktop/Raytracer/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hans/Desktop/Raytracer/tests/main.cpp > CMakeFiles/tests.dir/main.cpp.i
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp > CMakeFiles/tests.dir/main.cpp.i
 
 tests/CMakeFiles/tests.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/main.cpp.s"
-	cd /home/hans/Desktop/Raytracer/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hans/Desktop/Raytracer/tests/main.cpp -o CMakeFiles/tests.dir/main.cpp.s
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp -o CMakeFiles/tests.dir/main.cpp.s
 
 tests/CMakeFiles/tests.dir/main.cpp.o.requires:
 .PHONY : tests/CMakeFiles/tests.dir/main.cpp.o.requires
@@ -92,7 +92,7 @@ build/Release/tests: /usr/lib/x86_64-linux-gnu/libm.so
 build/Release/tests: /usr/lib/x86_64-linux-gnu/libGL.so
 build/Release/tests: tests/CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../build/Release/tests"
-	cd /home/hans/Desktop/Raytracer/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Running tests"
 	ctest
 
@@ -104,10 +104,10 @@ tests/CMakeFiles/tests.dir/requires: tests/CMakeFiles/tests.dir/main.cpp.o.requi
 .PHONY : tests/CMakeFiles/tests.dir/requires
 
 tests/CMakeFiles/tests.dir/clean:
-	cd /home/hans/Desktop/Raytracer/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/tests.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/tests.dir/clean
 
 tests/CMakeFiles/tests.dir/depend:
-	cd /home/hans/Desktop/Raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hans/Desktop/Raytracer /home/hans/Desktop/Raytracer/tests /home/hans/Desktop/Raytracer/build /home/hans/Desktop/Raytracer/build/tests /home/hans/Desktop/Raytracer/build/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/freddy/Dokumente/Studium/Prog/Raytracer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freddy/Dokumente/Studium/Prog/Raytracer /home/freddy/Dokumente/Studium/Prog/Raytracer/tests /home/freddy/Dokumente/Studium/Prog/Raytracer/build /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests /home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/tests.dir/depend
 

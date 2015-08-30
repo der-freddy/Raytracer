@@ -4,21 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hans/Desktop/Raytracer/tests/main.cpp" "/home/hans/Desktop/Raytracer/build/tests/CMakeFiles/tests.dir/main.cpp.o"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/tests/main.cpp" "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/tests/CMakeFiles/tests.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS
-  "FENSTERCHEN_BINARY_DIR=\"/home/hans/Desktop/Raytracer/build\""
-  "FENSTERCHEN_SOURCE_DIR=\"/home/hans/Desktop/Raytracer\""
+  "FENSTERCHEN_BINARY_DIR=\"/home/freddy/Dokumente/Studium/Prog/Raytracer/build\""
+  "FENSTERCHEN_SOURCE_DIR=\"/home/freddy/Dokumente/Studium/Prog/Raytracer\""
   "GLEW_STATIC"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/DependInfo.cmake"
-  "/home/hans/Desktop/Raytracer/build/external/glfw-3.0.3/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/framework/CMakeFiles/framework.dir/DependInfo.cmake"
+  "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/external/glfw-3.0.3/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

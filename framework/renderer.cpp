@@ -175,7 +175,6 @@ Color refr(0.0, 0.0, 0.0);
  
     
     float cosT2 = 1.0f - rindex * rindex * (1.0f - cosI * cosI);
-    std::cout << cosI << std::endl;
     if(cosI < 0)
     {
       glm::vec3 T = ( camVec - 2*-(cosI)*N);
@@ -208,26 +207,27 @@ Color refr(0.0, 0.0, 0.0);
 
 float Renderer::shade(Hit const& hit)
 {
-  float shade = 1.0;
+  float shade = 1.0f;
   typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
   typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_typeS;
 
 
-  for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
+  for(auto light : scene_->lights_)
   {
+
     glm::vec3 L{};
     glm::vec3 K{};
-    L = i->second->getLocation() - hit.getIntersect();
-    K = i->second->getLocation();
+    L = glm::normalize(light.second->getLocation() - hit.getIntersect());
+    K = glm::normalize(light.second->getLocation());
     Ray r{hit.getIntersect(), L};
 
-    for(it_typeS i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
+    for(auto shape : scene_->shapes_)
     {
       std::shared_ptr<Shape> s{};
-      s = i->second;
+      s = shape.second;
       if(s ->intersect(r).hit_)
       {
-        shade = 0.0;
+        shade = 0.0f;
       }
       return shade;
     }
@@ -257,36 +257,11 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-    //DEBUG SECTION 
- if(intersection.normal_ == glm::vec3{ -1.0, 0.0, 0.0 })
- {
- return Color{0.0,0.0,1.0};
- }
- else if (intersection.normal_ == glm::vec3{ 0.0, -1.0, 0.0 })
- {
- return Color{0.0,1.0,0.0};
- }
- else if (intersection.normal_ == glm::vec3{ 0.0, 0.0, 1.0 })
- {
- return Color{0.0,1.0,1.0};
- }
- else if (intersection.normal_ == glm::vec3{ 1.0, 0.0, 0.0 })
- {
- return Color{1.0,0.0,0.0};
- }
- else if (intersection.normal_ == glm::vec3{ 0.0, 1.0, 0.0 })
- {
- return Color{1.0,0.0,1.0};
- }
- else if (intersection.normal_ == glm::vec3{ 0.0, 0.0, -1.0 })
- {
- return Color{1.0,1.0,0.0};
- }
- else if (intersection.normal_ == glm::vec3{1.0, 1.0, 1.0})
- {
- return Color{1.0, 1.0, 1.0};
- }
-    ambient = ((getDiffuse(intersection) + getSpecular(intersection))) + ((intersection.shape_->material()->ka() * scene_->globalAmbient_)) + (getRefl(intersection, depth, ray)) + (getRefr(intersection,ray,depth));
+
+    ambient = ((getDiffuse(intersection)*shade(intersection))+getSpecular(intersection)*shade(intersection))+
+    ((intersection.shape_->material()->ka() * scene_->globalAmbient_))+
+    (getRefl(intersection, depth, ray))+
+    ((getRefr(intersection,ray,depth)*intersection.shape_->material()->opacity()));
   }
   return ambient;
 } 

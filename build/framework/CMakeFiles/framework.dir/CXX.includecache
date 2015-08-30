@@ -634,6 +634,35 @@ iostream
 color.hpp
 -
 
+<<<<<<< HEAD
+=======
+../framework/ray.hpp
+glm/glm.hpp
+-
+
+../framework/scene.hpp
+map
+-
+shape.hpp
+-
+sphere.hpp
+-
+box.hpp
+-
+material.hpp
+-
+camera.hpp
+-
+string
+-
+tr1/memory
+-
+light.hpp
+-
+composite.hpp
+-
+
+>>>>>>> c0738b9d1f7c4e6f21aab215095210105ec95b0e
 ../framework/shape.hpp
 material.hpp
 ../framework/material.hpp
@@ -662,6 +691,7 @@ shape.hpp
 hit.hpp
 ../framework/hit.hpp
 
+<<<<<<< HEAD
 /home/hans/Desktop/Raytracer/framework/color.hpp
 iostream
 -
@@ -675,11 +705,27 @@ memory
 -
 
 /home/hans/Desktop/Raytracer/framework/pixel.hpp
+=======
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
+iostream
+-
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/hit.hpp
+glm/vec3.hpp
+-
+ray.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+memory
+-
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
+>>>>>>> c0738b9d1f7c4e6f21aab215095210105ec95b0e
 iosfwd
 -
 color.hpp
 -
 
+<<<<<<< HEAD
 /home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
 string
 -
@@ -703,6 +749,31 @@ pixel.hpp
 /home/hans/Desktop/Raytracer/framework/pixel.hpp
 ppmwriter.hpp
 /home/hans/Desktop/Raytracer/framework/ppmwriter.hpp
+=======
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
+string
+-
+vector
+-
+pixel.hpp
+-
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+glm/glm.hpp
+-
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.cpp
+renderer.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/renderer.hpp
+color.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/color.hpp
+pixel.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/pixel.hpp
+ppmwriter.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ppmwriter.hpp
+>>>>>>> c0738b9d1f7c4e6f21aab215095210105ec95b0e
 string
 -
 cmath
@@ -710,6 +781,7 @@ cmath
 glm/glm.hpp
 -
 ray.hpp
+<<<<<<< HEAD
 /home/hans/Desktop/Raytracer/framework/ray.hpp
 scene.hpp
 /home/hans/Desktop/Raytracer/framework/scene.hpp
@@ -725,6 +797,27 @@ sphere.hpp
 -
 box.hpp
 -
+=======
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/ray.hpp
+scene.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.hpp
+hit.hpp
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/hit.hpp
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.cpp
+scene.hpp
+-
+
+/home/freddy/Dokumente/Studium/Prog/Raytracer/framework/scene.hpp
+map
+-
+shape.hpp
+-
+sphere.hpp
+-
+box.hpp
+-
+>>>>>>> c0738b9d1f7c4e6f21aab215095210105ec95b0e
 material.hpp
 -
 camera.hpp
