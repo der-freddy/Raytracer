@@ -21,10 +21,6 @@ class Box : public Shape
 
 	glm::vec3 min() const;
 
-	double volume() const override;
-
-	double area() const override;
-
 	std::ostream& print(std::ostream & os) const override;
 
 	Hit intersect(Ray const&) const override; 

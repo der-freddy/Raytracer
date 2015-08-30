@@ -22,10 +22,6 @@ class Cylinder : public Shape
 
 	glm::vec3 radius() const;
 
-	double volume() const override;
-
-	double area() const override;
-
 	bool intersectCylinder(Ray const&) const; 
 
 	private:

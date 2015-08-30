@@ -13,8 +13,6 @@ public:
 	Composite(std::string name);
 	~Composite();
 	void addShape(std::shared_ptr<Shape> s);
-	double area() const override;
-	double volume() const override;
 	Hit intersect(Ray const& ray) const override;
 	std::shared_ptr<Shape> getShape(std::string name);
 	std::map<std::string, std::shared_ptr<Shape>> getShapes();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Start testing: Aug 30 16:53 CEST
 ----------------------------------------------------------
 1/1 Testing: tests
@@ -5,6 +6,15 @@ Start testing: Aug 30 16:53 CEST
 Command: "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/build/Release/tests"
 Directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/build
 "tests" start time: Aug 30 16:53 CEST
+=======
+Start testing: Aug 30 20:09 CEST
+----------------------------------------------------------
+1/1 Testing: tests
+1/1 Test: tests
+Command: "/home/hans/Desktop/Raytracer/build/build/Release/tests"
+Directory: /home/hans/Desktop/Raytracer/build
+"tests" start time: Aug 30 20:09 CEST
+>>>>>>> deba5f3d4d9d9070713c438beac32ec8adada6bc
 Output:
 ----------------------------------------------------------
 red added
@@ -12,8 +22,8 @@ trans added
 blue added
 white added
 s1 added
-s2 added
 s3 added
+<<<<<<< HEAD
 s5 added
 s6 added
 eye added
@@ -28489,11 +28499,18 @@ ambi added
 0.0917445
 0.0691769
 0.027725
+=======
+c1 added
+eye added
+spot1 added
+ambi added
+>>>>>>> deba5f3d4d9d9070713c438beac32ec8adada6bc
 ===============================================================================
 test cases: 1 | 1 passed
 assertions: - none -
 
 <end of output>
+<<<<<<< HEAD
 Test time =   1.49 sec
 ----------------------------------------------------------
 Test Passed.
@@ -28502,3 +28519,13 @@ Test Passed.
 ----------------------------------------------------------
 
 End testing: Aug 30 16:53 CEST
+=======
+Test time =   3.40 sec
+----------------------------------------------------------
+Test Passed.
+"tests" end time: Aug 30 20:10 CEST
+"tests" time elapsed: 00:00:03
+----------------------------------------------------------
+
+End testing: Aug 30 20:10 CEST
+>>>>>>> deba5f3d4d9d9070713c438beac32ec8adada6bc

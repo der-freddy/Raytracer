@@ -129,26 +129,6 @@ bool Renderer::closestIntersection(Hit const& hit, std::shared_ptr<Light> const&
 
 }
 
-
-Hit Renderer::closestIntersection(Ray const& ray) 
-{
-  double closest = INFINITY;
-  Hit hit{};
-  typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_type;
-
-  for(it_type i = scene_->shapes_.begin(); i != scene_->shapes_.end(); i++)
-  {
-    Hit hit_temp{i->second->intersect(ray)};
-
-    if(hit_temp.distance_ < closest) 
-    {
-      closest = hit_temp.distance_;
-      hit = hit_temp;
-    }
-  }
-  return hit;
-}
-
 Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
 {
   int r = hit.shape_->material()->refl();
@@ -259,8 +239,18 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 {
   float d = 1.0f;
   Color ambient(0.0, 0.0, 0.0);
+  Hit intersection{};
+  float closest = INFINITY;
+  for(auto shape : scene_->shapes_)
+  {
+    Hit hit_temp{shape.second->intersect(ray)};
 
-  Hit intersection{closestIntersection(ray)};
+    if(hit_temp.distance_ < closest) 
+    {
+      closest = hit_temp.distance_;
+      intersection = hit_temp;
+    }
+  }
 
   if(intersection.hit_)
   {

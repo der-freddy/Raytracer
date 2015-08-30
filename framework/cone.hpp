@@ -21,10 +21,6 @@ class Cone : public Shape
 
 	glm::vec3 radius() const;
 
-	double volume() const override;
-
-	double area() const override;
-
 	bool intersectCone(Ray const&) const; 
 
 	private:

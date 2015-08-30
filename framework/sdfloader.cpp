@@ -82,29 +82,25 @@ void Sdfloader::readSdf(std::string path)
     {
       //create_transform(iss);
     }
-
   }
-  
-
 }
 
 void Sdfloader::create_composite(std::istringstream& iss)
 {
   std::string name;
   iss >> name;
+  std::string newName;
   
-  std::shared_ptr<Composite> toAddCom = std::make_shared<Composite>(Composite(name));
-  
-  while(iss >> name)
+  auto toAddCom = std::make_shared<Composite>(Composite{name});
+  while(iss >> newName)
   {
-    std::shared_ptr<Shape> shape_ptr = scene_.getShape(name);
+    auto shape_ptr = scene_.getShape(newName);
     toAddCom->addShape(shape_ptr);
+    scene_.shapes_.erase(scene_.shapes_.find(newName));
   }
 
-  if(scene_.getComposites() == nullptr)
-  {
-    scene_.addComposite(toAddCom);
-  }
+    scene_.addShape(newName,(toAddCom));
+    std::cout << name << " added" << std::endl;
 
 }
 

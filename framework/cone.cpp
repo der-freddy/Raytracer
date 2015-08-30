@@ -19,14 +19,3 @@ height_{height}
 
 Cone::~Cone()
 {}
-
-double Cone::volume() const
-{
-	return (M_PI/3)*r_*r_*height_;
-}
-
-double Cone::area() const
-{
-	float s = sqrt((height_*height_)+(r_*r_));
-	return M_PI*r_*(r_+s); 
-}
