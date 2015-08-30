@@ -208,10 +208,6 @@ Color refr(0.0, 0.0, 0.0);
 float Renderer::shade(Hit const& hit)
 {
   float shade = 1.0f;
-  typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
-  typedef std::map<std::string, std::shared_ptr<Shape>>::iterator it_typeS;
-
-
   for(auto light : scene_->lights_)
   {
 
@@ -225,6 +221,7 @@ float Renderer::shade(Hit const& hit)
     {
       std::shared_ptr<Shape> s{};
       s = shape.second;
+      
       if(s ->intersect(r).hit_)
       {
         shade = 0.0f;
