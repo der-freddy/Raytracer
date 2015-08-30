@@ -231,9 +231,9 @@ Color refr(0.0, 0.0, 0.0);
     }
     else
     {
-      //glm::vec3 T = ( camVec - 2*(cosI)*N);
+       glm::vec3 T = (N * camVec - 2*(cosI)*N);
        //glm::vec3 T = ( camVec - 2*-(cosI)*N);
-      glm::vec3 T = ( N * (camVec * rindex));
+      //glm::vec3 T = ( N * (camVec * rindex));
       //glm::vec3 T = ((camVec - 2*(cosI)*N));
       
       T = T  * float((rindex * rindex * cosI - sqrt(cosT2)));
