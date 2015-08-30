@@ -38,7 +38,6 @@ std::shared_ptr<Material> Scene::getMaterial(std::string const& name) const
 	{
 		return i -> second;
 	}
-	//else return Material{};
 }
 
 std::map<std::string, std::shared_ptr<Material>> Scene::material() const
@@ -48,8 +47,8 @@ std::map<std::string, std::shared_ptr<Material>> Scene::material() const
 
 void Scene::addLight(std::string name, std::shared_ptr<Light> light)
 {
-	lights_[name] = light;
-}
+	lights_.insert(std::make_pair(light->getName(),light));
+}	
 
 std::shared_ptr<Shape> Scene::getShape(std::string const& name)
 {
