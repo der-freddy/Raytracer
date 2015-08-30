@@ -204,7 +204,7 @@ Color refr(0.0, 0.0, 0.0);
 
 float Renderer::shade(Hit const& hit)
 {
-  float shade = 1.0f;
+  float shade = 0.0f;
   for(auto light : scene_->lights_)
   {
 
@@ -218,10 +218,10 @@ float Renderer::shade(Hit const& hit)
     {
       std::shared_ptr<Shape> s{};
       s = shape.second;
-      
-      if(s ->intersect(r).hit_)
+
+      if(!s ->intersect(r).hit_)
       {
-        shade = 0.0f;
+        shade = 1.0f;
       }
       return shade;
     }

@@ -1,10 +1,10 @@
-Start testing: Aug 31 00:32 CEST
+Start testing: Aug 31 00:54 CEST
 ----------------------------------------------------------
 1/1 Testing: tests
 1/1 Test: tests
 Command: "/home/freddy/Dokumente/Studium/Prog/Raytracer/build/build/Release/tests"
 Directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/build
-"tests" start time: Aug 31 00:32 CEST
+"tests" start time: Aug 31 00:54 CEST
 Output:
 ----------------------------------------------------------
 red added
@@ -12,9 +12,11 @@ trans added
 blue added
 white added
 s1 added
+s2 added
 s3 added
 s5 added
 s7 added
+b1 added
 c1 added
 root added
 eye added
@@ -26,11 +28,11 @@ test cases: 1 | 1 passed
 assertions: - none -
 
 <end of output>
-Test time =  11.92 sec
+Test time =  19.32 sec
 ----------------------------------------------------------
 Test Passed.
-"tests" end time: Aug 31 00:33 CEST
-"tests" time elapsed: 00:00:11
+"tests" end time: Aug 31 00:54 CEST
+"tests" time elapsed: 00:00:19
 ----------------------------------------------------------
 
-End testing: Aug 31 00:33 CEST
+End testing: Aug 31 00:54 CEST
