@@ -48,8 +48,3 @@ Material::~Material()
 	{
 		return _name;
 	}
-
-	std::ostream& operator<<(std::ostream& os , Material const& ma)
-	{
-		os << "[" << ma._name << ma._ka << "," << ma._kd << "," << ma._ks << "," << ma._m << "]";
-	}

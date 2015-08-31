@@ -62,8 +62,12 @@ source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/exp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/fwd.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/geometric.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/glm.hpp
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/gtc/matrix_transform.hpp
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/gtc/matrix_transform.inl
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/gtx/multiple.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/gtx/multiple.inl
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/gtx/transform.hpp
+source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/gtx/transform.inl
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/integer.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/mat2x2.hpp
 source/CMakeFiles/raytracer.dir/raytracer.cpp.o: ../external/glm-0.9.5.3/glm/mat2x3.hpp

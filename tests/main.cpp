@@ -184,7 +184,7 @@ TEST_CASE("sdfloader", "[checkload]")
 
 	std::shared_ptr<Scene> scene = std::make_shared<Scene>(s.scene());
 
-	Renderer renderer = Renderer{800, 800, "test.ppm", scene};
+	Renderer renderer = Renderer{400, 400, "test.ppm", scene};
 	renderer.render();
 }
 

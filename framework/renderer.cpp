@@ -22,7 +22,7 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_
 
 void Renderer::render()
 {
-
+  std::cout << "test" << std::endl;
   typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
@@ -109,7 +109,7 @@ Color Renderer::getSpecular(Hit const& hit) const
   {
       glm::vec3 camVec = glm::normalize(hit.normal_ - scene_->cam_.getEye());
 
-      glm::vec3 lightVec = glm::normalize(hit.normal_ - i->second->getLocation());
+      glm::vec3 lightVec = glm::normalize(hit.getIntersect() - i->second->getLocation());
 
       double angle = glm::dot(lightVec, camVec);
       if(angle < 0)
@@ -217,20 +217,13 @@ float Renderer::shade(Hit const& hit)
 
     for(auto shape : scene_->shapes_)
     {
-
-      std::shared_ptr<Shape> s{};
-      s = shape.second;
-
-      if(s ->intersect(r).hit_ && shade)
+      if(shape ->intersect(r).hit_)
       {
         shade -= shadowBias;
         if (shade < 0.0)
           {shade = 0.0f;}
-      }
-      
+      } 
     }
-
-
   }
 return shade;
 }
@@ -255,10 +248,9 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
-
     ambient = ((getDiffuse(intersection)*shade(intersection))+getSpecular(intersection)*shade(intersection))+
     ((intersection.shape_->material()->ka() * scene_->globalAmbient_))+
-    (getRefl(intersection, depth, ray))+
+    (getRefl(intersection, depth, ray)) + 
     ((getRefr(intersection,ray,depth)*intersection.shape_->material()->opacity()));
   }
   return ambient;

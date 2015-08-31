@@ -21,7 +21,7 @@ Hit Composite::intersect(Ray const& ray) const
   {
     Hit hit_temp{shape.second->intersect(ray)};
 
-    if(hit_temp.distance_ < closest && hit_temp.distance_ > 0.001) 
+    if(hit_temp.distance_ < closest && hit_temp.distance_>0.001) 
     {
       closest = hit_temp.distance_;
       hit = hit_temp;

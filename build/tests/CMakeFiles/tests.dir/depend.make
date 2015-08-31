@@ -61,10 +61,14 @@ tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/exponential.h
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/fwd.hpp
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/geometric.hpp
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/glm.hpp
+tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtc/matrix_transform.hpp
+tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtc/matrix_transform.inl
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtx/closest_point.hpp
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtx/closest_point.inl
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtx/intersect.hpp
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtx/intersect.inl
+tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtx/transform.hpp
+tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/gtx/transform.inl
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/integer.hpp
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/mat2x2.hpp
 tests/CMakeFiles/tests.dir/main.cpp.o: ../external/glm-0.9.5.3/glm/mat2x3.hpp
