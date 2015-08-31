@@ -8,6 +8,7 @@
 #include <iostream>
 #include "sdfloader.hpp"
 #include "renderer.hpp"
+#include "animator.hpp"
 
 // TEST_CASE("Sphere","[Sphere]")
 // {
@@ -169,23 +170,26 @@
 // 
 TEST_CASE("sdfloader", "[checkload]")
 {
-	Sdfloader s{};
+	// Sdfloader s{};
 
-	std::string p = "../framework/input/sdf_test.txt";
-	s.readSdf(p);
+	// std::string p = "../framework/input/sdf_test.txt";
+	// s.readSdf(p);
 
-	// REQUIRE(s.scene().material().size() == 2);
+	// // REQUIRE(s.scene().material().size() == 2);
 
-	// REQUIRE(s.scene().shapes_.size() == 2);
+	// // REQUIRE(s.scene().shapes_.size() == 2);
 
-	// REQUIRE(s.scene().lights_.size() == 1);
+	// // REQUIRE(s.scene().lights_.size() == 1);
 
-	// REQUIRE(s.scene().cam_.getName() == "eye");
+	// // REQUIRE(s.scene().cam_.getName() == "eye");
 
-	std::shared_ptr<Scene> scene = std::make_shared<Scene>(s.scene());
+	// std::shared_ptr<Scene> scene = std::make_shared<Scene>(s.scene());
 
-	Renderer renderer = Renderer{400, 400, "test.ppm", scene};
-	renderer.render();
+	// Renderer renderer = Renderer{400, 400, "test.ppm", scene};
+	// renderer.render();
+
+	Animator ani{};
+	ani.generateFrames();
 }
 
 

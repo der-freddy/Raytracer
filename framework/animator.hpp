@@ -4,7 +4,16 @@
 #include <memory>
 #include <string>
 #include <vector>
-
+#include <ostream>
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
+#include <sstream>
+#include <thread>
+#include <vector>
+#include <sdfloader.hpp>
 #include "scene.hpp"
 #include "renderer.hpp"
 
@@ -12,8 +21,8 @@
  {
  public:
 
- 	Animator(std::string path, int frames);
- 	void createFrames() const;
+ 	Animator();
+ 	void generateFrames();
 
  private:
  	std::string outputPath_;

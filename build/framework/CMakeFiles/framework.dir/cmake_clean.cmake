@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/framework.dir/window.cpp.o"
   "CMakeFiles/framework.dir/sphere.cpp.o"
   "CMakeFiles/framework.dir/cylinder.cpp.o"
+  "CMakeFiles/framework.dir/animator.cpp.o"
   "CMakeFiles/framework.dir/light.cpp.o"
   "CMakeFiles/framework.dir/scene.cpp.o"
   "CMakeFiles/framework.dir/cone.cpp.o"

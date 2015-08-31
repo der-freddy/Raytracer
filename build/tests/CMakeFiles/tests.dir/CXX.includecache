@@ -860,6 +860,38 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../external/glm-0.9.5.3/glm/detail/func_vector_relational.hpp
 
+../framework/animator.hpp
+memory
+-
+string
+-
+vector
+-
+ostream
+-
+algorithm
+-
+cstdlib
+-
+ctime
+-
+fstream
+-
+iomanip
+-
+sstream
+-
+thread
+-
+vector
+-
+sdfloader.hpp
+-
+scene.hpp
+../framework/scene.hpp
+renderer.hpp
+../framework/renderer.hpp
+
 ../framework/box.hpp
 glm/vec3.hpp
 -
@@ -1055,4 +1087,6 @@ sdfloader.hpp
 /home/hans/Desktop/Raytracer/tests/sdfloader.hpp
 renderer.hpp
 /home/hans/Desktop/Raytracer/tests/renderer.hpp
+animator.hpp
+/home/hans/Desktop/Raytracer/tests/animator.hpp
 

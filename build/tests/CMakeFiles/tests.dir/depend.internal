@@ -87,6 +87,7 @@ tests/CMakeFiles/tests.dir/main.cpp.o
  ../external/glm-0.9.5.3/glm/vec3.hpp
  ../external/glm-0.9.5.3/glm/vec4.hpp
  ../external/glm-0.9.5.3/glm/vector_relational.hpp
+ ../framework/animator.hpp
  ../framework/box.hpp
  ../framework/camera.hpp
  ../framework/color.hpp

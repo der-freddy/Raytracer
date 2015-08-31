@@ -217,7 +217,7 @@ float Renderer::shade(Hit const& hit)
 
     for(auto shape : scene_->shapes_)
     {
-      if(shape ->intersect(r).hit_)
+      if(shape.second->intersect(r).hit_)
       {
         shade -= shadowBias;
         if (shade < 0.0)

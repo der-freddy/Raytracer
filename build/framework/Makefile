@@ -167,6 +167,30 @@ framework/fast:
 	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/build
 .PHONY : framework/fast
 
+animator.o: animator.cpp.o
+.PHONY : animator.o
+
+# target to build an object file
+animator.cpp.o:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/animator.cpp.o
+.PHONY : animator.cpp.o
+
+animator.i: animator.cpp.i
+.PHONY : animator.i
+
+# target to preprocess a source file
+animator.cpp.i:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/animator.cpp.i
+.PHONY : animator.cpp.i
+
+animator.s: animator.cpp.s
+.PHONY : animator.s
+
+# target to generate assembly for a file
+animator.cpp.s:
+	cd /home/hans/Desktop/Raytracer/build && $(MAKE) -f framework/CMakeFiles/framework.dir/build.make framework/CMakeFiles/framework.dir/animator.cpp.s
+.PHONY : animator.cpp.s
+
 box.o: box.cpp.o
 .PHONY : box.o
 
@@ -589,6 +613,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... animator.o"
+	@echo "... animator.i"
+	@echo "... animator.s"
 	@echo "... box.o"
 	@echo "... box.i"
 	@echo "... box.s"

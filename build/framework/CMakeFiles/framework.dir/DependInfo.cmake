@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/hans/Desktop/Raytracer/framework/animator.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/animator.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/box.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/box.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/camera.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/camera.cpp.o"
   "/home/hans/Desktop/Raytracer/framework/composite.cpp" "/home/hans/Desktop/Raytracer/build/framework/CMakeFiles/framework.dir/composite.cpp.o"
