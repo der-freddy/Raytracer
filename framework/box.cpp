@@ -55,7 +55,7 @@ std::ostream& Box::print(std::ostream& os) const
 
     if (tmax > std::max(0.0, tmin)) {
 
-      intersec.distance_ = tmin - 0.0001f;
+      intersec.distance_ = tmin;
       // sqrt(
       // (
       //  intersec.intersect_.x* intersec.intersect_.x +
@@ -72,23 +72,33 @@ std::ostream& Box::print(std::ostream& os) const
     return intersec;
 }
 
-glm::vec3 Box::normal(glm::vec3 const& insec) const {
+glm::vec3 Box::normal(glm::vec3 const& intersection) const
+{
+  glm::vec3 front{0.0, 0.0, 1.0};
+  glm::vec3 right{1.0, 0.0, 0.0};
+  glm::vec3 back{0.0, 0.0, -1.0};
+  glm::vec3 left{-1.0, 0.0, 0.0};
+  glm::vec3 top{0.0, 1.0, 0.0};
+  glm::vec3 down{0.0, -1.0, 0.0};
 
-  glm::vec3 normal{ INFINITY, INFINITY, INFINITY };
-  const double epsilon = 0.0001;
+  std::map<float, glm::vec3> dotMin;
 
-  if (abs(_min.x - insec.x) < epsilon) {
-      normal = glm::vec3{ -1.0, 0.0, 0.0 };
-  } else if (abs(_min.y - insec.y) < epsilon) {
-      normal = glm::vec3{ 0.0, -1.0, 0.0 };
-  } else if (abs(_min.z - insec.z) < epsilon) {
-      normal = glm::vec3{ 0.0, 0.0, 1.0 };
-  } else if (abs(_max.x - insec.x) < epsilon) {
-      normal = glm::vec3{ 1.0, 0.0, 0.0 };
-  } else if (abs(_max.y - insec.y) < epsilon) {
-      normal = glm::vec3{ 0.0, 1.0, 0.0 };
-  } else if (abs(_max.z - insec.z) < epsilon) {
-      normal = glm::vec3{ 0.0, 0.0, -1.0 };
+  dotMin.insert(std::make_pair((glm::dot(front,(intersection-_min))), front));
+  dotMin.insert(std::make_pair((glm::dot(left,(intersection-_min))), left));
+  dotMin.insert(std::make_pair((glm::dot(down,(intersection-_min))), down));
+  dotMin.insert(std::make_pair((glm::dot(top,(intersection-_max))), top));
+  dotMin.insert(std::make_pair((glm::dot(right,(intersection-_max))), right));
+  dotMin.insert(std::make_pair((glm::dot(back,(intersection-_max))), back));
+
+  float closest = INFINITY;
+  glm::vec3 closestTemp{};
+  
+  for(auto dot : dotMin)
+  {
+    if(dot.first < closest) 
+    {
+      closestTemp = dot.second;
+    }
   }
-  return  normal;
+  return closestTemp;   
 }

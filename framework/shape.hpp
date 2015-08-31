@@ -6,6 +6,7 @@
 #include <iostream>
 #include <memory>
 #include "hit.hpp"
+#include <map>
 
 class Shape
 {

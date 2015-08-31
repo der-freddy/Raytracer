@@ -15,14 +15,13 @@ void Composite::addShape(std::shared_ptr<Shape> s)
 
 Hit Composite::intersect(Ray const& ray) const
 {
-	double closest = INFINITY;
+	float closest = INFINITY;
   Hit hit{};
-
   for(auto shape : shapes_)
   {
     Hit hit_temp{shape.second->intersect(ray)};
 
-    if(hit_temp.distance_ < closest) 
+    if(hit_temp.distance_ < closest && hit_temp.distance_ > 0.001) 
     {
       closest = hit_temp.distance_;
       hit = hit_temp;

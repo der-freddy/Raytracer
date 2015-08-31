@@ -22,6 +22,7 @@ Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_
 
 void Renderer::render()
 {
+
   typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
 
   for(it_type i = scene_->lights_.begin(); i != scene_->lights_.end(); i++)
@@ -78,6 +79,7 @@ Color Renderer::ks(std::shared_ptr<Shape> shape) const
 
 Color Renderer::getDiffuse(Hit const& hit) const
 {
+  
   Color diff{}; 
   typedef std::map<std::string, std::shared_ptr<Light>>::iterator it_type;
 
@@ -153,7 +155,6 @@ Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
 
 Color Renderer::getRefr(Hit const& hit, Ray const& ray, int depth)
 {
-
 float rindex = hit.shape_->material()->refr();
 
 Color refr(0.0, 0.0, 0.0);
@@ -204,10 +205,10 @@ Color refr(0.0, 0.0, 0.0);
 
 float Renderer::shade(Hit const& hit)
 {
-  float shade = 0.0f;
+  float shade = 1.0f;
+  float shadowBias = 0.9;
   for(auto light : scene_->lights_)
   {
-
     glm::vec3 L{};
     glm::vec3 K{};
     L = glm::normalize(light.second->getLocation() - hit.getIntersect());
@@ -216,24 +217,28 @@ float Renderer::shade(Hit const& hit)
 
     for(auto shape : scene_->shapes_)
     {
+
       std::shared_ptr<Shape> s{};
       s = shape.second;
 
-      if(!s ->intersect(r).hit_)
+      if(s ->intersect(r).hit_ && shade)
       {
-        shade = 1.0f;
+        shade -= shadowBias;
+        if (shade < 0.0)
+          {shade = 0.0f;}
       }
-      return shade;
+      
     }
 
 
   }
-
+return shade;
 }
 
 Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 {
   float d = 1.0f;
+
   Color ambient(0.0, 0.0, 0.0);
   Hit intersection{};
   float closest = INFINITY;
@@ -250,6 +255,7 @@ Color Renderer::raytrace(Ray const& ray, Color color, int depth)
 
   if(intersection.hit_)
   {
+
     ambient = ((getDiffuse(intersection)*shade(intersection))+getSpecular(intersection)*shade(intersection))+
     ((intersection.shape_->material()->ka() * scene_->globalAmbient_))+
     (getRefl(intersection, depth, ray))+
