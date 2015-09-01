@@ -12,10 +12,10 @@ class Composite: public Shape
 public:
 	Composite(std::string name);
 	~Composite();
-	void addShape(std::shared_ptr<Shape> s);
+	void addShape(std::shared_ptr<Shape> const& s);
 	Hit intersect(Ray const& ray) const override;
-	std::shared_ptr<Shape> getShape(std::string name);
-	std::map<std::string, std::shared_ptr<Shape>> getShapes();
+	std::shared_ptr<Shape> getShape(std::string const& name) const; 
+	std::map<std::string, std::shared_ptr<Shape>> getShapes() const;
 
 private:
 	std::map<std::string, std::shared_ptr<Shape>> shapes_;

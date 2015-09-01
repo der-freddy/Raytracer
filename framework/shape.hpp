@@ -33,8 +33,6 @@ public:
 	void rotate(glm::vec3);
 	void scale(glm::vec3);
 
-private:
-
 protected:
 	std::string _name;
 	std::shared_ptr<Material> _material;

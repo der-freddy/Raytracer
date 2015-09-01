@@ -14,7 +14,7 @@ class Sphere : public Shape
 		Sphere();
 		~Sphere();
 		Sphere(glm::vec3 const& mp, double r);
-		Sphere(std::string name, std::shared_ptr<Material> material, glm::vec3 const& mp, double r);
+		Sphere(std::string const& name, std::shared_ptr<Material> const& material, glm::vec3 const& mp, double r);
 
 		glm::vec3 mp() const;
 

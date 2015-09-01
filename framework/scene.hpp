@@ -11,7 +11,7 @@
 #include <light.hpp>
 #include <composite.hpp>
 
-class Scene
+struct Scene
 {
 public:
 	//Constructor
@@ -20,15 +20,15 @@ public:
 
 	void printScene();
 
- 	void addShape(std::string, std::shared_ptr<Shape>);
+ 	void addShape(std::string const&, std::shared_ptr<Shape> const&);
 
- 	void addMaterial(std::string, Material);
+ 	void addMaterial(std::string const&, Material const&);
 
- 	void addCam(Camera);
+ 	void addCam(Camera const&);
 
- 	void addLight(std::string, std::shared_ptr<Light>);
+ 	void addLight(std::string const&, std::shared_ptr<Light> const&);
 
- 	void addAmbient(Color c);
+ 	void addAmbient(Color const& c);
 
  	std::shared_ptr<Material> getMaterial(std::string const& name) const;
 
@@ -38,7 +38,6 @@ public:
 
  	Camera getCam() const;
 
- 	//private:
   std::map<std::string, std::shared_ptr<Material>> materials_;
   std::map<std::string, std::shared_ptr<Shape>> shapes_;
   Camera cam_;

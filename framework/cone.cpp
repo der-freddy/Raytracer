@@ -11,7 +11,7 @@ r_{1.0f},
 height_{1.0f}
 {}
 
-Cone::Cone(std::string name , std::shared_ptr<Material> material, glm::vec3 const& mp, float const& r, float const& height):
+Cone::Cone(std::string const& name , std::shared_ptr<Material> const& material, glm::vec3 const& mp, float r, float  height):
 Shape{name, material},
 r_{r},
 height_{height}

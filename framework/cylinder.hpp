@@ -14,8 +14,8 @@ class Cylinder : public Shape
 	public:
 	//Constructor
 	Cylinder();
-	Cylinder(glm::vec3 const& mp, float const& r, float const& height);
-	Cylinder(std::string name, std::shared_ptr<Material> material, glm::vec3 const& mp, float const& r, float const& height);
+	Cylinder(glm::vec3 const& mp, float r, float height);
+	Cylinder(std::string name, std::shared_ptr<Material> material, glm::vec3 const& mp, float r, float height);
 	~Cylinder();
 	
 	glm::vec3 mp() const;

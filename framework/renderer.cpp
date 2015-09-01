@@ -1,15 +1,6 @@
-// -----------------------------------------------------------------------------
-// Copyright  : (C) 2014 Andreas-C. Bernstein
-// License    : MIT (see the file LICENSE)
-// Maintainer : Andreas-C. Bernstein <andreas.bernstein@uni-weimar.de>
-// Stability  : experimental
-//
-// Renderer
-// -----------------------------------------------------------------------------
-
 #include "renderer.hpp"
 
-Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_ptr<Scene> scene)
+Renderer::Renderer(unsigned w, unsigned h, std::string const& file, std::shared_ptr<Scene> const& scene)
   : width_(w)
   , height_(h)
   , colorbuffer_(w*h, Color(0.0, 0.0, 0.0))
@@ -62,17 +53,17 @@ void Renderer::write(Pixel const& p)
 }
 
 
-Color Renderer::ka(std::shared_ptr<Shape> shape) const
+Color Renderer::ka(std::shared_ptr<Shape> const& shape) const
 {
   return shape->material()->ka();
 }
 
-Color Renderer::kd(std::shared_ptr<Shape> shape) const
+Color Renderer::kd(std::shared_ptr<Shape> const& shape) const
 {
   return shape->material()->kd();
 }
 
-Color Renderer::ks(std::shared_ptr<Shape> shape) const
+Color Renderer::ks(std::shared_ptr<Shape> const& shape) const
 {
   return shape->material()->ks();
 }
@@ -91,7 +82,6 @@ Color Renderer::getDiffuse(Hit const& hit) const
     float dot = glm::dot(L, N);
     if(dot > 0)
     {
-      //diff += (i->second->getLd() * hit.shape_->material()->m() * dot);
       diff += (i->second->getLd() * hit.shape_->material()->kd() * dot);
     }
   }
@@ -122,16 +112,16 @@ Color Renderer::getSpecular(Hit const& hit) const
 return spec;
 }
 
-bool Renderer::closestIntersection(Hit const& hit, std::shared_ptr<Light> const& light) const 
-{
-  Ray ray{light->getLocation(),hit.getIntersect() - light->getLocation()};
-  Hit hit_temp{hit.shape_->intersect(ray)};
+// bool Renderer::closestIntersection(Hit const& hit, std::shared_ptr<Light> const& light) const 
+// {
+//   Ray ray{light->getLocation(),hit.getIntersect() - light->getLocation()};
+//   Hit hit_temp{hit.shape_->intersect(ray)};
   
-  return hit_temp.distance_ >= hit.distance_;
+//   return hit_temp.distance_ >= hit.distance_;
 
-}
+// }
 
-Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
+Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray) const
 {
   int r = hit.shape_->material()->refl();
   Color refl(0.0, 0.0, 0.0);
@@ -153,7 +143,7 @@ Color Renderer::getRefl(Hit const& hit, int depth, Ray const& ray)
   return refl;
 }
 
-Color Renderer::getRefr(Hit const& hit, Ray const& ray, int depth)
+Color Renderer::getRefr(Hit const& hit, Ray const& ray, int depth) const
 {
 float rindex = hit.shape_->material()->refr();
 
@@ -203,7 +193,7 @@ Color refr(0.0, 0.0, 0.0);
   }
 }
 
-float Renderer::shade(Hit const& hit)
+float Renderer::shade(Hit const& hit) const
 {
   float shade = 1.0f;
   float shadowBias = 0.9;
@@ -228,7 +218,7 @@ float Renderer::shade(Hit const& hit)
 return shade;
 }
 
-Color Renderer::raytrace(Ray const& ray, Color color, int depth)
+Color Renderer::raytrace(Ray const& ray, Color const& color, int depth) const
 {
   float d = 1.0f;
 

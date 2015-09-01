@@ -8,10 +8,12 @@ shapes_{}
 Composite::~Composite()
 {}
 
-void Composite::addShape(std::shared_ptr<Shape> s)
+//add shape to composite
+void Composite::addShape(std::shared_ptr<Shape> const& s)
 {
 	shapes_[s->name()] = s;
 }
+
 
 Hit Composite::intersect(Ray const& ray) const
 {
@@ -30,7 +32,8 @@ Hit Composite::intersect(Ray const& ray) const
   return hit;
 }
 
-std::shared_ptr<Shape> Composite::getShape(std::string name)
+//find shape in composite
+std::shared_ptr<Shape> Composite::getShape(std::string const& name) const
 {
 	auto i = shapes_.find(name);
 	if (i != shapes_.end())
@@ -39,8 +42,8 @@ std::shared_ptr<Shape> Composite::getShape(std::string name)
 	}
 }
 
-
-std::map<std::string, std::shared_ptr<Shape>> Composite::getShapes()
+//returns map
+std::map<std::string, std::shared_ptr<Shape>> Composite::getShapes() const
 {
 	return shapes_;
 }

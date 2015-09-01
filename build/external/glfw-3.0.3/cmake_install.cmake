@@ -1,4 +1,4 @@
-# Install script for directory: /home/hans/Desktop/Raytracer/external/glfw-3.0.3
+# Install script for directory: /home/freddy/Dokumente/Studium/Prog/Raytracer/external/glfw-3.0.3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/hans/Desktop/Raytracer/build/external/glfw-3.0.3/src/cmake_install.cmake")
+  include("/home/freddy/Dokumente/Studium/Prog/Raytracer/build/external/glfw-3.0.3/src/cmake_install.cmake")
 
 endif()
 

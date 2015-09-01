@@ -1,12 +1,3 @@
-// -----------------------------------------------------------------------------
-// Copyright  : (C) 2014 Andreas-C. Bernstein
-// License    : MIT (see the file LICENSE)
-// Maintainer : Andreas-C. Bernstein <andreas.bernstein@uni-weimar.de>
-// Stability  : experimental
-//
-// Renderer
-// -----------------------------------------------------------------------------
-
 #ifndef BUW_RENDERER_HPP
 #define BUW_RENDERER_HPP
 
@@ -23,7 +14,7 @@
 class Renderer
 {
 public:
-  Renderer(unsigned w, unsigned h, std::string const& file, std::shared_ptr<Scene> scene);
+  Renderer(unsigned w, unsigned h, std::string const& file, std::shared_ptr<Scene> const& scene);
 
   void render();
   void write(Pixel const& p);
@@ -33,18 +24,17 @@ public:
     return colorbuffer_;
   }
 
-  Color raytrace(Ray const& ray, Color color, int depth);
+  Color raytrace(Ray const& ray, Color const& color, int depth) const;
 
-  Hit closestIntersection(Ray const&);
-  bool closestIntersection(Hit const&, std::shared_ptr<Light> const&) const; 
-  Color ka(std::shared_ptr<Shape> shape) const;
-  Color kd(std::shared_ptr<Shape> shape) const;
-  Color ks(std::shared_ptr<Shape> shape) const;
-  float shade(Hit const& hit);
+//  bool closestIntersection(Hit const&, std::shared_ptr<Light> const&) const; 
+  Color ka(std::shared_ptr<Shape> const& shape) const;
+  Color kd(std::shared_ptr<Shape> const& shape) const;
+  Color ks(std::shared_ptr<Shape> const& shape) const;
+  float shade(Hit const& hit) const;
   Color getDiffuse(Hit const&) const;
   Color getSpecular(Hit const& hit) const;
-  Color getRefl(Hit const& hit, int depth, Ray const&);
-  Color getRefr(Hit const& hit, Ray const& ray, int depth);
+  Color getRefl(Hit const& hit, int depth, Ray const&) const;
+  Color getRefr(Hit const& hit, Ray const& ray, int depth) const;
 
 private:
   unsigned width_;

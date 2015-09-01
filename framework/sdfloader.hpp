@@ -22,7 +22,7 @@ public:
 
 	Scene const& scene() const;
 
-	void readSdf(std::string path);
+	void readSdf(std::string const& path);
 	void create_composite(std::istringstream&);
 	void create_material(std::istringstream&);
 	void create_sphere(std::istringstream&);

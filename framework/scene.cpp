@@ -11,17 +11,17 @@ globalAmbient_()
 Scene::~Scene()
 {}
 
-void Scene::addShape(std::string name, std::shared_ptr<Shape> shape)
+void Scene::addShape(std::string const& name, std::shared_ptr<Shape> const& shape)
 {
 	shapes_.insert(std::make_pair(shape->name(),shape));
 }
 
-void Scene::addMaterial(std::string name, Material ma)
+void Scene::addMaterial(std::string const& name, Material const& ma)
 {
 	materials_[name] = std::make_shared<Material>(ma);
 }
 
-void Scene::addCam(Camera camera)
+void Scene::addCam(Camera const& camera)
 {
 	cam_ = camera;
 }
@@ -45,7 +45,7 @@ std::map<std::string, std::shared_ptr<Material>> Scene::material() const
 	return materials_;
 }
 
-void Scene::addLight(std::string name, std::shared_ptr<Light> light)
+void Scene::addLight(std::string const& name, std::shared_ptr<Light> const& light)
 {
 	lights_.insert(std::make_pair(light->getName(),light));
 }	
@@ -66,7 +66,7 @@ Camera Scene::getCam() const
 	return cam_;
 }
 
-void Scene::addAmbient(Color c)
+void Scene::addAmbient(Color const& c)
 {
 	globalAmbient_ += c;
 }

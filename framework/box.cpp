@@ -10,7 +10,7 @@ Box::Box(): Shape{}, _max{1.0f}, _min{0.0f}
 Box::Box(glm::vec3 const& min, glm::vec3 const& max):Shape{},_min{min}, _max{max}
 {}
 
-Box::Box(std::string name , std::shared_ptr<Material> material, glm::vec3 const& min, glm::vec3 const& max):Shape(name, material),  _min{min}, _max{max}
+Box::Box(std::string const& name , std::shared_ptr<Material> const& material, glm::vec3 const& min, glm::vec3 const& max):Shape(name, material),  _min{min}, _max{max}
 {}
 
 Box::~Box()

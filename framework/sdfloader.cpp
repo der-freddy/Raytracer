@@ -17,7 +17,7 @@ Scene const& Sdfloader::scene() const
   return scene_;
 }
 
-void Sdfloader::readSdf(std::string path)
+void Sdfloader::readSdf(std::string const& path)
 {
   std::ifstream file;
   std::string s;
